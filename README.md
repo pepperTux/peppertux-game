@@ -1,13 +1,9 @@
-# HaxeTux Old
-Old version of a recreation of SuperTux 0.0.6 using HaxeFlixel. If the license is wrong, please let me know! (I don't know whether I'm supposed to use GPL V2 or GPL V3 for this)
-
-If you want to see the new one, there should be a HaxeTux-New repository soon with stuff in it coming later. The reason why I've decided to do this is because the code is getting too "overwhelming" (it's terrible, ESPECIALLY playstate.hx) and I can't seem to finish making a power-up thing because I'm kind of dumb.
+# HaxeTux New
+Recreation of SuperTux 0.0.6 using HaxeFlixel. If the license is wrong, please let me know! (I don't know whether I'm supposed to use GPL V2 or GPL V3 for this)
 
 ## Things that won't be recreated here
-* Lives
 * Saving
-* All the text and stuff on screen (Although there will still be something to count the coins you have or whatever it is)
-* Score?
+* All the text and stuff on screen (Although there will still be some stuff from there, they wont be in the same positions or font)
 * The exact same brick breaking effect of the original SuperTux 0.0.6
 * Main Menu (There'll just be a basic main menu with options to view the credits and play the game)
 
@@ -16,6 +12,7 @@ If you want to see the new one, there should be a HaxeTux-New repository soon wi
 * Everyone who worked on SuperTux 0.0.0 to 0.0.6 - All the assets from SuperTux 0.0.6 that were used for this recreation.
 * Lukas Nystrand (Mortimer Twang) - Mortimer's Chipdisko
 * Larry Ewing - Creator of Tux
+* Discover HaxeFlixel (Book) + Scribd - This recreation's code will likely look like the code in that book quite a lot.
 
 ## More Info
 I don't know who made salcon, the credits in SuperTux 0.0.6 doesn't say who made it I think.
