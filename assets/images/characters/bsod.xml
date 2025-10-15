@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="bsod.png">
+<SubTexture name="walk0000" x="0" y="0" width="34" height="34" frameX="-1" frameY="-2" frameWidth="32" frameHeight="32" />
+<SubTexture name="walk0001" x="34" y="0" width="34" height="34" frameX="-1" frameY="-2" frameWidth="32" frameHeight="32" />
+<SubTexture name="walk0002" x="0" y="34" width="29" height="33" frameX="-1" frameY="-3" frameWidth="32" frameHeight="32" />
+<SubTexture name="walk0003" x="29" y="34" width="35" height="34" frameX="0" frameY="-2" frameWidth="32" frameHeight="32" />
+<SubTexture name="fall0000" x="0" y="68" width="35" height="36" frameX="0" frameY="0" frameWidth="32" frameHeight="32" />
+<SubTexture name="squished0000" x="35" y="68" width="36" height="12" frameX="0" frameY="0" frameWidth="32" frameHeight="8" />
+</TextureAtlas>
