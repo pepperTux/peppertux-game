@@ -27,3 +27,15 @@ I don't know who made salcon, the credits in SuperTux 0.0.6 doesn't say who made
 
 ## Why does this exist?
 I don't really know, but at least you'll be able to (sort of) play SuperTux 0.0.6 on Windows or Mac without using a virtual machine. I mean, it's not really the same since there's not gonna be a level editor and it'll obviously be slightly different than the real SuperTux 0.0.6.
+
+## Extra Things that are planned to be included
+* Sand tiles (Beach and Desert versions) (fanmade), beach background and desert background (Fanmade)
+* Grassland tiles (From the official SuperTux media repository), Grassland background (fanmade)
+* Rock tiles (fanmade), Mountains background (fanmade)
+* Sky background (fanmade)
+* Jungle tiles (fanmade), Jungle background (fanmade)
+* Wood tiles (fanmade)
+* Volcano tiles (fanmade), Volcano background (fanmade)
+* More music (Beach, Desert, Grassland, Rock, Sky, Jungle, Wood, Volcano)
+* Mr Bomb enemy (Using Milestone 1 design)
+* RSOD enemy (Red BSOD) (BSOD that stays on platforms)
