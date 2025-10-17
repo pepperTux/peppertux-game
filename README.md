@@ -15,7 +15,8 @@ Recreation of SuperTux 0.0.6 using HaxeFlixel. If the license is wrong, please l
 * Discover HaxeFlixel (Book) + Scribd - This recreation's code will likely look like the code in that book quite a lot.
 * Sage + Modarchive - Sage14 (A song in the files for sky levels) (Not added yet, but is planned to be added) (You can find the song and the license here: https://modarchive.org/index.php?request=view_by_moduleid&query=168975)
 * Wansti - Factory (SuperTux Milestone 1 Song (Although I don't think it was actually in Milestone 1?)) (Not added yet, but is planned to be added) (I found it in the SuperTux Media Repository)
-* Bart - Airship Song (A song in the files for airship levels) (Not added yet, but is planned to be added) (You can find the song and the licenses here: https://opengameart.org/content/airship-song)
+* Bart + OpenGameArt - Airship Song (A song in the files for airship levels) (Not added yet, but is planned to be added) (You can find the song and the licenses here: https://opengameart.org/content/airship-song)
+* Tarush Singhal + OpenGameArt - Sahara Desert Theme / desertv2 (A song in the files for desert levels) (Not added yet, but is planned to be added) (You can find the song and the license here: https://opengameart.org/content/sahara-desert-mario-level)
 
 ## More Info
 I don't know who made salcon, the credits in SuperTux 0.0.6 doesn't say who made it I think.
