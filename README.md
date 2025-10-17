@@ -14,6 +14,7 @@ Recreation of SuperTux 0.0.6 using HaxeFlixel. If the license is wrong, please l
 * Larry Ewing - Creator of Tux
 * Discover HaxeFlixel (Book) + Scribd - This recreation's code will likely look like the code in that book quite a lot.
 * Sage + Modarchive - Sage14 (A song in the files for sky levels) (Not added yet, but is planned to be added)
+* Wansti - Factory (SuperTux Milestone 1 Song (Although I don't think it was actually in Milestone 1?)) (Not added yet, but is planned to be added)
 
 ## More Info
 I don't know who made salcon, the credits in SuperTux 0.0.6 doesn't say who made it I think.
@@ -37,6 +38,7 @@ I don't really know, but at least you'll be able to (sort of) play SuperTux 0.0.
 * Jungle tiles (fanmade), Jungle background (fanmade)
 * Wood tiles (fanmade)
 * Volcano tiles (fanmade), Volcano background (fanmade)
-* More music (Beach, Desert, Grassland, Rock, Sky, Jungle, Wood, Volcano)
+* Industrial Tiles (from SuperTux before 0.7.0) and Factory Background
+* More music (Beach, Desert, Grassland, Mountain, Sky, Jungle, Volcano, Factory)
 * Mr Bomb enemy (Using Milestone 1 design)
 * RSOD enemy (Red BSOD) (BSOD that stays on platforms)
