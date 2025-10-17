@@ -6,6 +6,7 @@ Recreation of SuperTux 0.0.6 using HaxeFlixel. If the license is wrong, please l
 * All the text and stuff on screen (Although there will still be some stuff from there, they wont be in the same positions or font)
 * The exact same brick breaking effect of the original SuperTux 0.0.6
 * Main Menu (There'll just be a basic main menu with options to view the credits and play the game)
+* Level Editor (Use the latest version of Tiled instead)
 
 ## Credits
 * Vaesea - The recreation
