@@ -41,7 +41,7 @@ I don't really know, but at least you'll be able to (sort of) play SuperTux 0.0.
 * Jungle tiles (fanmade), Jungle background (fanmade)
 * Wood tiles (fanmade)
 * Volcano tiles (fanmade), Volcano background (fanmade)
-* Industrial Tiles (from SuperTux before 0.7.0) and Factory Background
+* Industrial Tiles (from SuperTux before 0.7.0) and Factory Background (Most likely will just be the Industrial Tiles but smaller and darker)
 * More music (Beach, Desert, Grassland, Mountain, Sky, Jungle, Volcano, Factory, Airship, Castle)
 * Mr Bomb enemy (Using Milestone 1 design)
 * RSOD enemy (Red BSOD) (BSOD that stays on platforms)
