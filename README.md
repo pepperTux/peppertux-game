@@ -13,7 +13,7 @@ Recreation of SuperTux 0.0.6 using HaxeFlixel. If the license is wrong, please l
 * Everyone who worked on SuperTux 0.0.0 to 0.0.6 - All the assets from SuperTux 0.0.6 that were used for this recreation.
 * Lukas Nystrand (Mortimer Twang) - Mortimer's Chipdisko
 * Larry Ewing - Creator of Tux
-* Discover HaxeFlixel (Book) + Scribd - This recreation's code will likely look like the code in that book quite a lot.
+* Discover HaxeFlixel (Book) + Scribd - This recreation's code will likely look like the code in that book quite a lot since I'm following that tutorial
 * ZhayTee - Ice Music (A song in the files for sky levels) (Not added yet, but is planned to be added) (It's from SuperTux)
 * Wansti - Factory (SuperTux Milestone 1 Song (Although I don't think it was actually in Milestone 1?)) (Not added yet, but is planned to be added) (It's from the SuperTux Media Repository)
 * Bart + OpenGameArt - Airship Song (A song in the files for airship levels) (Not added yet, but is planned to be added) (You can find the song and the licenses here: https://opengameart.org/content/airship-song)
@@ -30,6 +30,9 @@ I don't know who made salcon, the credits in SuperTux 0.0.6 doesn't say who made
 * I also think you need the latest version of openfl? I'm not sure.
 * Go to the folder where the game's Project.xml is in a terminal and type "lime test windows -debug" if you're on Windows, "lime test mac -debug" if you're on Mac or "lime test linux -debug" if you're on Linux.
 
+## How To Make A Level
+This section will be made after all the stuff is added!
+
 ## Why does this exist?
 I don't really know, but at least you'll be able to (sort of) play SuperTux 0.0.6 on Windows or Mac without using a virtual machine. I mean, it's not really the same since there's not gonna be a level editor and it'll obviously be slightly different than the real SuperTux 0.0.6.
 
@@ -45,3 +48,5 @@ I don't really know, but at least you'll be able to (sort of) play SuperTux 0.0.
 * More music (Beach, Desert, Grassland, Mountain, Sky, Jungle, Volcano, Factory, Airship, Castle)
 * Mr Bomb enemy (Using Milestone 1 design)
 * RSOD enemy (Red BSOD) (BSOD that stays on platforms)
+* Walking Tree enemy (Similar to the Spiky, is from the SuperTux Media Repository)
+* Tornado enemy (Basically like a Flying Spiky, is from the SuperTux Media Repository)
