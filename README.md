@@ -14,8 +14,8 @@ Recreation of SuperTux 0.0.6 using HaxeFlixel. If the license is wrong, please l
 * Lukas Nystrand (Mortimer Twang) - Mortimer's Chipdisko
 * Larry Ewing - Creator of Tux
 * Discover HaxeFlixel (Book) + Scribd - This recreation's code will likely look like the code in that book quite a lot.
-* Sage + Modarchive - Sage14 (A song in the files for sky levels) (Not added yet, but is planned to be added) (You can find the song and the license here: https://modarchive.org/index.php?request=view_by_moduleid&query=168975)
-* Wansti - Factory (SuperTux Milestone 1 Song (Although I don't think it was actually in Milestone 1?)) (Not added yet, but is planned to be added) (I found it in the SuperTux Media Repository)
+* ZhayTee - Ice Music (A song in the files for sky levels) (Not added yet, but is planned to be added) (It's from SuperTux)
+* Wansti - Factory (SuperTux Milestone 1 Song (Although I don't think it was actually in Milestone 1?)) (Not added yet, but is planned to be added) (It's from the SuperTux Media Repository)
 * Bart + OpenGameArt - Airship Song (A song in the files for airship levels) (Not added yet, but is planned to be added) (You can find the song and the licenses here: https://opengameart.org/content/airship-song)
 * Tarush Singhal + OpenGameArt - Sahara Desert Theme / desertv2 (A song in the files for desert levels) (Not added yet, but is planned to be added) (You can find the song and the license here: https://opengameart.org/content/sahara-desert-mario-level)
 
