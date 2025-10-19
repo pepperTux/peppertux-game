@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="800" height="15" tilewidth="32" tileheight="32" infinite="0" nextlayerid="11" nextobjectid="304">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="800" height="15" tilewidth="32" tileheight="32" infinite="0" nextlayerid="11" nextobjectid="316">
  <tileset firstgid="1" source="../tilesets/normalTiles.tsx"/>
  <tileset firstgid="144" source="../tilesets/creatures.tsx"/>
  <tileset firstgid="152" source="../tilesets/items.tsx"/>
@@ -65,6 +65,15 @@
   <object id="301" type="bag" gid="147" x="16896" y="320" width="32" height="32"/>
   <object id="302" type="bag" gid="147" x="19056" y="320" width="32" height="32"/>
   <object id="303" type="bag" gid="147" x="23168" y="192" width="32" height="32"/>
+  <object id="304" type="rsod" gid="150" x="544" y="256" width="32" height="32"/>
+  <object id="307" type="rsod" gid="150" x="1248" y="320" width="32" height="32"/>
+  <object id="308" type="rsod" gid="150" x="2144" y="224" width="32" height="32"/>
+  <object id="309" type="rsod" gid="150" x="6368" y="256" width="32" height="32"/>
+  <object id="310" type="rsod" gid="150" x="5792" y="384" width="32" height="32"/>
+  <object id="311" type="rsod" gid="150" x="12256" y="256" width="32" height="32"/>
+  <object id="312" type="rsod" gid="150" x="17504" y="160" width="32" height="32"/>
+  <object id="313" type="rsod" gid="150" x="24448" y="96" width="32" height="32"/>
+  <object id="314" type="rsod" gid="150" x="352" y="416" width="32" height="32"/>
  </objectgroup>
  <objectgroup id="8" name="Distros">
   <object id="21" gid="152" x="448" y="256" width="32" height="32"/>
