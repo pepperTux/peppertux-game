@@ -10,7 +10,7 @@ Recreation of SuperTux 0.0.6 using HaxeFlixel. If the license is wrong, please l
 
 ## Credits
 * Vaesea - The recreation
-* Everyone who worked on SuperTux 0.0.0 to 0.0.6 - All the assets from SuperTux 0.0.6 that were used for this recreation.
+* Everyone who worked on SuperTux 0.0.0 to 0.0.6 - All the assets from SuperTux 0.0.6 that were used for this recreation. Classic / Ji Turn is also from before 0.0.6 (As far as I know, it might've actually come from SuperTux 0.0.x versions?)
 * Lukas Nystrand (Mortimer Twang) - Mortimer's Chipdisko
 * Larry Ewing - Creator of Tux
 * Discover HaxeFlixel (Book) + Scribd - This recreation's code will likely look like the code in that book quite a lot since I'm following that tutorial
