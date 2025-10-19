@@ -31,7 +31,16 @@ I don't know who made salcon, the credits in SuperTux 0.0.6 doesn't say who made
 * Go to the folder where the game's Project.xml is in a terminal and type "lime test windows -debug" if you're on Windows, "lime test mac -debug" if you're on Mac or "lime test linux -debug" if you're on Linux.
 
 ## How To Make A Level
-This section will be made after all the stuff is added!
+### This tutorial assumes you know how to use Tiled.
+* Make sure you have the latest version of Tiled installed.
+* Make sure you have the source code and you can compile it. (You need to be able to test the level)
+* Open base.tmx
+* Save your level. (For example, you can save it as: newlevel.tmx)
+* Read the text in the level then delete it (I'm not sure whether keeping it in would crash the game or not)
+* Remember the text when creating your level.
+* Make sure to save it when you're making it and after you're done with it!
+* Edit the source code to change the test level to your new level. (Or you can add a new level)
+* Test your level, make sure everything looks good, make sure the Trees aren't BSODs.
 
 ## Why does this exist?
 I don't really know, but at least you'll be able to (sort of) play SuperTux 0.0.6 on Windows or Mac without using a virtual machine. I mean, it's not really the same since there's not gonna be a level editor and it'll obviously be slightly different than the real SuperTux 0.0.6.
