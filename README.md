@@ -8,6 +8,7 @@ Recreation of SuperTux 0.0.6 using HaxeFlixel. If the license is wrong, please l
 * Main Menu (There'll just be a basic main menu with options to view the credits and play the game)
 * Level Editor (Use the latest version of Tiled instead)
 * Holding the Laptop Enemy (I don't know how to add that)
+* The BSOD enemy jumping when it detects the edge of a platform or something like that
 
 ## Credits
 * Vaesea - The recreation
