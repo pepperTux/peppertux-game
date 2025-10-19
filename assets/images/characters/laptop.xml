@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="laptop.png">
+<SubTexture name="walk0000" x="0" y="0" width="31" height="32" frameX="-2" frameY="-4" frameWidth="32" frameHeight="32" />
+<SubTexture name="walk0001" x="0" y="32" width="35" height="33" frameX="0" frameY="-3" frameWidth="32" frameHeight="32" />
+<SubTexture name="walk0002" x="0" y="65" width="34" height="33" frameX="0" frameY="-3" frameWidth="32" frameHeight="32" />
+<SubTexture name="walk0003" x="0" y="32" width="35" height="33" frameX="0" frameY="-3" frameWidth="32" frameHeight="32" />
+<SubTexture name="squished0000" x="0" y="98" width="31" height="15" frameX="-1" frameY="-21" frameWidth="32" frameHeight="32" />
+</TextureAtlas>

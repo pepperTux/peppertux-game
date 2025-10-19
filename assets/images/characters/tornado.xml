@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="tornado.png">
+<SubTexture name="idle0000" x="0" y="0" width="42" height="42" frameX="0" frameY="0" frameWidth="38" frameHeight="38" />
+<SubTexture name="idle0001" x="42" y="0" width="42" height="42" frameX="0" frameY="0" frameWidth="38" frameHeight="38" />
+<SubTexture name="idle0002" x="0" y="42" width="42" height="42" frameX="0" frameY="0" frameWidth="38" frameHeight="38" />
+<SubTexture name="idle0003" x="42" y="42" width="42" height="42" frameX="0" frameY="0" frameWidth="38" frameHeight="38" />
+</TextureAtlas>

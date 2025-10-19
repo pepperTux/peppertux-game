@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="gown.png">
+<SubTexture name="sit0000" x="0" y="0" width="40" height="50" frameX="0" frameY="-2" frameWidth="36" frameHeight="48" />
+<SubTexture name="lookup0000" x="0" y="50" width="40" height="50" frameX="0" frameY="-2" frameWidth="36" frameHeight="48" />
+<SubTexture name="upset0000" x="0" y="100" width="40" height="49" frameX="0" frameY="-3" frameWidth="36" frameHeight="48" />
+</TextureAtlas>

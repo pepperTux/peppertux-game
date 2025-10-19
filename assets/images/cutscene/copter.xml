@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="copter.png">
+<SubTexture name="copter0000" x="0" y="0" width="130" height="83" frameX="0" frameY="-12" frameWidth="128" frameHeight="96" />
+<SubTexture name="copter0001" x="0" y="83" width="132" height="84" frameX="0" frameY="-11" frameWidth="128" frameHeight="96" />
+<SubTexture name="squish0000" x="0" y="167" width="99" height="83" frameX="0" frameY="-12" frameWidth="96" frameHeight="96" />
+<SubTexture name="stretch0000" x="0" y="250" width="192" height="83" frameX="0" frameY="-12" frameWidth="192" frameHeight="96" />
+</TextureAtlas>

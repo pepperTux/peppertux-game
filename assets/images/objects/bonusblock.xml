@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="bonusblock.png">
+<SubTexture name="full0000" x="0" y="0" width="36" height="36" frameX="0" frameY="0" frameWidth="32" frameHeight="32" />
+<SubTexture name="empty0000" x="0" y="36" width="36" height="36" frameX="0" frameY="0" frameWidth="32" frameHeight="32" />
+</TextureAtlas>

@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="firetux.png">
+<SubTexture name="stand0000" x="0" y="0" width="51" height="68" frameX="0" frameY="0" frameWidth="48" frameHeight="64" />
+<SubTexture name="walk0000" x="51" y="0" width="51" height="68" frameX="-1" frameY="0" frameWidth="48" frameHeight="64" />
+<SubTexture name="walk0001" x="0" y="0" width="51" height="68" frameX="0" frameY="0" frameWidth="48" frameHeight="64" />
+<SubTexture name="walk0002" x="0" y="68" width="45" height="67" frameX="-5" frameY="0" frameWidth="48" frameHeight="64" />
+<SubTexture name="walk0003" x="0" y="0" width="51" height="68" frameX="0" frameY="0" frameWidth="48" frameHeight="64" />
+<SubTexture name="jump0000" x="45" y="68" width="51" height="68" frameX="0" frameY="0" frameWidth="48" frameHeight="64" />
+<SubTexture name="duck0000" x="0" y="136" width="51" height="52" frameX="-1" frameY="-16" frameWidth="48" frameHeight="64" />
+</TextureAtlas>
