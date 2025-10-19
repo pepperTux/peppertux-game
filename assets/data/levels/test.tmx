@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="800" height="15" tilewidth="32" tileheight="32" infinite="0" nextlayerid="11" nextobjectid="316">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="800" height="15" tilewidth="32" tileheight="32" infinite="0" nextlayerid="11" nextobjectid="322">
  <tileset firstgid="1" source="../tilesets/normalTiles.tsx"/>
  <tileset firstgid="144" source="../tilesets/creatures.tsx"/>
  <tileset firstgid="152" source="../tilesets/items.tsx"/>
@@ -58,8 +58,6 @@
   <object id="294" type="bag" gid="147" x="320" y="256" width="32" height="32"/>
   <object id="295" type="bag" gid="147" x="3904" y="416" width="32" height="32"/>
   <object id="296" type="bag" gid="147" x="6016" y="288" width="32" height="32"/>
-  <object id="297" type="bag" gid="147" x="9936" y="224" width="32" height="32"/>
-  <object id="298" type="bag" gid="147" x="12464" y="256" width="32" height="32"/>
   <object id="299" type="bag" gid="147" x="13520" y="288" width="32" height="32"/>
   <object id="300" type="bag" gid="147" x="15984" y="384" width="32" height="32"/>
   <object id="301" type="bag" gid="147" x="16896" y="320" width="32" height="32"/>
@@ -73,7 +71,11 @@
   <object id="311" type="rsod" gid="150" x="12256" y="256" width="32" height="32"/>
   <object id="312" type="rsod" gid="150" x="17504" y="160" width="32" height="32"/>
   <object id="313" type="rsod" gid="150" x="24448" y="96" width="32" height="32"/>
-  <object id="314" type="rsod" gid="150" x="352" y="416" width="32" height="32"/>
+  <object id="316" type="tornado" gid="149" x="9136" y="256" width="32" height="32"/>
+  <object id="317" type="tornado" gid="149" x="9840" y="192" width="32" height="32"/>
+  <object id="318" type="tornado" gid="149" x="10416" y="384" width="32" height="32"/>
+  <object id="319" type="tornado" gid="149" x="12592" y="224" width="32" height="32"/>
+  <object id="320" type="tornado" gid="149" x="12336" y="224" width="32" height="32"/>
  </objectgroup>
  <objectgroup id="8" name="Distros">
   <object id="21" gid="152" x="448" y="256" width="32" height="32"/>
@@ -129,18 +131,6 @@
   <object id="83" gid="152" x="8352" y="256" width="32" height="32"/>
   <object id="84" gid="152" x="8384" y="256" width="32" height="32"/>
   <object id="85" gid="152" x="8416" y="288" width="32" height="32"/>
-  <object id="86" gid="152" x="9088" y="192" width="32" height="32"/>
-  <object id="87" gid="152" x="9120" y="160" width="32" height="32"/>
-  <object id="88" gid="152" x="9152" y="160" width="32" height="32"/>
-  <object id="89" gid="152" x="9184" y="192" width="32" height="32"/>
-  <object id="90" gid="152" x="9792" y="128" width="32" height="32"/>
-  <object id="91" gid="152" x="9824" y="96" width="32" height="32"/>
-  <object id="92" gid="152" x="9856" y="96" width="32" height="32"/>
-  <object id="94" gid="152" x="9888" y="128" width="32" height="32"/>
-  <object id="95" gid="152" x="10368" y="320" width="32" height="32"/>
-  <object id="96" gid="152" x="10400" y="288" width="32" height="32"/>
-  <object id="97" gid="152" x="10432" y="288" width="32" height="32"/>
-  <object id="98" gid="152" x="10464" y="320" width="32" height="32"/>
   <object id="99" gid="152" x="10752" y="320" width="32" height="32"/>
   <object id="100" gid="152" x="10784" y="288" width="32" height="32"/>
   <object id="102" gid="152" x="10816" y="288" width="32" height="32"/>
@@ -151,14 +141,6 @@
   <object id="111" gid="152" x="11104" y="224" width="32" height="32"/>
   <object id="112" gid="152" x="12032" y="160" width="32" height="32"/>
   <object id="113" gid="152" x="12128" y="160" width="32" height="32"/>
-  <object id="114" gid="152" x="12288" y="160" width="32" height="32"/>
-  <object id="115" gid="152" x="12384" y="160" width="32" height="32"/>
-  <object id="116" gid="152" x="12544" y="160" width="32" height="32"/>
-  <object id="117" gid="152" x="12640" y="160" width="32" height="32"/>
-  <object id="118" gid="152" x="12608" y="128" width="32" height="32"/>
-  <object id="119" gid="152" x="12576" y="128" width="32" height="32"/>
-  <object id="120" gid="152" x="12352" y="128" width="32" height="32"/>
-  <object id="121" gid="152" x="12320" y="128" width="32" height="32"/>
   <object id="122" gid="152" x="12096" y="128" width="32" height="32"/>
   <object id="123" gid="152" x="12064" y="128" width="32" height="32"/>
   <object id="124" gid="152" x="4192" y="320" width="32" height="32"/>

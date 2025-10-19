@@ -13,6 +13,7 @@ class Enemy extends FlxSprite
     var jumpHeight = 128;
     var scoreAmount = 50;
     var bag = false;
+    var tornado = false;
     var direction = -1;
     var appeared = false;
 
@@ -25,12 +26,12 @@ class Enemy extends FlxSprite
 
     override public function update(elapsed: Float)
     {
-        if (!inWorldBounds() && bag == false)
+        if (!inWorldBounds() && (bag == false || tornado == false))
         {
             exists = false;
         }
 
-        if (isOnScreen() && bag == false)
+        if (isOnScreen() && (bag == false || tornado == false))
         {
             appeared = true;
         }
@@ -41,7 +42,7 @@ class Enemy extends FlxSprite
             appeared = true;
         }
 
-        if (appeared && alive && bag == false)
+        if (appeared && alive && (bag == false || tornado == false))
         {
             move();
 
@@ -51,7 +52,7 @@ class Enemy extends FlxSprite
             }
         }
 
-        if (appeared && alive && bag == true)
+        if (appeared && alive && bag == false && tornado == false)
         {
             move();
         }

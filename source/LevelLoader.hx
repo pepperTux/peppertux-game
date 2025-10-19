@@ -3,6 +3,7 @@ package;
 import creatures.BSOD;
 import creatures.Bag;
 import creatures.RSOD;
+import creatures.Tornado;
 import creatures.WalkingTree;
 import flixel.FlxG;
 import flixel.FlxState;
@@ -68,6 +69,8 @@ class LevelLoader extends FlxState
                     state.enemies.add(new Bag(enemy.x, enemy.y - 32));
                 case "rsod":
                     state.enemies.add(new RSOD(enemy.x, enemy.y - 32));
+                case "tornado":
+                    state.enemies.add(new Tornado(enemy.x - 6, enemy.y - 36));
             }
         
         var tuxPosition:TiledObject = getLevelObjects(tiledMap, "Player")[0];
