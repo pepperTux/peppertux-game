@@ -187,6 +187,7 @@ class Tux extends FlxSprite
     
     public function die() // Tux dies. This will be changed to not just do this.
     {
+        canTakeDamage = false;
         Global.lives -= 1;
         Global.distros = 0;
         FlxG.resetState();
