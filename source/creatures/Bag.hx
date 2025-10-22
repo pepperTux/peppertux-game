@@ -15,6 +15,9 @@ class Bag extends Enemy
         animation.addByPrefix('jump', 'jump', 8, false);
         
         acceleration.y = gravity;
+
+        setSize(22, 27);
+        offset.set(6, 3);
     }
 
     override private function move()

@@ -100,6 +100,7 @@ class Enemy extends FlxSprite
 
     override public function kill()
     {
+        FlxG.sound.play('assets/sounds/squish.wav');
         alive = false;
         Global.score += scoreAmount;
         velocity.x = 0;

@@ -1,5 +1,6 @@
 package;
 
+import flixel.FlxCamera;
 import flixel.FlxState;
 import flixel.text.FlxText;
 import flixel.util.FlxColor;

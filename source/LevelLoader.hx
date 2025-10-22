@@ -13,25 +13,37 @@ import flixel.addons.editors.tiled.TiledObject;
 import flixel.addons.editors.tiled.TiledObjectLayer;
 import flixel.addons.editors.tiled.TiledTileLayer;
 import flixel.tile.FlxTilemap;
+import objects.BonusBlock;
+import objects.BrickBlock.EmptyNormalBrickBlock;
+import objects.BrickBlock.EmptySnowBrickBlock;
 import objects.Distro;
+import objects.Goal;
 import states.PlayState;
+import tiles.Water;
 
 class LevelLoader extends FlxState
 {
     // You really shouldn't touch anything here if you're modding...
     private static var background:FlxBackdrop;
 
-    public static function loadLevel(state:PlayState, level:String, levelBackground:String, song:String)
+    public static function loadLevel(state:PlayState, level:String)
     {
+        var tiledMap = new TiledMap("assets/data/levels/" + level + ".tmx");
+
+        // MAKE SURE TO PUT A SONG, BACKGROUND AND LEVEL NAME IN YOUR LEVEL OR THE GAME MIGHT CRASH!!!!!!!!!! Sorry for not being very professional but I just needed to make it VERY clear. Do NOT remove the custom properties of the base level for your level.
+        var song = tiledMap.properties.get("music");
+        var bg = tiledMap.properties.get("bg");
+        var levelName = tiledMap.properties.get("levelName");
+
+        Global.levelName = levelName;
+
         FlxG.sound.playMusic(song, 1.0, true);
 
         // Background Stuff
-        background = new FlxBackdrop(levelBackground, X);
+        background = new FlxBackdrop(bg, X);
         background.scrollFactor.x = 0.05;
         background.scrollFactor.y = 0.05; // should be unused
         state.add(background);
-
-        var tiledMap = new TiledMap("assets/data/levels/" + level + ".tmx");
 
         var backgroundLayer:TiledTileLayer = cast tiledMap.getLayer("Background");
         
@@ -55,9 +67,54 @@ class LevelLoader extends FlxState
         state.add(state.map);
         state.add(foregroundMap);
 
+        // Load animated tiles
+
+        for (object in getLevelObjects(tiledMap, "Animated Tiles"))
+        {
+            switch (object.type)
+            {
+                default:
+                    state.atiles.add(new Water(object.x, object.y - 32));
+                case "lava":
+                    state.atiles.add(new Lava(object.x, object.y - 32));
+            }
+        }
+
+        // Load goal
+        for (object in getLevelObjects(tiledMap, "Level"))
+        {
+            switch (object.type)
+            {
+                case "goal": // Might add a checkpoint at some point, keep this!
+                    state.items.add(new Goal(object.x, object.y - 32));
+            }
+        }
+
+        // Load distros
         for (distro in getLevelObjects(tiledMap, "Distros"))
             state.items.add(new Distro(distro.x, distro.y - 32));
 
+        // Load blocks
+        for (block in getLevelObjects(tiledMap, "Blocks"))
+        {
+            var blockToAdd = new BonusBlock(block.x, block.y - 32);
+            blockToAdd.content = block.type;
+            state.blocks.add(blockToAdd);
+        }
+
+        // Load bricks
+        for (brick in getLevelObjects(tiledMap, "Bricks"))
+        {
+            switch(brick.type)
+            {
+                default:
+                    state.bricks.add(new EmptyNormalBrickBlock(brick.x, brick.y - 32));
+                case "snow":
+                    state.bricks.add(new EmptySnowBrickBlock(brick.x, brick.y - 32));
+            }
+        }
+
+        // Load enemies
         for (enemy in getLevelObjects(tiledMap, "Enemies"))
             switch(enemy.type)
             {
@@ -72,7 +129,8 @@ class LevelLoader extends FlxState
                 case "tornado":
                     state.enemies.add(new Tornado(enemy.x - 6, enemy.y - 36));
             }
-        
+
+        // Don't be like me. Don't remove this.
         var tuxPosition:TiledObject = getLevelObjects(tiledMap, "Player")[0];
         state.tux.setPosition(tuxPosition.x, tuxPosition.y - 32);
     }

@@ -13,6 +13,9 @@ class WalkingTree extends Enemy
         frames = treeImage;
         animation.addByPrefix('walk', 'walk', 8, true);
         animation.play('walk');
+
+        setSize(44, 53);
+        offset.set(11, 13);
     }
 
     override private function move()

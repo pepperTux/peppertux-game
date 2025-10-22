@@ -1,16 +1,16 @@
 package objects;
 
 import flixel.FlxG;
-import flixel.FlxObject;
 import flixel.FlxSprite;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
+import flixel.util.FlxTimer;
 
 class Distro extends FlxSprite
 {
     var scoreAmount = 25;
-
+    var speedFromBlock = -128;
     var distroImage = FlxAtlasFrames.fromSparrow('assets/images/objects/distro.png', 'assets/images/objects/distro.xml');
 
     public function new(x:Float, y:Float)
@@ -20,6 +20,9 @@ class Distro extends FlxSprite
         frames = distroImage;
         animation.addByPrefix('idle', 'idle', 12, true);
         animation.play('idle');
+
+        setSize(26, 26);
+        offset.set(3, 6);
     }
 
     public function collect()
@@ -40,5 +43,13 @@ class Distro extends FlxSprite
     function finishKill(_)
     {
         kill();
+    }
+
+    public function setFromBlock()
+    {
+        solid = false;
+        acceleration.y = 420;
+        velocity.y = speedFromBlock;
+        new FlxTimer().start(0.3, function(_) {collect();}, 1);
     }
 }

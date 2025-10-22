@@ -17,6 +17,9 @@ class RSOD extends Enemy
         animation.addByPrefix('fall', 'fall', 8, false);
         animation.addByPrefix('squished', 'squished', 8, false);
         animation.play('walk');
+
+        setSize(28, 28);
+        offset.set(2, 4);
     }
 
     override private function move()
