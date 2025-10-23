@@ -1,5 +1,6 @@
 package creatures;
 
+import flixel.FlxG;
 import flixel.graphics.frames.FlxAtlasFrames;
 
 class WalkingTree extends Enemy
@@ -25,9 +26,24 @@ class WalkingTree extends Enemy
 
     override public function interact(tux:Tux)
     {
-        if (alive)
+        if (alive && tux.invincible == false)
         {
             tux.takeDamage();
         }
+
+        if (tux.invincible == true)
+        {
+            killFall();
+        }
+    }
+
+    override public function killFall()
+    {
+        FlxG.sound.play("assets/sounds/fall.wav");
+        flipY = true;
+        acceleration.x = 0;
+        velocity.x = fallForce;
+        velocity.y = -fallForce;
+        solid = false;
     }
 }

@@ -15,6 +15,7 @@ import objects.BrickBlock.EmptyNormalBrickBlock;
 import objects.BrickBlock.EmptySnowBrickBlock;
 import objects.Distro;
 import objects.Goal;
+import objects.Herring;
 import objects.Mints;
 import substates.IntroSubState;
 
@@ -118,6 +119,11 @@ class PlayState extends FlxState
 		}
 
 		if (Std.isOfType(entity, Mints))
+		{
+			(cast entity).collect(tux);
+		}
+
+		if (Std.isOfType(entity, Herring))
 		{
 			(cast entity).collect(tux);
 		}

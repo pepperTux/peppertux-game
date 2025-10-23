@@ -13,4 +13,6 @@ class Global
     public static var levels:Array<String> = ["test", "antarctica1", "antarctica2", "mondo", "skytake1"];
     public static var currentLevel = 0;
     public static var levelName:String;
+
+    public static var currentSong:String;
 }

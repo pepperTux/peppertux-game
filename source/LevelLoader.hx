@@ -38,6 +38,7 @@ class LevelLoader extends FlxState
         Global.levelName = levelName;
 
         FlxG.sound.playMusic(song, 1.0, true);
+        Global.currentSong = song;
 
         // Background Stuff
         background = new FlxBackdrop(bg, X);

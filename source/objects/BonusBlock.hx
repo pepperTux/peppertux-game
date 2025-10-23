@@ -69,6 +69,10 @@ class BonusBlock extends FlxSprite
                 var powerup:Mints = new Mints(Std.int(x), Std.int(y - 32));
                 Global.PS.items.add(powerup);
                 FlxG.sound.play('assets/sounds/upgrade.wav');
+            
+            case "herring":
+                var herring:Herring = new Herring(Std.int(x), Std.int(y - 32));
+                Global.PS.items.add(herring);
         }
     }
 }

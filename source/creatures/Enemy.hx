@@ -3,11 +3,13 @@ package creatures;
 import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.FlxSprite;
-import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.util.FlxTimer;
 
 class Enemy extends FlxSprite
 {
+    var fallForce = 128;
+    var dieFall = false;
+
     var gravity = 1000;
     var walkSpeed = 115;
     var jumpHeight = 128;
@@ -72,6 +74,8 @@ class Enemy extends FlxSprite
 
     public function interact(tux:Tux)
     {
+        checkIfHerring(tux);
+
         if (!alive)
         {
             return;
@@ -79,7 +83,7 @@ class Enemy extends FlxSprite
 
         FlxObject.separateY(this, tux);
 
-        if ((tux.velocity.y > 0) && tux.y + tux.height < y + 10) // Can't just do the simple isTouching UP thing because then if the player hits the corner of the enemy, they take damage. That's not exactly fair.
+        if (tux.velocity.y > 0 && tux.y + tux.height < y + 10 && tux.invincible == false) // Can't just do the simple isTouching UP thing because then if the player hits the corner of the enemy, they take damage. That's not exactly fair.
         {
             if (FlxG.keys.anyPressed([SPACE, UP, W]))
             {
@@ -94,24 +98,53 @@ class Enemy extends FlxSprite
         }
         else
         {
-            tux.takeDamage();
+            if (tux.invincible == false)
+            {
+                tux.takeDamage();
+            }
         }
     }
 
     override public function kill()
     {
-        FlxG.sound.play('assets/sounds/squish.wav');
-        alive = false;
-        Global.score += scoreAmount;
-        velocity.x = 0;
-        acceleration.x = 0;
-        immovable = true;
-        animation.play("squished");
-
-        new FlxTimer().start(2.0, function(_)
+        if (dieFall == false)
         {
-            exists = false;
-            visible = false;
-        }, 1);
+            FlxG.sound.play('assets/sounds/squish.wav');
+            alive = false;
+            Global.score += scoreAmount;
+            velocity.x = 0;
+            acceleration.x = 0;
+            immovable = true;
+            animation.play("squished");
+
+            new FlxTimer().start(2.0, function(_)
+            {
+                exists = false;
+                visible = false;
+            }, 1);
+        }
+        else
+        {
+            FlxG.sound.play("assets/sounds/fall.wav");
+            animation.play("fall");
+            acceleration.x = 0;
+            velocity.x = fallForce;
+            velocity.y = -fallForce;
+            solid = false;
+        }
+    }
+
+    function checkIfHerring(tux:Tux)
+    {
+        if (tux.invincible == true)
+        {
+            killFall();
+        }
+    }
+
+    public function killFall()
+    {
+        dieFall = true;
+        kill();
     }
 }

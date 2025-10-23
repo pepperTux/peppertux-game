@@ -24,6 +24,12 @@ class Tux extends FlxSprite
     // Current State
     public var currentState = States.Small;
 
+    // Invicibility Power-Up (Herring)
+    var herringDuration = 10.0;
+    public var invincible = false;
+    var smallCape:FlxSprite;
+    var bigCape:FlxSprite;
+
     // Whether Tux can take damage or not
     var canTakeDamage = true;
 
@@ -71,6 +77,20 @@ class Tux extends FlxSprite
                 frames = fireTuxImage;
         }
 
+        // I doubt some of this is actually needed, like the solid = false stuff, but I'm adding it anyways! What could possibly go wrong?
+        smallCape = new FlxSprite(this.x, this.y);
+        bigCape = new FlxSprite(this.x, this.y);
+        smallCape.loadGraphic("assets/images/characters/tux/cape.png", true, 32, 32);
+        bigCape.loadGraphic("assets/images/characters/tux/bigcape.png", true, 64, 64);
+        smallCape.animation.add("normal", [0, 1], 16, true);
+        bigCape.animation.add("alsonormal", [0, 1], 16, true); // Just trying to prevent flickering between the 2 capes!
+        smallCape.setSize(32, 32);
+        bigCape.setSize(32, 32);
+        smallCape.solid = false;
+        bigCape.solid = false;
+        smallCape.visible = false;
+        bigCape.visible = false;
+
         reloadGraphics();
     }
 
@@ -95,6 +115,10 @@ class Tux extends FlxSprite
         {
             currentState = Fire;
             reloadGraphics();
+        }
+        else if (FlxG.keys.justPressed.FOUR)
+        {
+            invincible = true;
         }
         #end
 
@@ -122,10 +146,18 @@ class Tux extends FlxSprite
         if (velocity.x > 0)
         {
             flipX = false;
+            smallCape.flipX = true;
+            bigCape.flipX = true;
+            smallCape.offset.x = 6;
+            bigCape.offset.x = 28;
         }
         else if (velocity.x < 0)
         {
             flipX = true;
+            smallCape.flipX = false;
+            bigCape.flipX = false;
+            smallCape.offset.x = 4;
+            bigCape.offset.x = 4;
         }
         if ((velocity.y > 0 || velocity.y < 0) && currentState != Small)
         {
@@ -172,6 +204,41 @@ class Tux extends FlxSprite
         if (FlxG.keys.anyJustReleased([SPACE, UP, W]) && velocity.y < 0) // Variable Jump Height Stuff
         {
             velocity.y = decelerateOnJumpRelease;
+        }
+
+        if (invincible)
+        {
+            smallCape.x = this.x;
+            smallCape.y = this.y;
+            bigCape.x = this.x;
+            bigCape.y = this.y;
+            smallCape.animation.play("normal");
+            bigCape.animation.play("alsonormal");
+
+            if (currentState == Small)
+            {
+                smallCape.visible = true;
+                Global.PS.items.add(smallCape); // Is this what they call a hack? Feel like capes should be in their own group.
+            }
+            else
+            {
+                smallCape.visible = false;
+            }
+
+            if (currentState == Big || currentState == Fire)
+            {
+                bigCape.visible = true;
+                Global.PS.items.add(bigCape);
+            }
+            else
+            {
+                bigCape.visible = false;
+            }
+        }
+        else
+        {
+            smallCape.visible = false;
+            bigCape.visible = false;
         }
 
 		super.update(elapsed); // Put this after the movement code, should probably also be after everything else in update.
@@ -258,5 +325,20 @@ class Tux extends FlxSprite
             reloadGraphics();
             y -= height - smallHeight;
         }
+    }
+
+    public function herringTux()
+    {
+        var previousSong = Global.currentSong;
+
+        FlxG.sound.playMusic("assets/music/salcon.ogg", 1, true);
+
+        invincible = true;
+
+        new FlxTimer().start(herringDuration, function(_)
+        {
+            FlxG.sound.playMusic(previousSong, 1.0, true);
+            invincible = false;
+        });
     }
 }
