@@ -2,6 +2,7 @@ package;
 
 import creatures.BSOD;
 import creatures.Bag;
+import creatures.Laptop;
 import creatures.RSOD;
 import creatures.Tornado;
 import creatures.WalkingTree;
@@ -37,7 +38,7 @@ class LevelLoader extends FlxState
 
         Global.levelName = levelName;
 
-        FlxG.sound.playMusic(song, 1.0, true);
+        // FlxG.sound.playMusic(song, 1.0, true); only add back if there's a problem
         Global.currentSong = song;
 
         // Background Stuff
@@ -129,6 +130,8 @@ class LevelLoader extends FlxState
                     state.enemies.add(new RSOD(enemy.x, enemy.y - 32));
                 case "tornado":
                     state.enemies.add(new Tornado(enemy.x - 6, enemy.y - 36));
+                case "laptop":
+                    state.enemies.add(new Laptop(enemy.x, enemy.y - 32));
             }
 
         // Don't be like me. Don't remove this.

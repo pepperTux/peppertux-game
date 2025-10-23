@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="800" height="15" tilewidth="32" tileheight="32" infinite="0" nextlayerid="15" nextobjectid="451">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="800" height="15" tilewidth="32" tileheight="32" infinite="0" nextlayerid="15" nextobjectid="454">
  <properties>
   <property name="bg" value="assets/images/backgrounds/arctis.png"/>
   <property name="levelName" value="Test Level"/>
@@ -131,7 +131,7 @@
   </data>
  </layer>
  <objectgroup id="10" name="Enemies">
-  <object id="136" gid="145" x="736" y="384" width="32" height="32"/>
+  <object id="136" gid="145" x="736" y="384" width="64" height="64"/>
   <object id="137" gid="145" x="1696" y="224" width="32" height="32"/>
   <object id="138" gid="145" x="3136" y="416" width="32" height="32"/>
   <object id="139" gid="145" x="5312" y="416" width="32" height="32"/>
@@ -187,6 +187,8 @@
   <object id="318" type="tornado" gid="149" x="10416" y="384" width="32" height="32"/>
   <object id="319" type="tornado" gid="149" x="12592" y="224" width="32" height="32"/>
   <object id="320" type="tornado" gid="149" x="12336" y="224" width="32" height="32"/>
+  <object id="452" type="laptop" gid="146" x="2240" y="352" width="32" height="32"/>
+  <object id="453" gid="145" x="2176" y="352" width="32" height="32"/>
  </objectgroup>
  <objectgroup id="8" name="Distros">
   <object id="21" gid="152" x="448" y="256" width="32" height="32"/>

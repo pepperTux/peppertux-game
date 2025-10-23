@@ -20,6 +20,11 @@ class IntroSubState extends FlxSubState
     {
         super.create();
 
+        if (FlxG.sound.music != null) // Check if song is playing, if it is, stop song. This if statement is here just to avoid a really weird crash.
+        {
+            FlxG.sound.music.stop();
+        }
+
         if (Global.lives == 0 || Global.lives <= 0)
         {
             gameOver = true;
@@ -54,6 +59,10 @@ class IntroSubState extends FlxSubState
             }
             else
             {
+                if (Global.currentSong != null) // If it's null and this isn't done, the game will crash.
+                {
+                    FlxG.sound.playMusic(Global.currentSong, 1.0, true);
+                }
                 close();
             }
         } , 1);

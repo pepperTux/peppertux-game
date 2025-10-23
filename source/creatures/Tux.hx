@@ -38,6 +38,9 @@ class Tux extends FlxSprite
     var speed = 0; // DON'T CHANGE THIS UNLESS YOU KNOW WHAT YOU'RE DOING. You should only change walkSpeed and runSpeed.
     var runSpeed = 320;
 
+    // Direction
+    public var direction = 1;
+
     // Jump stuff and Gravity
     public var minJumpHeight = 512; // Jump Height (Minimum)
     public var maxJumpHeight = 576; // Jump Height (Maximum)
@@ -145,6 +148,7 @@ class Tux extends FlxSprite
         }
         if (velocity.x > 0)
         {
+            direction = 1;
             flipX = false;
             smallCape.flipX = true;
             bigCape.flipX = true;
@@ -153,6 +157,7 @@ class Tux extends FlxSprite
         }
         else if (velocity.x < 0)
         {
+            direction = -1;
             flipX = true;
             smallCape.flipX = false;
             bigCape.flipX = false;

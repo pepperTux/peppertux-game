@@ -7,6 +7,7 @@ import flixel.FlxCamera;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.FlxState;
+import flixel.FlxSubState;
 import flixel.group.FlxGroup;
 import flixel.tile.FlxTilemap;
 import flixel.util.FlxColor;
@@ -86,9 +87,12 @@ class PlayState extends FlxState
 
 		// Enemy collision
 		FlxG.collide(map, entities);
-		FlxG.collide(enemies, enemies);
 		FlxG.collide(enemies, blocks);
 		FlxG.collide(enemies, bricks);
+		FlxG.overlap(enemies, enemies, function(enemyA:Enemy, enemyB:Enemy) {
+			enemyA.collideOtherEnemy(enemyB);
+			enemyB.collideOtherEnemy(enemyA);
+		});
 
 		// Item collision
 		FlxG.collide(map, items);

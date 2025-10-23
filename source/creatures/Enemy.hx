@@ -10,6 +10,8 @@ class Enemy extends FlxSprite
     var fallForce = 128;
     var dieFall = false;
 
+    var damageOthers = false;
+
     var gravity = 1000;
     var walkSpeed = 115;
     var jumpHeight = 128;
@@ -146,5 +148,13 @@ class Enemy extends FlxSprite
     {
         dieFall = true;
         kill();
+    }
+
+    public function collideOtherEnemy(otherEnemy:Enemy)
+    {
+        if (otherEnemy.damageOthers == true)
+        {
+            killFall();
+        }
     }
 }
