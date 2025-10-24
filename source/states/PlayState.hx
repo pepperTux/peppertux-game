@@ -7,14 +7,12 @@ import flixel.FlxCamera;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.FlxState;
-import flixel.FlxSubState;
 import flixel.group.FlxGroup;
 import flixel.tile.FlxTilemap;
 import flixel.util.FlxColor;
 import objects.Ball;
 import objects.BonusBlock;
-import objects.BrickBlock.EmptyNormalBrickBlock;
-import objects.BrickBlock.EmptySnowBrickBlock;
+import objects.BrickBlock;
 import objects.Distro;
 import objects.Goal;
 import objects.Herring;
@@ -120,7 +118,7 @@ class PlayState extends FlxState
 			(cast entity).interact(tux);
 		}
 
-		if (Std.isOfType(entity, EmptyNormalBrickBlock) || Std.isOfType(entity, EmptySnowBrickBlock))
+		if (Std.isOfType(entity, EmptyNormalBrickBlock) || Std.isOfType(entity, EmptySnowBrickBlock) || Std.isOfType(entity, CoinSnowBrickBlock) || Std.isOfType(entity, CoinNormalBrickBlock))
 		{
 			(cast entity).hit(tux);
 		}

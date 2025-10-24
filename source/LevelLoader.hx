@@ -16,8 +16,7 @@ import flixel.addons.editors.tiled.TiledObjectLayer;
 import flixel.addons.editors.tiled.TiledTileLayer;
 import flixel.tile.FlxTilemap;
 import objects.BonusBlock;
-import objects.BrickBlock.EmptyNormalBrickBlock;
-import objects.BrickBlock.EmptySnowBrickBlock;
+import objects.BrickBlock;
 import objects.Distro;
 import objects.Goal;
 import states.PlayState;
@@ -116,6 +115,10 @@ class LevelLoader extends FlxState
                     state.bricks.add(new EmptyNormalBrickBlock(brick.x, brick.y - 32));
                 case "snow":
                     state.bricks.add(new EmptySnowBrickBlock(brick.x, brick.y - 32));
+                case "coin":
+                    state.bricks.add(new CoinNormalBrickBlock(brick.x, brick.y - 32));
+                case "coinsnow":
+                    state.bricks.add(new CoinSnowBrickBlock(brick.x, brick.y - 32));
             }
         }
 

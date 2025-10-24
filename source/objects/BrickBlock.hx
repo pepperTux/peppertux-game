@@ -5,7 +5,6 @@ package objects;
 
 import creatures.Tux;
 import flixel.FlxG;
-import flixel.FlxObject;
 import flixel.FlxSprite;
 import flixel.effects.particles.FlxParticle;
 import flixel.graphics.frames.FlxAtlasFrames;
@@ -159,5 +158,135 @@ class EmptySnowBrickBlock extends FlxSprite
             .wait(0.05)
             .then(FlxTween.tween(this, {y: currentY}, 0.05));
         }
+    }
+}
+
+class CoinNormalBrickBlock extends FlxSprite
+{
+    var scoreAmount = 25;
+    var gravity = 1000;
+
+    var howManyHits = 3;
+
+    var HFraycast2d:FlxSprite; // it's BASICALLY a raycast2d, right??
+
+    var brickCoinImage = FlxAtlasFrames.fromSparrow('assets/images/objects/brick.png', 'assets/images/objects/brick.xml');
+    
+    public function new(x:Float, y:Float)
+    {
+        super(x, y);
+        solid = true;
+        immovable = true;
+
+        frames = brickCoinImage;
+        animation.addByPrefix('normal', 'normal', 12, false);
+        animation.addByPrefix('empty', 'empty', 12, false);
+        animation.play("normal");
+
+        HFraycast2d = new FlxSprite(x + 8, y + height);
+        HFraycast2d.makeGraphic(Std.int(width) - 16, Std.int(height) + 1, FlxColor.TRANSPARENT); // all this STD is gonna give me a... Nevermind. Forget about it. Std.int is there because width and height need to be ints.
+        HFraycast2d.immovable = true;
+        HFraycast2d.solid = false;
+    }
+
+    override public function update(elapsed:Float)
+    {
+        super.update(elapsed);
+
+        if (howManyHits == 0)
+        {
+            animation.play("empty");
+        }
+    }
+    
+    public function hit(tux:Tux)
+    {
+        if (HFraycast2d.overlaps(tux) == false)
+        {
+            return;
+        }
+
+        if (howManyHits > 0)
+        {
+            var currentY = y;
+            howManyHits -= 1;
+            FlxTween.tween(this, {y: currentY - 4}, 0.05)
+            .wait(0.05)
+            .then(FlxTween.tween(this, {y: currentY}, 0.05));
+            createItem();
+        }
+    }
+
+    function createItem()
+    {
+        FlxG.sound.play('assets/sounds/brick.wav');
+        var distro:Distro = new Distro(Std.int(x), Std.int(y - 32));
+        distro.setFromBlock();
+        Global.PS.items.add(distro);
+    }
+}
+
+class CoinSnowBrickBlock extends FlxSprite
+{
+    var scoreAmount = 25;
+    var gravity = 1000;
+
+    var howManyHits = 3;
+
+    var HFraycast2d:FlxSprite; // it's BASICALLY a raycast2d, right??
+
+    var snowBrickCoinImage = FlxAtlasFrames.fromSparrow('assets/images/objects/brick.png', 'assets/images/objects/brick.xml');
+    
+    public function new(x:Float, y:Float)
+    {
+        super(x, y);
+        solid = true;
+        immovable = true;
+
+        frames = snowBrickCoinImage;
+        animation.addByPrefix('normal', 'snow', 12, false);
+        animation.addByPrefix('empty', 'empty', 12, false);
+        animation.play("normal");
+
+        HFraycast2d = new FlxSprite(x + 8, y + height);
+        HFraycast2d.makeGraphic(Std.int(width) - 16, Std.int(height) + 1, FlxColor.TRANSPARENT); // all this STD is gonna give me a... Nevermind. Forget about it. Std.int is there because width and height need to be ints.
+        HFraycast2d.immovable = true;
+        HFraycast2d.solid = false;
+    }
+
+    override public function update(elapsed:Float)
+    {
+        super.update(elapsed);
+
+        if (howManyHits == 0)
+        {
+            animation.play("empty");
+        }
+    }
+    
+    public function hit(tux:Tux)
+    {
+        if (HFraycast2d.overlaps(tux) == false)
+        {
+            return;
+        }
+
+        if (howManyHits > 0)
+        {
+            var currentY = y;
+            howManyHits -= 1;
+            FlxTween.tween(this, {y: currentY - 4}, 0.05)
+            .wait(0.05)
+            .then(FlxTween.tween(this, {y: currentY}, 0.05));
+            createItem();
+        }
+    }
+
+    function createItem()
+    {
+        FlxG.sound.play('assets/sounds/brick.wav');
+        var distro:Distro = new Distro(Std.int(x), Std.int(y - 32));
+        distro.setFromBlock();
+        Global.PS.items.add(distro);
     }
 }
