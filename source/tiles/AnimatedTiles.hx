@@ -29,3 +29,17 @@ class Lava extends FlxSprite
         animation.play("normal");
     }
 }
+
+class Flag extends FlxSprite
+{
+    var framesPS = 12;
+
+    public function new(x:Float, y:Float)
+    {
+        super(x, y);
+
+        loadGraphic("assets/images/animatedtiles/flag.png", true, 32, 32);
+        animation.add("normal", [0, 1], framesPS, true);
+        animation.play("normal");
+    }
+}

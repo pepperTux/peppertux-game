@@ -11,6 +11,7 @@ import flixel.FlxSprite;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.util.FlxDirectionFlags;
 import flixel.util.FlxTimer;
+import objects.Ball;
 
 enum States
 {
@@ -23,6 +24,10 @@ class Tux extends FlxSprite
 {
     // Current State
     public var currentState = States.Small;
+
+    // Coffee Ball Stuff
+    var canShoot = true;
+    var shootCooldown = 0.3;
 
     // Invicibility Power-Up (Herring)
     var herringDuration = 10.0;
@@ -246,6 +251,8 @@ class Tux extends FlxSprite
             bigCape.visible = false;
         }
 
+        shootBall();
+
 		super.update(elapsed); // Put this after the movement code, should probably also be after everything else in update.
 	}
 
@@ -332,6 +339,22 @@ class Tux extends FlxSprite
         }
     }
 
+    public function fireTux()
+    {
+        if (currentState == Small)
+        {
+            var smallHeight = height;
+            currentState = Fire;
+            reloadGraphics();
+            y -= height - smallHeight;
+        }
+        else
+        {
+            currentState = Fire;
+            reloadGraphics();
+        }
+    }
+
     public function herringTux()
     {
         var previousSong = Global.currentSong;
@@ -345,5 +368,24 @@ class Tux extends FlxSprite
             FlxG.sound.playMusic(previousSong, 1.0, true);
             invincible = false;
         });
+    }
+
+    function shootBall()
+    {
+        if (currentState != Fire)
+        {
+            return;
+        }
+
+        if (FlxG.keys.justPressed.CONTROL && canShoot)
+        {
+            var ball:Ball = new Ball(x + 16, y + 16);
+            ball.direction = direction;
+            Global.PS.items.add(ball);
+            FlxG.sound.play("assets/sounds/shoot.wav");
+
+            canShoot = false;
+            new FlxTimer().start(shootCooldown, function(_) canShoot = true);
+        }
     }
 }

@@ -8,8 +8,8 @@ class Laptop extends Enemy
 {
     var laptopImage = FlxAtlasFrames.fromSparrow("assets/images/characters/laptop.png", "assets/images/characters/laptop.xml");
 
-    var isSquished = false;
-    var isMovingSquished = false;
+    public var isSquished = false;
+    public var isMovingSquished = false;
     var waitToCollide:Float = 0;
 
     public function new (x:Float, y:Float)

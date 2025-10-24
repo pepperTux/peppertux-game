@@ -7,6 +7,7 @@ import creatures.RSOD;
 import creatures.Tornado;
 import creatures.WalkingTree;
 import flixel.FlxG;
+import flixel.FlxGame;
 import flixel.FlxState;
 import flixel.addons.display.FlxBackdrop;
 import flixel.addons.editors.tiled.TiledMap;
@@ -20,7 +21,7 @@ import objects.BrickBlock.EmptySnowBrickBlock;
 import objects.Distro;
 import objects.Goal;
 import states.PlayState;
-import tiles.Water;
+import tiles.AnimatedTiles;
 
 class LevelLoader extends FlxState
 {
@@ -79,6 +80,8 @@ class LevelLoader extends FlxState
                     state.atiles.add(new Water(object.x, object.y - 32));
                 case "lava":
                     state.atiles.add(new Lava(object.x, object.y - 32));
+                case "flag":
+                    state.atiles.add(new Flag(object.x, object.y - 32));
             }
         }
 

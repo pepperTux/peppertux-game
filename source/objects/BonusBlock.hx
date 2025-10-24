@@ -66,7 +66,7 @@ class BonusBlock extends FlxSprite
                 Global.PS.items.add(distro);
             
             case "powerup":
-                var powerup:Mints = new Mints(Std.int(x), Std.int(y - 32));
+                var powerup:PowerUp = new PowerUp(Std.int(x), Std.int(y - 32));
                 Global.PS.items.add(powerup);
                 FlxG.sound.play('assets/sounds/upgrade.wav');
             

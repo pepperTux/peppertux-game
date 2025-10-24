@@ -4,6 +4,7 @@ import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.FlxSprite;
 import flixel.util.FlxTimer;
+import objects.Ball;
 
 class Enemy extends FlxSprite
 {
@@ -12,13 +13,15 @@ class Enemy extends FlxSprite
 
     var damageOthers = false;
 
+    var canBallDamage = true;
+
     var gravity = 1000;
     var walkSpeed = 115;
     var jumpHeight = 128;
     var scoreAmount = 50;
     var bag = false;
     var tornado = false;
-    var direction = -1;
+    public var direction = -1;
     var appeared = false;
 
     public function new(x:Float, y:Float)
@@ -153,6 +156,15 @@ class Enemy extends FlxSprite
     public function collideOtherEnemy(otherEnemy:Enemy)
     {
         if (otherEnemy.damageOthers == true)
+        {
+            killFall();
+        }
+    }
+
+    public function collideBall(ball:Ball)
+    {
+        ball.kill();
+        if (canBallDamage)
         {
             killFall();
         }

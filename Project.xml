@@ -88,4 +88,6 @@
 	<!-- _________________________________ Custom _______________________________ -->
 
 	<!--Place custom nodes like icons here-->
+	<icon path="assets/images/icon.png" />
+
 </project>

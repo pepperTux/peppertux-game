@@ -11,13 +11,14 @@ import flixel.FlxSubState;
 import flixel.group.FlxGroup;
 import flixel.tile.FlxTilemap;
 import flixel.util.FlxColor;
+import objects.Ball;
 import objects.BonusBlock;
 import objects.BrickBlock.EmptyNormalBrickBlock;
 import objects.BrickBlock.EmptySnowBrickBlock;
 import objects.Distro;
 import objects.Goal;
 import objects.Herring;
-import objects.Mints;
+import objects.PowerUp;
 import substates.IntroSubState;
 
 class PlayState extends FlxState
@@ -89,10 +90,17 @@ class PlayState extends FlxState
 		FlxG.collide(map, entities);
 		FlxG.collide(enemies, blocks);
 		FlxG.collide(enemies, bricks);
-		FlxG.overlap(enemies, enemies, function(enemyA:Enemy, enemyB:Enemy) {
-			enemyA.collideOtherEnemy(enemyB);
-			enemyB.collideOtherEnemy(enemyA);
-		});
+		FlxG.overlap(entities, enemies, function (entity:FlxSprite, enemy:Enemy)
+		{
+			if (Std.isOfType(entity, Enemy))
+			{
+				enemy.collideOtherEnemy(cast entity);
+			}
+			if (Std.isOfType(entity, Ball))
+			{
+				enemy.collideBall(cast entity);
+			}
+		} );
 
 		// Item collision
 		FlxG.collide(map, items);
@@ -122,7 +130,7 @@ class PlayState extends FlxState
 			(cast entity).hit(tux);
 		}
 
-		if (Std.isOfType(entity, Mints))
+		if (Std.isOfType(entity, PowerUp))
 		{
 			(cast entity).collect(tux);
 		}
