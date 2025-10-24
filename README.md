@@ -51,4 +51,3 @@ I don't really know, but at least you'll be able to (sort of) play SuperTux 0.0.
 * Mr Bomb
 * Stalactite
 * Mr Bomb
-* 
