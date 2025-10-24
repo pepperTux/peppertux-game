@@ -7,7 +7,7 @@ Recreation of SuperTux 0.0.6 using HaxeFlixel. If the license is wrong, please l
 * The exact same brick breaking effect of the original SuperTux 0.0.6
 * Main Menu (There'll just be a basic main menu with options to view the credits and play the game)
 * Level Editor (Use the latest version of Tiled instead)
-* Holding the Laptop Enemy (I don't know how to add that)
+* Holding the Laptop Enemy (I don't know how to add that) (If someone could add this, that would be amazing!)
 * The BSOD enemy jumping when it detects the edge of a platform or something like that
 
 ## Credits
@@ -16,10 +16,10 @@ Recreation of SuperTux 0.0.6 using HaxeFlixel. If the license is wrong, please l
 * Lukas Nystrand (Mortimer Twang) - Mortimer's Chipdisko
 * Larry Ewing - Creator of Tux
 * Discover HaxeFlixel (Book) + Scribd - This recreation's code will likely look like the code in that book quite a lot since I'm following that tutorial
-* ZhayTee - Ice Music (A song in the files for sky levels) (Not added yet, but is planned to be added) (It's from SuperTux)
-* Wansti - Factory (SuperTux Milestone 1 Song (Although I don't think it was actually in Milestone 1?)) (Not added yet, but is planned to be added) (It's from the SuperTux Media Repository)
-* Bart + OpenGameArt - Airship Song (A song in the files for airship levels) (Not added yet, but is planned to be added) (You can find the song and the licenses here: https://opengameart.org/content/airship-song)
-* Tarush Singhal + OpenGameArt - Sahara Desert Theme / desertv2 (A song in the files for desert levels) (Not added yet, but is planned to be added) (You can find the song and the license here: https://opengameart.org/content/sahara-desert-mario-level)
+* ZhayTee - Ice Music (A song in the files for sky levels) (It's from SuperTux)
+* Wansti - Factory (SuperTux Milestone 1 Song (Although I don't think it was actually in Milestone 1?)) (It's from the SuperTux Media Repository)
+* Bart + OpenGameArt - Airship Song (A song in the files for airship levels) (You can find the song and the licenses here: https://opengameart.org/content/airship-song)
+* Tarush Singhal + OpenGameArt - Sahara Desert Theme / desertv2 (A song in the files for desert levels) (You can find the song and the license here: https://opengameart.org/content/sahara-desert-mario-level)
 
 ## More Info
 I don't know who made salcon, the credits in SuperTux 0.0.6 doesn't say who made it I think.
@@ -45,17 +45,10 @@ I don't know who made salcon, the credits in SuperTux 0.0.6 doesn't say who made
 * Test your level, make sure everything looks good, make sure the Trees aren't BSODs.
 
 ## Why does this exist?
-I don't really know, but at least you'll be able to (sort of) play SuperTux 0.0.6 on Windows or Mac without using a virtual machine. I mean, it's not really the same since there's not gonna be a level editor and it'll obviously be slightly different than the real SuperTux 0.0.6.
+I don't really know, but at least you'll be able to (sort of) play SuperTux 0.0.6 on Windows or Mac? without using a virtual machine. I mean, it's not really the same since there's not gonna be a level editor and it'll obviously be slightly different than the real SuperTux 0.0.6. Don't worry, this will be available on Linux too.
 
-## Extra Things that are planned to be included
-* Sand tiles (Beach and Desert versions) (fanmade), beach background and desert background (Fanmade)
-* Grassland tiles (From the official SuperTux media repository), Grassland background (fanmade)
-* Rock tiles (fanmade), Mountains background (fanmade)
-* Sky background (fanmade)
-* Jungle tiles (fanmade), Jungle background (fanmade)
-* Wood tiles (fanmade)
-* Volcano tiles (fanmade), Volcano background (fanmade)
-* Industrial Tiles (from SuperTux before 0.7.0) and Factory Background (Most likely will just be the Industrial Tiles but smaller and darker)
-* More music (Beach, Desert, Grassland, Mountain, Sky, Jungle, Volcano, Factory, Airship, Castle)
-* Walking Tree enemy (Similar to the Spiky, is from the SuperTux Media Repository)
-* Tornado enemy (Basically like a Flying Spiky, is from the SuperTux Media Repository)
+## Extra Things that are planned to be included that isn't included yet
+* Mr Bomb
+* Stalactite
+* Mr Bomb
+* 
