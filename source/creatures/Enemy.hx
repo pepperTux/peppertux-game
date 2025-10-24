@@ -6,12 +6,20 @@ import flixel.FlxSprite;
 import flixel.util.FlxTimer;
 import objects.Ball;
 
+enum EnemyStates
+{
+    Alive;
+    Dead;
+}
+
 class Enemy extends FlxSprite
 {
     var fallForce = 128;
     var dieFall = false;
 
     var damageOthers = false;
+
+    var currentState = Alive;
 
     var canBallDamage = true;
 
@@ -112,6 +120,8 @@ class Enemy extends FlxSprite
 
     override public function kill()
     {
+        currentState = Dead;
+        
         if (dieFall == false)
         {
             FlxG.sound.play('assets/sounds/squish.wav');

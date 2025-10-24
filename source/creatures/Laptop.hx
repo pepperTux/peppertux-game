@@ -4,12 +4,20 @@ import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.graphics.frames.FlxAtlasFrames;
 
+enum LaptopStates
+{
+    Normal;
+    Squished;
+    MovingSquished;
+    Held; // Here just in case someone wants to add it.
+}
+
 class Laptop extends Enemy
 {
     var laptopImage = FlxAtlasFrames.fromSparrow("assets/images/characters/laptop.png", "assets/images/characters/laptop.xml");
 
-    public var isSquished = false;
-    public var isMovingSquished = false;
+    public var currentLaptopState = Normal;
+
     var waitToCollide:Float = 0;
 
     public function new (x:Float, y:Float)
@@ -28,11 +36,15 @@ class Laptop extends Enemy
 
     override private function move()
     {
-        if (isMovingSquished)
+        if (currentLaptopState == MovingSquished)
         {
-            velocity.x = direction * walkSpeed * 3;
+            velocity.x = direction * walkSpeed * 3.5;
         }
-        else if (!isSquished)
+        else if (currentLaptopState == Squished || currentLaptopState == Held)
+        {
+            velocity.x = 0;
+        }
+        else
         {
             velocity.x = direction * walkSpeed;
         }
@@ -55,7 +67,7 @@ class Laptop extends Enemy
             return;
         }
 
-        if (isMovingSquished)
+        if (currentLaptopState == MovingSquished)
         {
             damageOthers = true;
         }
@@ -64,15 +76,14 @@ class Laptop extends Enemy
 
         FlxObject.separateY(this, tux);
 
-        if (isMovingSquished)
+        if (currentLaptopState == MovingSquished)
         {
             if (tux.velocity.y > 0 && tux.y + tux.height < y + 10 && tux.invincible == false)
             {
                 waitToCollide = 0.25;
-                isMovingSquished = false;
+                currentLaptopState = Squished;
                 Global.score += scoreAmount;
                 animation.play("squished");
-                isSquished = true;
                 velocity.x = 0;
                 if (FlxG.keys.anyPressed([SPACE, UP, W]))
                 {
@@ -91,7 +102,7 @@ class Laptop extends Enemy
                 }
             }
         }
-        else if (isSquished)
+        else if (currentLaptopState == Squished)
         {
             if (tux.velocity.y > 0 && tux.y + tux.height < y + 10 && tux.invincible == false)
             {
@@ -108,7 +119,7 @@ class Laptop extends Enemy
             waitToCollide = 0.25;
 
             direction = tux.direction;
-            isMovingSquished = true;
+            currentLaptopState = MovingSquished;
             damageOthers = true;
         }
         else
@@ -118,7 +129,7 @@ class Laptop extends Enemy
                 waitToCollide = 0.25;
                 Global.score += scoreAmount;
                 animation.play("squished");
-                isSquished = true;
+                currentLaptopState = Squished;
                 velocity.x = 0;
                 if (FlxG.keys.anyPressed([SPACE, UP, W]))
                 {

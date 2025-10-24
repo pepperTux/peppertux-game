@@ -13,7 +13,7 @@ import flixel.util.FlxDirectionFlags;
 import flixel.util.FlxTimer;
 import objects.Ball;
 
-enum States
+enum TuxStates
 {
     Small;
     Big;
@@ -23,7 +23,7 @@ enum States
 class Tux extends FlxSprite
 {
     // Current State
-    public var currentState = States.Small;
+    public var currentState = Small;
 
     // Coffee Ball Stuff
     var canShoot = true;
@@ -202,11 +202,11 @@ class Tux extends FlxSprite
                 velocity.y = -minJumpHeight;
             }
 
-            if (currentState == States.Small) // Play small Tux jump sound
+            if (currentState == Small) // Play small Tux jump sound
             {
                 FlxG.sound.play('assets/sounds/jump.wav');
             }
-            else if (currentState == States.Big || currentState == States.Fire) // Play big Tux jump sound (It seems to be the exact same?)
+            else if (currentState == Big || currentState == Fire) // Play big Tux jump sound (It seems to be the exact same?)
             {
                 FlxG.sound.play('assets/sounds/bigjump.wav');
             }
@@ -264,17 +264,17 @@ class Tux extends FlxSprite
             new FlxTimer().start(invFrames, function(_) {canTakeDamage = true;}, 1);
             FlxG.sound.play('assets/sounds/hurt.wav');
             
-            if (currentState == States.Fire) // If current state is fire, make him go down to just being big.
+            if (currentState == Fire) // If current state is fire, make him go down to just being big.
             {
-                currentState = States.Big;
+                currentState = Big;
                 reloadGraphics();
             }
-            else if (currentState == States.Big) // If current state is big, make him go down to just being small.
+            else if (currentState == Big) // If current state is big, make him go down to just being small.
             {
-                currentState = States.Small;
+                currentState = Small;
                 reloadGraphics();
             }
-            else if (currentState == States.Small) // If current state is small, kill him.
+            else if (currentState == Small) // If current state is small, kill him.
             {
                 die();
             }
