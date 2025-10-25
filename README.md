@@ -9,6 +9,7 @@ Recreation of SuperTux 0.0.6 using HaxeFlixel. If the license is wrong, please l
 * Level Editor (Use the latest version of Tiled instead)
 * Holding the Laptop Enemy (I don't know how to add that) (If someone could add this, that would be amazing!) (There's already an (unused) state in Laptop for this, so all that needs to be done (probably) is the actual code)
 * The BSOD enemy jumping when it detects the edge of a platform or something like that (Again, if someone could add this, that would be amazing! It might require adding the tile detecting stuff from RSOD to BSOD but instead of turning around, BSOD could do a small jump?)
+* Enemies being killed when they're on a bonus block / brick block that's being hit by Tux (If someone could add this, that would be amazing!)
 
 ## Credits
 * Vaesea - The recreation
