@@ -13,6 +13,12 @@ class MainMenuState extends FlxState
     {
         super.create();
 
+        if (FlxG.sound.music != null) // Check if song is playing, if it is, stop song. This if statement is here just to avoid a really weird crash.
+        {
+            FlxG.sound.music.stop();
+        }
+
+        Global.currentLevel = 0;
         Global.lives = 3;
         Global.score = 0;
         Global.distros = 0;
