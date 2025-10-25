@@ -31,10 +31,12 @@ class LevelLoader extends FlxState
     {
         var tiledMap = new TiledMap("assets/data/levels/" + level + ".tmx");
 
-        // MAKE SURE TO PUT A SONG, BACKGROUND AND LEVEL NAME IN YOUR LEVEL OR THE GAME MIGHT CRASH!!!!!!!!!! Sorry for not being very professional but I just needed to make it VERY clear. Do NOT remove the custom properties of the base level for your level.
+        // MAKE SURE TO PUT A SONG, BACKGROUND, LEVEL NAME AND BACKGROUND SPEED IN YOUR LEVEL OR THE GAME MIGHT CRASH!!!!!!!!!! Sorry for not being very professional but I just needed to make it VERY clear. Do NOT remove the custom properties of the base level for your level.
         var song = tiledMap.properties.get("music");
         var bg = tiledMap.properties.get("bg");
         var levelName = tiledMap.properties.get("levelName");
+        var speed = tiledMap.properties.get("backgroundSpeed");
+        var offset = tiledMap.properties.get("backgroundOffset");
 
         Global.levelName = levelName;
 
@@ -43,10 +45,30 @@ class LevelLoader extends FlxState
 
         // Background Stuff
         background = new FlxBackdrop(bg, X);
-        background.scrollFactor.x = 0.05;
-        background.scrollFactor.y = 0.05; // should be unused
+        background.scrollFactor.x = Std.parseFloat(speed);
+        background.scrollFactor.y = Std.parseFloat(speed); // Should no longer be unused with certain backgrounds.
+        background.offset.x = Std.parseFloat(offset);
+        background.offset.y = Std.parseFloat(offset);
         state.add(background);
 
+        var furthestBackgroundLayer:TiledTileLayer = cast tiledMap.getLayer("Furthest Background");
+        
+        var furthestBackgroundMap = new FlxTilemap();
+        furthestBackgroundMap.loadMapFromArray(furthestBackgroundLayer.tileArray, tiledMap.width, tiledMap.height, "assets/images/normalTiles.png", 32, 32, 1);
+        furthestBackgroundMap.solid = false;
+
+        var evenFurtherBackgroundLayer:TiledTileLayer = cast tiledMap.getLayer("Even Further Background");
+        
+        var evenFurtherBackgroundMap = new FlxTilemap();
+        evenFurtherBackgroundMap.loadMapFromArray(evenFurtherBackgroundLayer.tileArray, tiledMap.width, tiledMap.height, "assets/images/normalTiles.png", 32, 32, 1);
+        evenFurtherBackgroundMap.solid = false;
+
+        var furtherBackgroundLayer:TiledTileLayer = cast tiledMap.getLayer("Further Background");
+        
+        var furtherBackgroundMap = new FlxTilemap();
+        furtherBackgroundMap.loadMapFromArray(furtherBackgroundLayer.tileArray, tiledMap.width, tiledMap.height, "assets/images/normalTiles.png", 32, 32, 1);
+        furtherBackgroundMap.solid = false;
+        
         var backgroundLayer:TiledTileLayer = cast tiledMap.getLayer("Background");
         
         var backgroundMap = new FlxTilemap();
