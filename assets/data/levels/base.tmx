@@ -40,13 +40,13 @@
   <object id="316" gid="152" x="224" y="0" width="32" height="32"/>
  </objectgroup>
  <objectgroup id="6" name="Player">
-  <object id="296" x="-968" y="0" width="892" height="960">
+  <object id="296" x="-968" y="0" width="892" height="224">
    <properties>
     <property name="bg" value="assets/images/backgrounds/arctis.png"/>
     <property name="levelName" value="New Level"/>
     <property name="music" value="assets/music/mortimers_chipdisko.ogg"/>
    </properties>
-   <text fontfamily="Segoe UI" pixelsize="37" wrap="1" color="#ff0000">(Make sure to remove this text!) To place enemies, make sure the Class of the enemy is the name of the enemy. For BSODs, it can be blank, for Laptops, it's &quot;laptop&quot;, for Bags, it's &quot;bag&quot;, for Walking Tree, it's &quot;tree&quot;, for Tornado, it's &quot;tornado&quot;, for RSOD, it's &quot;rsod&quot;, for &quot;Mr Bomb&quot;, it's &quot;bomb&quot;. I'm sure you already know how to place Tile Images as objects, Discover Haxeflixel has a thing telling you how to do it. Also, to place Distros, the class name is blank. Laptop and Mr Bomb have not been added yet. Also, to change the music and background, go into Map Properties and change it there. To add a goal, check how test.tmx does it. Make sure not to place it too high above the level, but make sure to still place it above the level. Do NOT use the normal Mints or Coffee yet! Those are unfinished! To place lava waves, class name is lava, to place flags, class name is flag. water, lava and flags are placed in Animated Tiles.</text>
+   <text fontfamily="Segoe UI" pixelsize="37" wrap="1" color="#ff0000">(Remove this text before playing!) To place objects, copy them from the top left to your level, or manually change the class name of the object you just placed from the tilesets.</text>
   </object>
   <object id="302" gid="144" x="0" y="0" width="32" height="32"/>
   <object id="324" type="flag" gid="162" x="480" y="0" width="32" height="32"/>

@@ -12,6 +12,7 @@ import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.util.FlxDirectionFlags;
 import flixel.util.FlxTimer;
 import objects.Ball;
+import states.PlayState;
 
 enum TuxStates
 {
@@ -127,6 +128,11 @@ class Tux extends FlxSprite
         else if (FlxG.keys.justPressed.FOUR)
         {
             invincible = true;
+        }
+        else if (FlxG.keys.justPressed.FIVE)
+        {
+            Global.currentLevel += 1;
+            FlxG.switchState(PlayState.new);
         }
         #end
 
