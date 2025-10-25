@@ -1,7 +1,7 @@
 # HaxeTux New
 Recreation of SuperTux 0.0.6 using HaxeFlixel. If the license is wrong, please let me know! (I don't know whether I'm supposed to use GPL V2 or GPL V3 for this)
 
-## Things that won't be recreated here
+## Things that aren't recreated here (Although anyone can add these if they want!)
 * Saving
 * All the text and stuff on screen (Although there will still be some stuff from there, they wont be in the same positions or font)
 * The exact same brick breaking effect of the original SuperTux 0.0.6
