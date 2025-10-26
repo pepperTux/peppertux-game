@@ -1,7 +1,7 @@
 # pepperTux
 SuperTux fangame made using HaxeFlixel.
 
-hi this is going in a different direction than before so there wont be forest stuff after all
+nevermind there will be forest stuff
 
 ## Story
 Not added yet.
@@ -14,7 +14,7 @@ Same way you make levels for HaxeTux. I would not recommend making a level yet.
 
 ## Credits (Not all of these are added yet, especially because this repository was just made...)
 * Vaesea - The game
-* Everyone who worked on SuperTux - Assets from Milestone 1
+* Everyone who worked on SuperTux - Assets from Milestone 1 and Milestone 2
 * Lukas Nystrand (Mortimer Twang) - Mortimer's Chipdisko
 * Larry Ewing - Creator of Tux
 * Discover HaxeFlixel (Book) + Scribd - This is the tutorial I followed to make HaxeTux
