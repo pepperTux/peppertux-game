@@ -25,8 +25,8 @@ class BonusBlock extends FlxSprite
         immovable = true;
 
         frames = blockImage;
-        animation.addByPrefix('full', 'full', 12, false);
-        animation.addByPrefix('empty', 'empty', 12, false);
+        animation.addByPrefix('full', 'bonusblock full', 12, false); // I messed up and used default settings for the FNF Spritesheet and XML generator.
+        animation.addByPrefix('empty', 'bonusblock empty', 12, false);
         animation.play("full");
 
         HFraycast2d = new FlxSprite(x + 8, y + height);
@@ -61,18 +61,19 @@ class BonusBlock extends FlxSprite
         switch (content)
         {
             default:
-                var distro:Distro = new Distro(Std.int(x), Std.int(y - 32));
-                distro.setFromBlock();
-                Global.PS.items.add(distro);
+                var Coin:Coin = new Coin(Std.int(x), Std.int(y - 32));
+                Coin.setFromBlock();
+                Global.PS.items.add(Coin);
             
             case "powerup":
                 var powerup:PowerUp = new PowerUp(Std.int(x), Std.int(y - 32));
                 Global.PS.items.add(powerup);
                 FlxG.sound.play('assets/sounds/upgrade.wav');
             
-            case "herring":
+            case "star":
                 var herring:Herring = new Herring(Std.int(x), Std.int(y - 32));
                 Global.PS.items.add(herring);
+                FlxG.sound.play('assets/sounds/upgrade.wav');
         }
     }
 }

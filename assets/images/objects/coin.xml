@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="coin.png">
+<SubTexture name="idle0000" x="0" y="0" width="36" height="36" frameX="0" frameY="0" frameWidth="32" frameHeight="32" />
+<SubTexture name="idle0001" x="36" y="0" width="24" height="36" frameX="-6" frameY="0" frameWidth="32" frameHeight="32" />
+<SubTexture name="idle0002" x="0" y="36" width="12" height="36" frameX="-12" frameY="0" frameWidth="32" frameHeight="32" />
+<SubTexture name="idle0003" x="36" y="0" width="24" height="36" frameX="-6" frameY="0" frameWidth="32" frameHeight="32" />
+</TextureAtlas>

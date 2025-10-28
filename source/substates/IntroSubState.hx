@@ -5,7 +5,6 @@ import flixel.FlxSubState;
 import flixel.text.FlxText;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
-import lime.system.System;
 import states.MainMenuState;
 
 class IntroSubState extends FlxSubState

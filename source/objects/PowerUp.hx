@@ -26,17 +26,14 @@ class PowerUp extends FlxSprite
         {
             mints = true;
             coffee = false;
-            loadGraphic('assets/images/objects/mints.png', false);
+            loadGraphic('assets/images/objects/egg.png', false);
         }
         else
         {
             coffee = true;
             mints = false;
-            loadGraphic('assets/images/objects/coffee.png', false);
+            loadGraphic('assets/images/objects/fireflower.png', false);
         }
-
-        setSize(30, 16);
-        offset.set(1, 16);
 
         solid = true;
 
@@ -74,7 +71,7 @@ class PowerUp extends FlxSprite
         }
         if (coffee)
         {
-            FlxG.sound.play('assets/sounds/coffee.wav');
+            FlxG.sound.play('assets/sounds/fire-flower.wav');
             kill();
             tux.fireTux();
             Global.score += scoreAmount;

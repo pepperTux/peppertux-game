@@ -10,10 +10,10 @@ import flixel.FlxState;
 import flixel.group.FlxGroup;
 import flixel.tile.FlxTilemap;
 import flixel.util.FlxColor;
-import objects.Ball;
+import objects.Fireball;
 import objects.BonusBlock;
 import objects.BrickBlock;
-import objects.Distro;
+import objects.Coin;
 import objects.Goal;
 import objects.Herring;
 import objects.PowerUp;
@@ -23,6 +23,7 @@ class PlayState extends FlxState
 {
 	public var map:FlxTilemap;
 
+	public var collision(default, null):FlxTypedGroup<FlxSprite>;
 	public var atiles(default, null):FlxTypedGroup<FlxSprite>;
 	public var tux(default, null):Tux;
 	public var items(default, null):FlxTypedGroup<FlxSprite>;
@@ -40,6 +41,7 @@ class PlayState extends FlxState
 		Global.PS = this;
 
 		// Add stuff part 1
+		collision = new FlxTypedGroup<FlxSprite>();
 		atiles = new FlxTypedGroup<FlxSprite>();
 		entities = new FlxGroup();
 		items = new FlxTypedGroup<FlxSprite>();
@@ -59,6 +61,7 @@ class PlayState extends FlxState
 		entities.add(bricks);
 		entities.add(blocks);
 		entities.add(enemies);
+		add(collision);
 		add(atiles);
 		add(entities);
 		add(tux);
@@ -69,8 +72,6 @@ class PlayState extends FlxState
 		FlxG.camera.setScrollBoundsRect(0, 0, map.width, map.height, true);
 
 		openSubState(new IntroSubState(FlxColor.BLACK));
-		Global.score = 0;
-		Global.distros = 0;
 		super.create();
 	}
 
@@ -79,13 +80,13 @@ class PlayState extends FlxState
 		super.update(elapsed);
 
 		// Tux collision
+		FlxG.collide(collision, tux);
 		FlxG.overlap(entities, tux, collideEntities);
 		FlxG.collide(tux, blocks, collideEntities);
 		FlxG.collide(tux, bricks, collideEntities);
-		FlxG.collide(map, tux);
 
 		// Enemy collision
-		FlxG.collide(map, entities);
+		FlxG.collide(collision, entities);
 		FlxG.collide(enemies, blocks);
 		FlxG.collide(enemies, bricks);
 		FlxG.overlap(entities, enemies, function (entity:FlxSprite, enemy:Enemy)
@@ -94,21 +95,21 @@ class PlayState extends FlxState
 			{
 				enemy.collideOtherEnemy(cast entity);
 			}
-			if (Std.isOfType(entity, Ball))
+			if (Std.isOfType(entity, Fireball))
 			{
-				enemy.collideBall(cast entity);
+				enemy.collideFireball(cast entity);
 			}
 		} );
 
 		// Item collision
-		FlxG.collide(map, items);
+		FlxG.collide(collision, items);
 		FlxG.collide(items, blocks);
 		FlxG.collide(items, bricks);
 	}
 
 	function collideEntities(entity:FlxSprite, tux:Tux)
 	{
-		if (Std.isOfType(entity, Distro))
+		if (Std.isOfType(entity, Coin))
 		{
 			(cast entity).collect();
 		}

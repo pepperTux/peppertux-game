@@ -1,10 +1,10 @@
 package creatures;
 
+import objects.Fireball;
 import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.FlxSprite;
 import flixel.util.FlxTimer;
-import objects.Ball;
 
 enum EnemyStates
 {
@@ -21,14 +21,14 @@ class Enemy extends FlxSprite
 
     var currentState = Alive;
 
-    var canBallDamage = true;
+    var canFireballDamage = true;
 
     var gravity = 1000;
-    var walkSpeed = 115;
+    var walkSpeed = 80;
     var jumpHeight = 128;
     var scoreAmount = 50;
     var bag = false;
-    var tornado = false;
+    var tornado = false; // Not sure why I added this?
     public var direction = -1;
     var appeared = false;
 
@@ -67,7 +67,7 @@ class Enemy extends FlxSprite
             }
         }
 
-        if (appeared && alive && bag == false && tornado == false)
+        if (appeared && alive && (bag == false || tornado == false))
         {
             move();
         }
@@ -141,7 +141,7 @@ class Enemy extends FlxSprite
         else
         {
             FlxG.sound.play("assets/sounds/fall.wav");
-            animation.play("fall");
+            flipY = true;
             acceleration.x = 0;
             velocity.x = fallForce;
             velocity.y = -fallForce;
@@ -171,10 +171,10 @@ class Enemy extends FlxSprite
         }
     }
 
-    public function collideBall(ball:Ball)
+    public function collideFireball(fireball:Fireball)
     {
-        ball.kill();
-        if (canBallDamage)
+        fireball.kill();
+        if (canFireballDamage)
         {
             killFall();
         }

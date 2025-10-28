@@ -21,7 +21,7 @@ class MainMenuState extends FlxState
         Global.currentLevel = 0;
         Global.lives = 3;
         Global.score = 0;
-        Global.distros = 0;
+        Global.coins = 0;
 
         // Adding Title Screen background
         var bg = new FlxSprite();

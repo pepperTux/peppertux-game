@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="flyingsnowball.png">
+<SubTexture name="fly0000" x="0" y="0" width="44" height="47" frameX="0" frameY="0" frameWidth="40" frameHeight="43" />
+<SubTexture name="fly0001" x="0" y="47" width="44" height="47" frameX="0" frameY="0" frameWidth="40" frameHeight="43" />
+<SubTexture name="squished0000" x="0" y="94" width="44" height="25" frameX="0" frameY="-22" frameWidth="40" frameHeight="43" />
+</TextureAtlas>

@@ -16,7 +16,7 @@ class Herring extends FlxSprite
     public function new (x:Float, y:Float)
     {
         super(x, y);
-        loadGraphic("assets/images/objects/golden-herring.png", false);
+        loadGraphic("assets/images/objects/star.png", false);
 
         setSize(30, 12);
         offset.set(1, 10);
@@ -43,7 +43,7 @@ class Herring extends FlxSprite
 
     public function collect(tux:Tux)
     {
-        FlxG.sound.play('assets/sounds/herring.wav');
+        FlxG.sound.play('assets/sounds/invincible.wav');
         kill();
         tux.herringTux();
         Global.score += scoreAmount;
