@@ -2,6 +2,7 @@
 <map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="328" height="15" tilewidth="32" tileheight="32" infinite="0" nextlayerid="19" nextobjectid="673">
  <properties>
   <property name="bg" value="assets/images/backgrounds/arctis2.png"/>
+  <property name="levelCreator" value="Sophie Ball"/>
   <property name="levelName" value="Beginning The Journey"/>
   <property name="music" value="assets/music/chipdisko.ogg"/>
  </properties>
@@ -112,7 +113,7 @@
   <object id="661" gid="381" x="8960" y="448" width="32" height="32"/>
  </objectgroup>
  <objectgroup id="6" name="Player">
-  <object id="302" gid="353" x="32" y="320" width="32" height="32"/>
+  <object id="302" gid="353" x="32" y="288" width="32" height="32"/>
  </objectgroup>
  <objectgroup id="13" name="Bricks">
   <object id="415" type="snow" gid="393" x="768" y="320" width="32" height="32"/>

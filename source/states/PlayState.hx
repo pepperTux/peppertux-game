@@ -1,5 +1,9 @@
 package states;
 
+// Original file made by Vaesea
+// Saving Tux's state support done by AnatoyStev
+
+import flixel.tile.FlxTile;
 import LevelLoader;
 import creatures.Enemy;
 import creatures.Tux;
@@ -22,6 +26,7 @@ import substates.IntroSubState;
 class PlayState extends FlxState
 {
 	public var map:FlxTilemap;
+	public var foregroundMap:FlxTilemap;
 
 	public var collision(default, null):FlxTypedGroup<FlxSprite>;
 	public var atiles(default, null):FlxTypedGroup<FlxSprite>;
@@ -30,6 +35,7 @@ class PlayState extends FlxState
 	public var blocks(default, null):FlxTypedGroup<FlxSprite>;
 	public var bricks(default, null):FlxTypedGroup<FlxSprite>;
 	public var enemies(default, null):FlxTypedGroup<Enemy>;
+	public var atilesFront(default, null):FlxTypedGroup<FlxSprite>;
 
 	var hud:HUD;
 
@@ -49,6 +55,9 @@ class PlayState extends FlxState
 		blocks = new FlxTypedGroup<FlxSprite>();
 		enemies = new FlxTypedGroup<Enemy>();
 		tux = new Tux();
+		tux.currentState = Global.tuxState;
+		tux.reloadGraphics(); // May seem VERY useless but I just want to make it work.
+		atilesFront = new FlxTypedGroup<FlxSprite>();
 		hud = new HUD();
 
 		var numberOfLevel = Global.levels[Global.currentLevel];
@@ -65,6 +74,8 @@ class PlayState extends FlxState
 		add(atiles);
 		add(entities);
 		add(tux);
+		add(atilesFront);
+		add(foregroundMap);
 		add(hud);
 
 		// Camera

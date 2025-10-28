@@ -11,6 +11,7 @@ class IntroSubState extends FlxSubState
 {
     var readyText:FlxText;
     var titleText:FlxText;
+    var creatorText:FlxText;
 
     var gameOver = false;
     var waitTime = 2;
@@ -35,6 +36,12 @@ class IntroSubState extends FlxSubState
         titleText.screenCenter(X);
         titleText.borderSize = 1.25;
 
+        creatorText = new FlxText(0, 21, 0, Global.creatorOfLevel, 14);
+        creatorText.setFormat(null, 14, FlxColor.BLACK, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.WHITE);
+        creatorText.scrollFactor.set();
+        creatorText.screenCenter(X);
+        creatorText.borderSize = 1.25;
+
         readyText = new FlxText(0, 0, 0, "Get Ready!", 14);
         readyText.setFormat(null, 14, FlxColor.BLACK, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.WHITE);
         readyText.scrollFactor.set();
@@ -42,11 +49,13 @@ class IntroSubState extends FlxSubState
         readyText.borderSize = 1.25;
 
         add(titleText);
+        add(creatorText);
         add(readyText);
 
         if (gameOver)
         {
             titleText.visible = false;
+            creatorText.visible = false;
             readyText.text = "Game Over";
         }
 

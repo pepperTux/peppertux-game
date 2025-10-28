@@ -2,6 +2,7 @@
 <map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="424" height="15" tilewidth="32" tileheight="32" infinite="0" nextlayerid="19" nextobjectid="656">
  <properties>
   <property name="bg" value="assets/images/backgrounds/arctis2.png"/>
+  <property name="levelCreator" value="Sophie Ball"/>
   <property name="levelName" value="Welcome To PepperTux"/>
   <property name="music" value="assets/music/chipdisko.ogg"/>
  </properties>
@@ -145,7 +146,7 @@
   <object id="654" gid="381" x="12320" y="160" width="32" height="32"/>
  </objectgroup>
  <objectgroup id="6" name="Player">
-  <object id="302" gid="353" x="32" y="384" width="32" height="32"/>
+  <object id="302" gid="353" x="32" y="352" width="32" height="32"/>
  </objectgroup>
  <objectgroup id="13" name="Bricks">
   <object id="402" type="snow" gid="393" x="416" y="320" width="32" height="32"/>

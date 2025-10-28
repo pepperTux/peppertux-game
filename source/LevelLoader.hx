@@ -31,12 +31,14 @@ class LevelLoader extends FlxState
     {
         var tiledMap = new TiledMap("assets/data/levels/" + level + ".tmx");
 
-        // MAKE SURE TO PUT A SONG, BACKGROUND, LEVEL NAME AND BACKGROUND SPEED IN YOUR LEVEL OR THE GAME MIGHT CRASH!!!!!!!!!! Sorry for not being very professional but I just needed to make it VERY clear. Do NOT remove the custom properties of the base level for your level.
+        // MAKE SURE TO PUT THESE THINGS IN YOUR LEVEL OR THE GAME MIGHT CRASH!!!!!!!!!! Sorry for not being very professional but I just needed to make it VERY clear. Do NOT remove the custom properties of the base level for your level.
         var song = tiledMap.properties.get("music");
         var bg = tiledMap.properties.get("bg");
         var levelName = tiledMap.properties.get("levelName");
+        var levelCreator = tiledMap.properties.get("levelCreator");
 
         Global.levelName = levelName;
+        Global.creatorOfLevel = levelCreator;
 
         // FlxG.sound.playMusic(song, 1.0, true); only add back if there's a problem
         Global.currentSong = song;
@@ -85,9 +87,9 @@ class LevelLoader extends FlxState
         // Foreground
         var foregroundLayer:TiledTileLayer = cast tiledMap.getLayer("Foreground");
         
-        var foregroundMap = new FlxTilemap();
-        foregroundMap.loadMapFromArray(foregroundLayer.tileArray, tiledMap.width, tiledMap.height, "assets/images/normalTiles.png", 32, 32, 1);
-        foregroundMap.solid = false;
+        state.foregroundMap = new FlxTilemap();
+        state.foregroundMap.loadMapFromArray(foregroundLayer.tileArray, tiledMap.width, tiledMap.height, "assets/images/normalTiles.png", 32, 32, 1);
+        state.foregroundMap.solid = false;
 
         state.add(furthestBackgroundMap);
         state.add(evenFurtherBackgroundMap);
@@ -173,12 +175,25 @@ class LevelLoader extends FlxState
                 case "bouncingsnowball":
                     state.enemies.add(new BouncingSnowball(enemy.x, enemy.y - 32));
             }
+        
+        for (object in getLevelObjects(tiledMap, "Animated Tiles Foreground"))
+        {
+            switch (object.type)
+            {
+                default:
+                    state.atilesFront.add(new Water(object.x, object.y - 32));
+                case "trans":
+                    state.atilesFront.add(new WaterTrans(object.x, object.y - 32));
+                case "flag":
+                    state.atilesFront.add(new Flag(object.x, object.y - 32));
+            }
+        }
 
         // Don't be like me. Don't remove this.
         var tuxPosition:TiledObject = getLevelObjects(tiledMap, "Player")[0];
         state.tux.setPosition(tuxPosition.x, tuxPosition.y - 37);
+
         
-        state.add(foregroundMap);
     }
 
     public static function getLevelObjects(map:TiledMap, layer:String):Array<TiledObject>

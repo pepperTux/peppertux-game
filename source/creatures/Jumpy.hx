@@ -14,6 +14,8 @@ class Jumpy extends Enemy
 
         frames = jumpyImage;
         animation.addByPrefix('jump', 'jump', 8, false);
+
+        bag = true;
         
         acceleration.y = gravity;
 

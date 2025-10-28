@@ -168,6 +168,7 @@ class CoinNormalBrickBlock extends FlxSprite
     var gravity = 1000;
 
     var howManyHits = 3;
+    var isHit = false;
 
     var HFraycast2d:FlxSprite; // it's BASICALLY a raycast2d, right??
 
@@ -202,7 +203,7 @@ class CoinNormalBrickBlock extends FlxSprite
     
     public function hit(tux:Tux)
     {
-        if (HFraycast2d.overlaps(tux) == false)
+        if (HFraycast2d.overlaps(tux) == false || isHit == true)
         {
             return;
         }
@@ -211,9 +212,13 @@ class CoinNormalBrickBlock extends FlxSprite
         {
             var currentY = y;
             howManyHits -= 1;
+            isHit = true;
             FlxTween.tween(this, {y: currentY - 4}, 0.05)
             .wait(0.05)
-            .then(FlxTween.tween(this, {y: currentY}, 0.05));
+            .then(FlxTween.tween(this, {y: currentY}, 0.05, {onComplete: function (_)
+            {
+                isHit = false;
+            }}));
             createItem();
         }
     }
@@ -233,6 +238,7 @@ class CoinSnowBrickBlock extends FlxSprite
     var gravity = 1000;
 
     var howManyHits = 3;
+    var isHit = false;
 
     var HFraycast2d:FlxSprite; // it's BASICALLY a raycast2d, right??
 
@@ -267,7 +273,7 @@ class CoinSnowBrickBlock extends FlxSprite
     
     public function hit(tux:Tux)
     {
-        if (HFraycast2d.overlaps(tux) == false)
+        if (HFraycast2d.overlaps(tux) == false || isHit == true)
         {
             return;
         }
@@ -276,9 +282,13 @@ class CoinSnowBrickBlock extends FlxSprite
         {
             var currentY = y;
             howManyHits -= 1;
+            isHit = true;
             FlxTween.tween(this, {y: currentY - 4}, 0.05)
             .wait(0.05)
-            .then(FlxTween.tween(this, {y: currentY}, 0.05));
+            .then(FlxTween.tween(this, {y: currentY}, 0.05, {onComplete: function (_)
+            {
+                isHit = false;
+            }}));
             createItem();
         }
     }

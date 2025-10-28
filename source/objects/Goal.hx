@@ -23,6 +23,7 @@ class Goal extends FlxSprite
         {
             solid = false;
             Global.currentLevel += 1;
+            Global.tuxState = tux.currentState;
         }
 
         if (Global.currentLevel >= Global.levels.length)

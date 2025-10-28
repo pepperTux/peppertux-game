@@ -23,6 +23,9 @@ enum TuxStates
 
 class Tux extends FlxSprite
 {
+    // (Added by AnatolyStev) Holding Iceblock Stuff
+    public var heldIceblock:Iceblock = null;
+
     // Current State
     public var currentState = Small;
 
@@ -136,6 +139,7 @@ class Tux extends FlxSprite
         else if (FlxG.keys.justPressed.FIVE)
         {
             Global.currentLevel += 1;
+            Global.tuxState = currentState;
             FlxG.switchState(PlayState.new);
         }
         #end
@@ -271,8 +275,41 @@ class Tux extends FlxSprite
 
         shootBall();
 
+        if (heldIceblock != null)
+        {
+            if (FlxG.keys.justReleased.CONTROL)
+            {
+                throwIceblock();
+            }
+        }
+
 		super.update(elapsed); // Put this after the movement code, should probably also be after everything else in update.
 	}
+
+    public function holdIceblock(iceblock:Iceblock)
+    {
+        if (heldIceblock != null)
+        {
+            return;
+        }
+
+        if (FlxG.keys.pressed.CONTROL)
+        {
+            heldIceblock = iceblock;
+            iceblock.pickUp(this);
+        }
+    }
+
+    public function throwIceblock()
+    {
+        if (heldIceblock == null)
+        {
+            return;
+        }
+
+        heldIceblock.iceblockThrow();
+        heldIceblock = null;
+    }
 
     public function takeDamage() //  Makes Tux take damage.
     {
@@ -307,7 +344,7 @@ class Tux extends FlxSprite
         FlxG.resetState();
     }
 
-    function reloadGraphics()
+    public function reloadGraphics()
     {
         animation.reset();
 

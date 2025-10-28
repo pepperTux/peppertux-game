@@ -1,9 +1,9 @@
 welcome_peppertux
 beginning_journey
-antarctica_path
-freezing_air
+snowball_path
+platforms_icy_river
 bombs_ice
-penguin_cant_swim
+freezing_air
 cant_under
 snowy_evening
 arctic_night
