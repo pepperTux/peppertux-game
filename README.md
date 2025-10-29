@@ -10,7 +10,7 @@ Not added yet.
 Same way you compile HaxeTux.
 
 ## How do I make levels?
-Same way you make levels for HaxeTux. I would not recommend making a level yet.
+Same way you make levels for HaxeTux.
 
 ## Credits (Not all of these are added yet, especially because this repository was just made...)
 * Vaesea - The game
