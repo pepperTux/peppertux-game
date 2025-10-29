@@ -13,9 +13,9 @@ Same way you compile HaxeTux.
 Same way you make levels for HaxeTux.
 
 ## Credits (Not all of these are added yet, especially because this repository was just made...)
-* Vaesea - The game
-* Everyone who worked on SuperTux - Assets from Milestone 1 and Milestone 2 (Some assets from Milestone 2 may be used but I'm not sure yet)
+* Steel Paperclip Team (Vaesea, AnatolyStev, Convival) - The game
+* Everyone who worked on SuperTux - Assets from Milestone 1 and Milestone 2 (Some assets from Milestone 2 are added, like the voc music for example)
 * Lukas Nystrand (Mortimer Twang) - Mortimer's Chipdisko
+* Mystical - Salcon
 * Larry Ewing - Creator of Tux
 * Discover HaxeFlixel (Book) + Scribd - This is the tutorial I followed to make HaxeTux
-* Bart + Remaxim + OpenGameArt - Airship Song (Orchestral Remix) (You can find the original song and the licenses here: https://opengameart.org/content/airship-song) (You can find the remix and the licenses here: https://opengameart.org/content/airship-song-orchestral-remix)
