@@ -1,5 +1,6 @@
 package;
 
+import creatures.Bomb;
 import creatures.BouncingSnowball;
 import objects.Solid;
 import creatures.Smartball;
@@ -174,6 +175,8 @@ class LevelLoader extends FlxState
                     state.enemies.add(new Iceblock(enemy.x, enemy.y - 30));
                 case "bouncingsnowball":
                     state.enemies.add(new BouncingSnowball(enemy.x, enemy.y - 32));
+                case "bomb":
+                    state.enemies.add(new Bomb(enemy.x, enemy.y - 35));
             }
         
         for (object in getLevelObjects(tiledMap, "Animated Tiles Foreground"))

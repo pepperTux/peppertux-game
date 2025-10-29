@@ -1,5 +1,6 @@
 package objects;
 
+import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.FlxSprite;
 
 class Fireball extends FlxSprite
@@ -10,11 +11,15 @@ class Fireball extends FlxSprite
 
     public var direction = -1;
 
+    var fireballImage = FlxAtlasFrames.fromSparrow("assets/images/objects/firebullet.png", "assets/images/objects/firebullet.xml");
+
     public function new(x:Float, y:Float)
     {
         super(x, y);
 
-        loadGraphic("assets/images/objects/firebullet.png", false); // REPLACE WITH SPRITESHEET!
+        frames = fireballImage;
+        animation.addByPrefix('normal', 'normal', 12, true);
+        animation.play('normal');
 
         acceleration.y = gravity;
     }

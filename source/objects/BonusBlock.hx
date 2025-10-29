@@ -3,6 +3,8 @@ package objects;
 // Made by Vaesea, fixed by AnatolyStev
 // Well actually it came from Discover Haxeflixel but still
 
+// Note from Vaesea: AnatolyStev meant Area2D probably
+
 import creatures.Tux;
 import flixel.FlxG;
 import flixel.FlxSprite;

@@ -1,0 +1,28 @@
+MILESTONE 1:
+"welcome_peppertux" = Welcome To pepperTux. It's a level that introduces you to the basic stuff, but is also sure you already know it by now.
+"beginning_journey" = Beginning The Journey. It's a level that introduces you to Spikys and Secret Areas with a really easy-to-find secret area that even a Snowball finds!
+"snowball_path" = Snowball Path. It's a level that introduces you to Bouncing Snowballs and is a remake of the first ever SuperTux level. The original level was made by Bill Kendrick and the remake was made by Sophie "Vaesea" Ball.
+"platforms_icy_river" = Platforms In The Icy River. It's a level that introduces you to the fact that Tux can't swim. It was not made by Vaesea and was in fact made by AnatolyStev. The level is pretty hard to beat, so it's sort of like a miniboss as a level!
+"bombs_ice" - Bombs On Ice. It's a level that introduces you to Mr Bombs, but you can also see and walk on bridges made out of wood.
+"freezing_air" - Freezing Air. It's going to be a level that introduces you to the sky. This was originally the 4th level until AnatolyStev made Platforms In The Icy River.
+"cant_under" - Can't Go Under It. It's going to be another sky level.
+"snowy_evening" - Snowy Evening. It's going to be an evening level.
+"arctic_night" - Arctic Night. It's going to be a night level.
+"find_star" - Find The Star. It's going to be a level that introduces you to the star powerup.
+"above_night" - Above The Night Sky. It's going to be a sky level that takes place in the night.
+"icy_sunrise" - Icy Sunrise. It's going to be a sunrise level.
+"back_to_morning" - Back To The Morning. It's going to be a level that introduces you to stalactites!
+"entering_cave" - Entering The Cave. It's going to be a random morning level that has a 2nd half that uses the cave tileset, similar to the SuperTux / Original version of this level idea.
+"no_snow" - No Snow. It's going to be a level that introduces you to the cave.
+"cave_water" - Cave Of Water. It's going to be a level that features a lot of water in a cave.
+"taking_dive" - Taking A Dive. It's going to be a level that again, for some reason, features a lot of water? If anyone has a better level idea and a "proof of concept" (actual level, unfinished or not), please tell me.
+"dark_ice" - Dark Ice. It's going to be another cave level, this time with no water. It's named after the tiles.
+"arctic_freezer" - Arctic Freezer. It's going to be another cave level, possibly with a secret where you can walk on top of the level to skip a quarter of it.
+"end_cave" - End Of The Cave. It's going to be the last cave level in World 1.
+"solid_clouds" - Solid Clouds. It's going to be another sky level, however, some of the clouds will be solid, which will let you access a secret area.
+"snow_fortress" - Snow Fortress. It's going to be a level that takes place in an almost-cave, however, it won't have the cave tileset except for the background of the level, which will be the middle tile of the cave tileset.
+"escaping_building" - Escaping The Building. It's going to be another snow level, beginning with the same start as "The Escape" from SuperTux.
+"broken_aqueduct" - Broken Aqueduct. It's going to be a bridge level, similar to "Shattered Bridge" from SuperTux.
+"ruins_antarctica" - Ruins Of Antarctica. It's going to be another bridge level, similar to "Arctic Ruins" from SuperTux.
+"white_hills" - White Hills. It's going to be a level that features hills, however unfortunately they can't have slopes because HaxeFlixel doesn't handle that well.
+"nolok_citadel" - Nolok's Citadel. It's going to be a castle level that introduces the flame enemy.
