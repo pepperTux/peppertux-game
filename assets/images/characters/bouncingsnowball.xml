@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="bouncingsnowball.png">
+<SubTexture name="bounce0000" x="38" y="0" width="39" height="36" frameX="0" frameY="0" frameWidth="35" frameHeight="32" />
+<SubTexture name="bounce0001" x="0" y="36" width="39" height="36" frameX="0" frameY="0" frameWidth="35" frameHeight="32" />
+<SubTexture name="bounce0002" x="39" y="36" width="39" height="36" frameX="0" frameY="0" frameWidth="35" frameHeight="32" />
+<SubTexture name="bounce0003" x="0" y="72" width="39" height="36" frameX="0" frameY="0" frameWidth="35" frameHeight="32" />
+<SubTexture name="bounce0004" x="39" y="72" width="39" height="36" frameX="0" frameY="0" frameWidth="35" frameHeight="32" />
+<SubTexture name="bounce0005" x="0" y="108" width="39" height="36" frameX="0" frameY="0" frameWidth="35" frameHeight="32" />
+<SubTexture name="squished0000" x="0" y="0" width="38" height="18" frameX="0" frameY="-18" frameWidth="35" frameHeight="32" />
+</TextureAtlas>

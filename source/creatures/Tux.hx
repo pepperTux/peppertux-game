@@ -11,7 +11,7 @@ import flixel.FlxSprite;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.util.FlxDirectionFlags;
 import flixel.util.FlxTimer;
-import objects.Ball;
+import objects.Fireball;
 import states.PlayState;
 
 enum TuxStates
@@ -23,6 +23,9 @@ enum TuxStates
 
 class Tux extends FlxSprite
 {
+    // (Added by AnatolyStev) Holding Iceblock Stuff
+    public var heldIceblock:Iceblock = null;
+
     // Current State
     public var currentState = Small;
 
@@ -43,6 +46,8 @@ class Tux extends FlxSprite
     var walkSpeed = 230;
     var speed = 0; // DON'T CHANGE THIS UNLESS YOU KNOW WHAT YOU'RE DOING. You should only change walkSpeed and runSpeed.
     var runSpeed = 320;
+    var tuxAcceleration = 2000;
+    var deceleration = 1600;
 
     // Direction
     public var direction = 1;
@@ -61,7 +66,7 @@ class Tux extends FlxSprite
 
     // Images, if replaced, make sure the replacement image has the same animations!
     var smallTuxImage = FlxAtlasFrames.fromSparrow("assets/images/characters/tux/smalltux.png", "assets/images/characters/tux/smalltux.xml");
-    var bigTuxImage = FlxAtlasFrames.fromSparrow("assets/images/characters/tux/tux.png", "assets/images/characters/tux/tux.xml");
+    var bigTuxImage = FlxAtlasFrames.fromSparrow("assets/images/characters/tux/bigtux.png", "assets/images/characters/tux/bigtux.xml");
     var fireTuxImage = FlxAtlasFrames.fromSparrow("assets/images/characters/tux/firetux.png", "assets/images/characters/tux/firetux.xml");
 
     // You probably shouldn't change any of the below if you're making a mod.
@@ -69,11 +74,13 @@ class Tux extends FlxSprite
     {
         super();
 
+        // Is this even needed? I'm NEVER doing this coding stuff for a job. Pretty sure I did this when I was really tired. I'm extremely sorry.
         smallTuxImage = FlxAtlasFrames.fromSparrow("assets/images/characters/tux/smalltux.png", "assets/images/characters/tux/smalltux.xml");
-        bigTuxImage = FlxAtlasFrames.fromSparrow("assets/images/characters/tux/tux.png", "assets/images/characters/tux/tux.xml");
+        bigTuxImage = FlxAtlasFrames.fromSparrow("assets/images/characters/tux/bigtux.png", "assets/images/characters/tux/bigtux.xml");
         fireTuxImage = FlxAtlasFrames.fromSparrow("assets/images/characters/tux/firetux.png", "assets/images/characters/tux/firetux.xml");
         
-        drag.x = 4800; // Add Deceleration
+        drag.x = deceleration; // Add Deceleration
+        acceleration.x = 0; // Stop him before keys are pressed, very important.
         acceleration.y = gravity; // Add Gravity
 
         switch(currentState)
@@ -91,8 +98,8 @@ class Tux extends FlxSprite
         bigCape = new FlxSprite(this.x, this.y);
         smallCape.loadGraphic("assets/images/characters/tux/cape.png", true, 32, 32);
         bigCape.loadGraphic("assets/images/characters/tux/bigcape.png", true, 64, 64);
-        smallCape.animation.add("normal", [0, 1], 16, true);
-        bigCape.animation.add("alsonormal", [0, 1], 16, true); // Just trying to prevent flickering between the 2 capes!
+        smallCape.animation.add("normal", [0, 1], 16, true); // REPLACE THIS WITH STARS
+        bigCape.animation.add("alsonormal", [0, 1], 16, true); // REPLACE THIS WITH STARS
         smallCape.setSize(32, 32);
         bigCape.setSize(32, 32);
         smallCape.solid = false;
@@ -132,6 +139,7 @@ class Tux extends FlxSprite
         else if (FlxG.keys.justPressed.FIVE)
         {
             Global.currentLevel += 1;
+            Global.tuxState = currentState;
             FlxG.switchState(PlayState.new);
         }
         #end
@@ -175,13 +183,13 @@ class Tux extends FlxSprite
             smallCape.offset.x = 4;
             bigCape.offset.x = 4;
         }
-        if ((velocity.y > 0 || velocity.y < 0) && currentState != Small)
+        if ((velocity.y > 0 || velocity.y < 0))
         {
             animation.play('jump');
         }
 
         // Stuff to move Tux
-        if (FlxG.keys.anyPressed([CONTROL])) // Running
+        if (FlxG.keys.pressed.CONTROL) // Running
         {
             speed = runSpeed;
         }
@@ -189,14 +197,22 @@ class Tux extends FlxSprite
         {
             speed = walkSpeed;
         }
+
+        maxVelocity.x = speed; // Stop Tux from running too fast. This is very important unless you want him to be like Sonic.
+
         if (FlxG.keys.anyPressed([LEFT, A]) && !FlxG.keys.anyPressed([RIGHT, D])) // Moving Left
         {
-            velocity.x = -speed;
+            acceleration.x = -tuxAcceleration;
         }
-        if (FlxG.keys.anyPressed([RIGHT, D]) && !FlxG.keys.anyPressed([LEFT, A])) // Moving Right
+        else if (FlxG.keys.anyPressed([RIGHT, D]) && !FlxG.keys.anyPressed([LEFT, A])) // Moving Right
         {
-            velocity.x = speed;
+            acceleration.x = tuxAcceleration;
         }
+        else
+        {
+            acceleration.x = 0;
+        }
+
         if (FlxG.keys.anyPressed([SPACE, UP, W]) && isTouching(FlxDirectionFlags.FLOOR)) // Jumping
         {
             if (velocity.x == 320 || velocity.x == -320)
@@ -259,8 +275,41 @@ class Tux extends FlxSprite
 
         shootBall();
 
+        if (heldIceblock != null)
+        {
+            if (FlxG.keys.justReleased.CONTROL)
+            {
+                throwIceblock();
+            }
+        }
+
 		super.update(elapsed); // Put this after the movement code, should probably also be after everything else in update.
 	}
+
+    public function holdIceblock(iceblock:Iceblock)
+    {
+        if (heldIceblock != null)
+        {
+            return;
+        }
+
+        if (FlxG.keys.pressed.CONTROL)
+        {
+            heldIceblock = iceblock;
+            iceblock.pickUp(this);
+        }
+    }
+
+    public function throwIceblock()
+    {
+        if (heldIceblock == null)
+        {
+            return;
+        }
+
+        heldIceblock.iceblockThrow();
+        heldIceblock = null;
+    }
 
     public function takeDamage() //  Makes Tux take damage.
     {
@@ -291,11 +340,11 @@ class Tux extends FlxSprite
     {
         canTakeDamage = false;
         Global.lives -= 1;
-        Global.distros = 0;
+        Global.coins = 0;
         FlxG.resetState();
     }
 
-    function reloadGraphics()
+    public function reloadGraphics()
     {
         animation.reset();
 
@@ -307,20 +356,21 @@ class Tux extends FlxSprite
 
                 animation.addByPrefix('stand', 'stand', 10, false);
                 animation.addByPrefix('walk', 'walk', 10, true);
+                animation.addByPrefix('jump', 'jump', 10, false);
                 animation.play('stand');
 
-                setSize(20, 30);
-                offset.set(6, 2);
+                setSize(27, 37);
+                offset.set(8, 5);
             case Big:
-                var fixedMaybeTwo = FlxAtlasFrames.fromSparrow("assets/images/characters/tux/tux.png", "assets/images/characters/tux/tux.xml");
+                var fixedMaybeTwo = FlxAtlasFrames.fromSparrow("assets/images/characters/tux/bigtux.png", "assets/images/characters/tux/bigtux.xml");
                 frames = fixedMaybeTwo;
                 animation.addByPrefix('stand', 'stand', 10, false);
                 animation.addByPrefix('walk', 'walk', 10, true);
                 animation.addByPrefix('jump', 'jump', 10, false);
                 animation.addByPrefix('duck', 'duck', 10, false);
                 animation.play('stand');
-                setSize(32, 60);
-                offset.set(8, 4);
+                setSize(30, 63);
+                offset.set(10, 4);
             case Fire:
                 var fixedMaybeThree = FlxAtlasFrames.fromSparrow("assets/images/characters/tux/firetux.png", "assets/images/characters/tux/firetux.xml");
                 frames = fixedMaybeThree;
@@ -329,8 +379,8 @@ class Tux extends FlxSprite
                 animation.addByPrefix('jump', 'jump', 10, false);
                 animation.addByPrefix('duck', 'duck', 10, false);
                 animation.play('stand');
-                setSize(32, 60);
-                offset.set(8, 4);
+                setSize(30, 63);
+                offset.set(10, 4);
         }
     }
 
@@ -385,9 +435,9 @@ class Tux extends FlxSprite
 
         if (FlxG.keys.justPressed.CONTROL && canShoot)
         {
-            var ball:Ball = new Ball(x + 16, y + 16);
-            ball.direction = direction;
-            Global.PS.items.add(ball);
+            var fireball:Fireball = new Fireball(x + 16, y + 16);
+            fireball.direction = direction;
+            Global.PS.items.add(fireball);
             FlxG.sound.play("assets/sounds/shoot.wav");
 
             canShoot = false;

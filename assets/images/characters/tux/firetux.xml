@@ -1,10 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
 <TextureAtlas imagePath="firetux.png">
-<SubTexture name="stand0000" x="0" y="0" width="51" height="68" frameX="0" frameY="0" frameWidth="48" frameHeight="64" />
-<SubTexture name="walk0000" x="51" y="0" width="51" height="68" frameX="-1" frameY="0" frameWidth="48" frameHeight="64" />
-<SubTexture name="walk0001" x="0" y="0" width="51" height="68" frameX="0" frameY="0" frameWidth="48" frameHeight="64" />
-<SubTexture name="walk0002" x="0" y="68" width="45" height="67" frameX="-5" frameY="0" frameWidth="48" frameHeight="64" />
-<SubTexture name="walk0003" x="0" y="0" width="51" height="68" frameX="0" frameY="0" frameWidth="48" frameHeight="64" />
-<SubTexture name="jump0000" x="45" y="68" width="51" height="68" frameX="0" frameY="0" frameWidth="48" frameHeight="64" />
-<SubTexture name="duck0000" x="0" y="136" width="51" height="52" frameX="-1" frameY="-16" frameWidth="48" frameHeight="64" />
+<SubTexture name="stand0000" x="0" y="0" width="46" height="69" frameX="-5" frameY="-2" frameWidth="53" frameHeight="67" />
+<SubTexture name="walk0000" x="46" y="0" width="49" height="69" frameX="-4" frameY="-2" frameWidth="53" frameHeight="67" />
+<SubTexture name="walk0001" x="95" y="0" width="47" height="67" frameX="-3" frameY="-4" frameWidth="53" frameHeight="67" />
+<SubTexture name="walk0002" x="0" y="69" width="46" height="70" frameX="-4" frameY="-1" frameWidth="53" frameHeight="67" />
+<SubTexture name="walk0003" x="46" y="69" width="50" height="68" frameX="-3" frameY="-3" frameWidth="53" frameHeight="67" />
+<SubTexture name="walk0004" x="96" y="69" width="50" height="67" frameX="-3" frameY="-4" frameWidth="53" frameHeight="67" />
+<SubTexture name="walk0005" x="0" y="139" width="50" height="70" frameX="-3" frameY="-1" frameWidth="53" frameHeight="67" />
+<SubTexture name="jump0000" x="50" y="139" width="54" height="70" frameX="-1" frameY="-1" frameWidth="53" frameHeight="67" />
+<SubTexture name="duck0000" x="104" y="139" width="47" height="42" frameX="-5" frameY="-29" frameWidth="53" frameHeight="67" />
 </TextureAtlas>

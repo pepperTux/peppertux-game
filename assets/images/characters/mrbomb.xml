@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="mrbomb.png">
+<SubTexture name="walk0000" x="0" y="0" width="49" height="49" frameX="0" frameY="0" frameWidth="45" frameHeight="45" />
+<SubTexture name="walk0001" x="49" y="0" width="49" height="49" frameX="0" frameY="0" frameWidth="45" frameHeight="45" />
+<SubTexture name="walk0002" x="0" y="49" width="49" height="49" frameX="0" frameY="0" frameWidth="45" frameHeight="45" />
+<SubTexture name="walk0003" x="49" y="0" width="49" height="49" frameX="0" frameY="0" frameWidth="45" frameHeight="45" />
+<SubTexture name="frozen0000" x="49" y="49" width="49" height="49" frameX="0" frameY="0" frameWidth="45" frameHeight="45" />
+<SubTexture name="exploding0000" x="0" y="98" width="47" height="45" frameX="-2" frameY="-4" frameWidth="45" frameHeight="45" />
+<SubTexture name="exploding0001" x="47" y="98" width="47" height="45" frameX="-2" frameY="-4" frameWidth="45" frameHeight="45" />
+</TextureAtlas>

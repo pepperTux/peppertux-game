@@ -1,8 +1,13 @@
 <?xml version='1.0' encoding='utf-8'?>
 <TextureAtlas imagePath="smalltux.png">
-<SubTexture name="stand0000" x="0" y="0" width="36" height="36" frameX="0" frameY="0" frameWidth="32" frameHeight="32" />
-<SubTexture name="walk0000" x="0" y="36" width="36" height="36" frameX="0" frameY="0" frameWidth="32" frameHeight="32" />
-<SubTexture name="walk0001" x="0" y="0" width="36" height="36" frameX="0" frameY="0" frameWidth="32" frameHeight="32" />
-<SubTexture name="walk0002" x="0" y="72" width="31" height="36" frameX="-4" frameY="0" frameWidth="32" frameHeight="32" />
-<SubTexture name="walk0003" x="0" y="0" width="36" height="36" frameX="0" frameY="0" frameWidth="32" frameHeight="32" />
+<SubTexture name="stand0000" x="0" y="0" width="46" height="44" frameX="-1" frameY="-2" frameWidth="43" frameHeight="42" />
+<SubTexture name="walk0000" x="46" y="0" width="46" height="44" frameX="-1" frameY="-2" frameWidth="43" frameHeight="42" />
+<SubTexture name="walk0001" x="0" y="44" width="46" height="43" frameX="-1" frameY="-3" frameWidth="43" frameHeight="42" />
+<SubTexture name="walk0002" x="46" y="44" width="46" height="44" frameX="-1" frameY="-2" frameWidth="43" frameHeight="42" />
+<SubTexture name="walk0003" x="0" y="88" width="46" height="45" frameX="-1" frameY="-1" frameWidth="43" frameHeight="42" />
+<SubTexture name="walk0004" x="46" y="88" width="46" height="44" frameX="-1" frameY="-2" frameWidth="43" frameHeight="42" />
+<SubTexture name="walk0005" x="0" y="133" width="46" height="43" frameX="-1" frameY="-3" frameWidth="43" frameHeight="42" />
+<SubTexture name="walk0006" x="0" y="0" width="46" height="44" frameX="-1" frameY="-2" frameWidth="43" frameHeight="42" />
+<SubTexture name="walk0007" x="46" y="133" width="46" height="45" frameX="-1" frameY="-1" frameWidth="43" frameHeight="42" />
+<SubTexture name="jump0000" x="0" y="178" width="47" height="46" frameX="0" frameY="0" frameWidth="43" frameHeight="42" />
 </TextureAtlas>

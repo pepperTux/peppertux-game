@@ -1,10 +1,13 @@
 package creatures;
 
+// Original file by Vaesea
+// Very simple Jumpy fix by AnatolyStev
+
+import objects.Fireball;
 import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.FlxSprite;
 import flixel.util.FlxTimer;
-import objects.Ball;
 
 enum EnemyStates
 {
@@ -21,14 +24,14 @@ class Enemy extends FlxSprite
 
     var currentState = Alive;
 
-    var canBallDamage = true;
+    var canFireballDamage = true;
 
     var gravity = 1000;
-    var walkSpeed = 115;
+    var walkSpeed = 80;
     var jumpHeight = 128;
     var scoreAmount = 50;
     var bag = false;
-    var tornado = false;
+    var tornado = false; // Not sure why I added this?
     public var direction = -1;
     var appeared = false;
 
@@ -41,34 +44,33 @@ class Enemy extends FlxSprite
 
     override public function update(elapsed: Float)
     {
-        if (!inWorldBounds() && (bag == false || tornado == false))
+        if (bag == false && tornado == false)
         {
-            exists = false;
-        }
-
-        if (isOnScreen() && (bag == false || tornado == false))
-        {
-            appeared = true;
-        }
-
-        if (bag == true)
-        {
-            exists = true;
-            appeared = true;
-        }
-
-        if (appeared && alive && (bag == false || tornado == false))
-        {
-            move();
-
-            if (justTouched(WALL))
+            if (!inWorldBounds())
             {
-                flipDirection();
+                exists = false;
+            }
+
+            if (isOnScreen())
+            {
+                appeared = true;
+            }
+
+            if (appeared && alive)
+            {
+                move();
+
+                if (justTouched(WALL))
+                {
+                    flipDirection();
+                }
             }
         }
 
-        if (appeared && alive && bag == false && tornado == false)
+        if (bag == true || tornado == true)
         {
+            exists = true;
+            appeared = true;
             move();
         }
 
@@ -94,17 +96,17 @@ class Enemy extends FlxSprite
             return;
         }
 
-        FlxObject.separateY(this, tux);
+        FlxObject.separateY(tux, this);
 
         if (tux.velocity.y > 0 && tux.y + tux.height < y + 10 && tux.invincible == false) // Can't just do the simple isTouching UP thing because then if the player hits the corner of the enemy, they take damage. That's not exactly fair.
         {
             if (FlxG.keys.anyPressed([SPACE, UP, W]))
             {
-                tux.velocity.y -= tux.maxJumpHeight;
+                tux.velocity.y = -tux.maxJumpHeight;
             }
             else
             {
-                tux.velocity.y -= tux.minJumpHeight;
+                tux.velocity.y = -tux.minJumpHeight / 2;
             }
 
             kill();
@@ -141,7 +143,7 @@ class Enemy extends FlxSprite
         else
         {
             FlxG.sound.play("assets/sounds/fall.wav");
-            animation.play("fall");
+            flipY = true;
             acceleration.x = 0;
             velocity.x = fallForce;
             velocity.y = -fallForce;
@@ -171,10 +173,10 @@ class Enemy extends FlxSprite
         }
     }
 
-    public function collideBall(ball:Ball)
+    public function collideFireball(fireball:Fireball)
     {
-        ball.kill();
-        if (canBallDamage)
+        fireball.kill();
+        if (canFireballDamage)
         {
             killFall();
         }

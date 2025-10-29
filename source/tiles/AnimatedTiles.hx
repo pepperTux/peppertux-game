@@ -16,7 +16,7 @@ class Water extends FlxSprite
     }
 }
 
-class Lava extends FlxSprite
+class WaterTrans extends FlxSprite
 {
     var framesPS = 12;
 
@@ -24,7 +24,7 @@ class Lava extends FlxSprite
     {
         super(x, y);
 
-        loadGraphic("assets/images/animatedtiles/lavawaves.png", true, 32, 32);
+        loadGraphic("assets/images/animatedtiles/waves-trans.png", true, 32, 32);
         animation.add("normal", [0, 1, 2], framesPS, true);
         animation.play("normal");
     }

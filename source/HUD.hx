@@ -1,6 +1,5 @@
 package;
 
-import flixel.FlxCamera;
 import flixel.FlxState;
 import flixel.text.FlxText;
 import flixel.util.FlxColor;
@@ -21,7 +20,7 @@ class HUD extends FlxState
         scoreText.scrollFactor.set();
         scoreText.borderSize = 1.25;
 
-        distroText = new FlxText(0, 4, 640, "Distros: " + Global.distros, 14);
+        distroText = new FlxText(0, 4, 640, "Coins: " + Global.coins, 14);
         distroText.setFormat(null, 14, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
         distroText.scrollFactor.set();
         distroText.borderSize = 1.25;
@@ -45,7 +44,7 @@ class HUD extends FlxState
     override public function update(elapsed:Float)
     {
         scoreText.text = "Score: " + (Global.score);
-        distroText.text = "Distros: " + (Global.distros);
+        distroText.text = "Coins: " + (Global.coins);
         livesText.text = "Lives: " + (Global.lives);
         super.update(elapsed);
     }

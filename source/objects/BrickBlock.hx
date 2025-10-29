@@ -10,13 +10,14 @@ import flixel.effects.particles.FlxParticle;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
+import objects.Coin;
 
 class EmptyNormalBrickBlock extends FlxSprite
 {
     var scoreAmount = 25;
     var gravity = 1000;
 
-    var HFraycast2d:FlxSprite; // it's BASICALLY a raycast2d, right??
+    var HFraycast2d:FlxSprite; // it's BASICALLY a raycast2d, right?? (I believe the word you were looking for was area2d)
 
     var brickImage = FlxAtlasFrames.fromSparrow('assets/images/objects/brick.png', 'assets/images/objects/brick.xml');
     
@@ -167,6 +168,7 @@ class CoinNormalBrickBlock extends FlxSprite
     var gravity = 1000;
 
     var howManyHits = 3;
+    var isHit = false;
 
     var HFraycast2d:FlxSprite; // it's BASICALLY a raycast2d, right??
 
@@ -201,7 +203,7 @@ class CoinNormalBrickBlock extends FlxSprite
     
     public function hit(tux:Tux)
     {
-        if (HFraycast2d.overlaps(tux) == false)
+        if (HFraycast2d.overlaps(tux) == false || isHit == true)
         {
             return;
         }
@@ -210,9 +212,13 @@ class CoinNormalBrickBlock extends FlxSprite
         {
             var currentY = y;
             howManyHits -= 1;
+            isHit = true;
             FlxTween.tween(this, {y: currentY - 4}, 0.05)
             .wait(0.05)
-            .then(FlxTween.tween(this, {y: currentY}, 0.05));
+            .then(FlxTween.tween(this, {y: currentY}, 0.05, {onComplete: function (_)
+            {
+                isHit = false;
+            }}));
             createItem();
         }
     }
@@ -220,9 +226,9 @@ class CoinNormalBrickBlock extends FlxSprite
     function createItem()
     {
         FlxG.sound.play('assets/sounds/brick.wav');
-        var distro:Distro = new Distro(Std.int(x), Std.int(y - 32));
-        distro.setFromBlock();
-        Global.PS.items.add(distro);
+        var coin:Coin = new Coin(Std.int(x), Std.int(y - 32));
+        coin.setFromBlock();
+        Global.PS.items.add(coin);
     }
 }
 
@@ -232,6 +238,7 @@ class CoinSnowBrickBlock extends FlxSprite
     var gravity = 1000;
 
     var howManyHits = 3;
+    var isHit = false;
 
     var HFraycast2d:FlxSprite; // it's BASICALLY a raycast2d, right??
 
@@ -266,7 +273,7 @@ class CoinSnowBrickBlock extends FlxSprite
     
     public function hit(tux:Tux)
     {
-        if (HFraycast2d.overlaps(tux) == false)
+        if (HFraycast2d.overlaps(tux) == false || isHit == true)
         {
             return;
         }
@@ -275,9 +282,13 @@ class CoinSnowBrickBlock extends FlxSprite
         {
             var currentY = y;
             howManyHits -= 1;
+            isHit = true;
             FlxTween.tween(this, {y: currentY - 4}, 0.05)
             .wait(0.05)
-            .then(FlxTween.tween(this, {y: currentY}, 0.05));
+            .then(FlxTween.tween(this, {y: currentY}, 0.05, {onComplete: function (_)
+            {
+                isHit = false;
+            }}));
             createItem();
         }
     }
@@ -285,8 +296,8 @@ class CoinSnowBrickBlock extends FlxSprite
     function createItem()
     {
         FlxG.sound.play('assets/sounds/brick.wav');
-        var distro:Distro = new Distro(Std.int(x), Std.int(y - 32));
-        distro.setFromBlock();
-        Global.PS.items.add(distro);
+        var coin:Coin = new Coin(Std.int(x), Std.int(y - 32));
+        coin.setFromBlock();
+        Global.PS.items.add(coin);
     }
 }

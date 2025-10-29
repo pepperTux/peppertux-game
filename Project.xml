@@ -4,7 +4,7 @@
 
 	<!-- _________________________ Application Settings _________________________ -->
 
-	<app title="HaxeTux" file="HaxeTux" main="Main" version="0.0.6" company="Vaesea" />
+	<app title="pepperTux" file="pepperTux" main="Main" version="0.0.6" company="Vaesea" />
 
 	<!--The flixel preloader is not accurate in Chrome. You can use it regularly if you embed the swf into a html file
 		or you can set the actual size of your file manually at "FlxPreloaderBase-onUpdate-bytesTotal"-->
@@ -39,6 +39,9 @@
 
 	<!--In case you want to use the addons package-->
 	<haxelib name="flixel-addons" />
+
+	<!--In case anyone wants to add Polymod support-->
+	<!--<haxelib name="polymod" />-->
 
 	<!--In case you want to use the ui package-->
 	<!--<haxelib name="flixel-ui" />-->
