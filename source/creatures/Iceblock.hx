@@ -171,7 +171,7 @@ class Iceblock extends Enemy
                 }
                 else
                 {
-                    tux.velocity.y = -tux.minJumpHeight;
+                    tux.velocity.y = -tux.minJumpHeight / 2;
                 }
             }
 
@@ -203,7 +203,7 @@ class Iceblock extends Enemy
                 }
                 else
                 {
-                    tux.velocity.y = -tux.minJumpHeight;
+                    tux.velocity.y = -tux.minJumpHeight / 2;
                 }
             }
             else
