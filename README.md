@@ -9,6 +9,8 @@ Not added yet.
 ## How do I compile?
 Same way you compile HaxeTux.
 
+Make sure your libraries are up to date!
+
 ## How do I make levels?
 Same way you make levels for HaxeTux.
 
