@@ -3,7 +3,6 @@ package states;
 // Original file made by Vaesea
 // Saving Tux's state support done by AnatoyStev
 
-import flixel.tile.FlxTile;
 import LevelLoader;
 import creatures.Enemy;
 import creatures.Tux;
@@ -60,10 +59,8 @@ class PlayState extends FlxState
 		atilesFront = new FlxTypedGroup<FlxSprite>();
 		hud = new HUD();
 
-		var numberOfLevel = Global.levels[Global.currentLevel];
-
 		// Loading the Test Level
-		LevelLoader.loadLevel(this, numberOfLevel);
+		LevelLoader.loadLevel(this, Global.currentLevel);
 
 		// Add stuff part 2
 		entities.add(items);
@@ -154,5 +151,11 @@ class PlayState extends FlxState
 		{
 			(cast entity).reach(tux);
 		}
+	}
+
+	override public function destroy()
+	{
+		Global.saveProgress();
+		super.destroy();
 	}
 }

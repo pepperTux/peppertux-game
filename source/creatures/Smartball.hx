@@ -35,7 +35,7 @@ class Smartball extends Enemy
         var tileY = Std.int(groundDetectorY / map.tileHeight);
 
         // Check for no tiles
-        if (map.getTileIndex(tileX, tileY) == 0) // This is why there needs to be Std.int
+        if (map.getTileIndex(tileX, tileY) == 0 && currentState == Alive) // This is why there needs to be Std.int
         {
             flipDirection();
         }

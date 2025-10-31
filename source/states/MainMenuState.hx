@@ -1,5 +1,10 @@
 package states;
 
+// Saving / loading by AnatolyStev
+// Worldmap by AnatolyStev
+
+import openfl.system.System;
+import worldmap.WorldmapState.WorldMapState;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.FlxState;
@@ -8,6 +13,7 @@ import flixel.ui.FlxButton;
 class MainMenuState extends FlxState
 {
     var playButton:FlxButton;
+    var eraseSaveButton:FlxButton;
 
     override public function create()
     {
@@ -18,10 +24,21 @@ class MainMenuState extends FlxState
             FlxG.sound.music.stop();
         }
 
-        Global.currentLevel = 0;
-        Global.lives = 3;
-        Global.score = 0;
-        Global.coins = 0;
+        Global.initSave();
+        Global.loadProgress();
+
+        if (Global.saveFile.data == null)
+        {
+            Global.lives = 3;
+            Global.score = 0;
+            Global.coins = 0;
+            Global.saveProgress();
+        }
+
+        if (Global.lives < 1)
+        {
+            Global.lives = 3;
+        }
 
         // Adding Title Screen background
         var bg = new FlxSprite();
@@ -32,11 +49,24 @@ class MainMenuState extends FlxState
         playButton = new FlxButton(0, 300, "Play Game", clickPlay);
         playButton.screenCenter(X);
         add(playButton);
+
+        // Adding erase save data button
+        eraseSaveButton = new FlxButton(0, 350, "Erase Save Data", clickEraseSave);
+        eraseSaveButton.screenCenter(X);
+        add(eraseSaveButton);
     }
 
     function clickPlay()
     {
         remove(playButton, true); // Remove button, may not be needed?
-        FlxG.switchState(PlayState.new); // Switch State
+        FlxG.switchState(WorldMapState.new); // Switch State
+    }
+
+    function clickEraseSave()
+    {
+        remove(eraseSaveButton, true);
+        remove(playButton, true);
+        Global.eraseSave();
+        System.exit(0);
     }
 }

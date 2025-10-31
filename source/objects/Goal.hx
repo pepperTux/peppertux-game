@@ -1,11 +1,12 @@
 package objects;
 
+// Worldmap support by AnatolyStev
+
+import worldmap.WorldmapState.WorldMapState;
 import creatures.Tux;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.util.FlxColor;
-import states.MainMenuState;
-import states.PlayState;
 
 class Goal extends FlxSprite
 {
@@ -19,20 +20,18 @@ class Goal extends FlxSprite
 
     public function reach(tux:Tux)
     {
-        if (solid == true)
+        if (solid == true) // TODO: Add cutscene (feel free to remove this TODO if cutscenes are NOT being done in the future)
         {
             solid = false;
-            Global.currentLevel += 1;
             Global.tuxState = tux.currentState;
-        }
 
-        if (Global.currentLevel >= Global.levels.length)
-        {
-            FlxG.switchState(MainMenuState.new);
-        }
-        else
-        {
-            FlxG.switchState(PlayState.new);
+            if (!Global.completedLevels.contains(Global.currentLevel))
+            {
+                Global.completedLevels.push(Global.currentLevel);
+            }
+
+            Global.saveProgress();
+            FlxG.switchState(WorldMapState.new);
         }
     }
 }

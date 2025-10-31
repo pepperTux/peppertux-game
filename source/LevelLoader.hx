@@ -30,7 +30,7 @@ class LevelLoader extends FlxState
 
     public static function loadLevel(state:PlayState, level:String)
     {
-        var tiledMap = new TiledMap("assets/data/levels/" + level + ".tmx");
+        var tiledMap = new TiledMap(level);
 
         // MAKE SURE TO PUT THESE THINGS IN YOUR LEVEL OR THE GAME MIGHT CRASH!!!!!!!!!! Sorry for not being very professional but I just needed to make it VERY clear. Do NOT remove the custom properties of the base level for your level.
         var song = tiledMap.properties.get("music");
@@ -78,7 +78,7 @@ class LevelLoader extends FlxState
         backgroundMap.loadMapFromArray(backgroundLayer.tileArray, tiledMap.width, tiledMap.height, "assets/images/normalTiles.png", 32, 32, 1);
         backgroundMap.solid = false;
 
-        // Interactive / Main
+        // Main (Used to be named Interactive during HaxeTux development)
         var interactiveLayer:TiledTileLayer = cast tiledMap.getLayer("Main");
 
         state.map = new FlxTilemap();

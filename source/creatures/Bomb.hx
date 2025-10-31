@@ -10,6 +10,7 @@ enum BombStates
 {
     Normal;
     Exploding;
+    Dead;
 }
 
 class Bomb extends Enemy
@@ -37,6 +38,23 @@ class Bomb extends Enemy
 
     override private function move()
     {
+        // Ground Detectors
+        var groundDetectorX = if (direction == 1) { x + this.width + 1; } else { x + 1; }
+        var groundDetectorY = y + this.height + 1;
+
+        // Use PlayState's Map
+        var map = Global.PS.map;
+
+        // Things
+        var tileX = Std.int(groundDetectorX / map.tileWidth);
+        var tileY = Std.int(groundDetectorY / map.tileHeight);
+
+        // Check for no tiles
+        if (map.getTileIndex(tileX, tileY) == 0 && currentState == Alive) // This is why there needs to be Std.int
+        {
+            flipDirection();
+        }
+
         if (currentBombState == Normal)
         {
             velocity.x = direction * walkSpeed;
@@ -84,6 +102,7 @@ class Bomb extends Enemy
     {
         animation.play('exploding');
         currentBombState = Exploding;
+        currentState = Dead;
         new FlxTimer().start(1.0, function(_)
             {
                 var explosion:Explosion = new Explosion(this.x - 20, this.y - 9);

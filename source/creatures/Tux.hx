@@ -1,5 +1,7 @@
 package creatures;
 
+// Worldmap support by AnatolyStev
+
 // Tutorials Used:
 // https://www.youtube.com/watch?v=Qdq-vXt-NOE
 // https://www.youtube.com/watch?v=aQazVHDztsg and yes i know this is for godot but it was actually helpful for this
@@ -12,7 +14,7 @@ import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.util.FlxDirectionFlags;
 import flixel.util.FlxTimer;
 import objects.Fireball;
-import states.PlayState;
+import worldmap.WorldmapState;
 
 enum TuxStates
 {
@@ -116,7 +118,6 @@ class Tux extends FlxSprite
         // Left + A = Go Left, Right + D = Go Right, Control = Run, Down + S = Duck (NOT ADDED YET!!!), Space + Up + W = Jump
         // i was gonna use the official haxeflixel way of doing variable jumping (using elapsed:float stuff) so that's why movement stuff is here. might still use it if the godot tutorial method turns out to not work that well for this, so don't move any of this stuff yet!
 
-        #if debug
         if (FlxG.keys.justPressed.ONE)
         {
             currentState = Small;
@@ -138,11 +139,16 @@ class Tux extends FlxSprite
         }
         else if (FlxG.keys.justPressed.FIVE)
         {
-            Global.currentLevel += 1;
             Global.tuxState = currentState;
-            FlxG.switchState(PlayState.new);
+
+            if (!Global.completedLevels.contains(Global.currentLevel))
+            {
+                Global.completedLevels.push(Global.currentLevel);
+            }
+
+            Global.saveProgress();
+            FlxG.switchState(WorldMapState.new);
         }
-        #end
 
         // Make sure Tux cant escape the level through the left side of the screen
         if (x < 0)

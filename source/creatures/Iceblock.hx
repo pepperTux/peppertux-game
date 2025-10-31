@@ -31,8 +31,8 @@ class Iceblock extends Enemy
         animation.addByPrefix('flat', 'flat', 10, false);
         animation.play('walk');
 
-        setSize(29, 30);
-        offset.set(3, 8);
+        setSize(31, 30);
+        offset.set(2, 5);
     }
 
     override private function move()

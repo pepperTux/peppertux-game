@@ -4,15 +4,15 @@ MILESTONE 1:
 "snowball_path" = Snowball Path. It's a level that introduces you to Bouncing Snowballs and is a remake of the first ever SuperTux level. The original level was made by Bill Kendrick and the remake was made by Sophie "Vaesea" Ball.
 "platforms_icy_river" = Platforms In The Icy River. It's a level that introduces you to the fact that Tux can't swim. It was not made by Vaesea and was in fact made by AnatolyStev. The level is pretty hard to beat, so it's sort of like a miniboss as a level!
 "bombs_ice" - Bombs On Ice. It's a level that introduces you to Mr Bombs, but you can also see and walk on bridges made out of wood.
-"freezing_air" - Freezing Air. It's going to be a level that introduces you to the sky. This was originally the 4th level until AnatolyStev made Platforms In The Icy River.
-"cant_under" - Can't Go Under It. It's going to be another sky level.
+"convivial_path" - Convivial Path. It's another snow level, this time it's pretty difficult since it's the first section 2 level!
+"cant_under" - Can't Go Under It. It's a level that introduces you to the sky!
 "snowy_evening" - Snowy Evening. It's going to be an evening level.
 "arctic_night" - Arctic Night. It's going to be a night level.
 "find_star" - Find The Star. It's going to be a level that introduces you to the star powerup.
 "above_night" - Above The Night Sky. It's going to be a sky level that takes place in the night.
 "icy_sunrise" - Icy Sunrise. It's going to be a sunrise level.
 "back_to_morning" - Back To The Morning. It's going to be a level that introduces you to stalactites!
-"entering_cave" - Entering The Cave. It's going to be a random morning level that has a 2nd half that uses the cave tileset, similar to the SuperTux / Original version of this level idea.
+"entering_cave" - Entering The Cave. It's going to be a random morning level that has a 2nd half that uses the cave tileset, similar to the SuperTux / original version of this level idea.
 "no_snow" - No Snow. It's going to be a level that introduces you to the cave.
 "cave_water" - Cave Of Water. It's going to be a level that features a lot of water in a cave.
 "taking_dive" - Taking A Dive. It's going to be a level that again, for some reason, features a lot of water? If anyone has a better level idea and a "proof of concept" (actual level, unfinished or not), please tell me.
@@ -26,3 +26,8 @@ MILESTONE 1:
 "ruins_antarctica" - Ruins Of Antarctica. It's going to be another bridge level, similar to "Arctic Ruins" from SuperTux.
 "white_hills" - White Hills. It's going to be a level that features hills, however unfortunately they can't have slopes because HaxeFlixel doesn't handle that well.
 "nolok_citadel" - Nolok's Citadel. It's going to be a castle level that introduces the flame enemy.
+
+SCRAPPED LEVELS:
+Icy Island:
+"penguin_cant_swim" - Penguin That Can't Swim. It was going to be similar to The Somewhat Smaller Bath from SuperTux, Platforms In The Icy River basically replaced this level.
+"freezing_air" - Freezing Cold Air. It was going to be another sky level. Convivial Path replaced this level.
