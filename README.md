@@ -1,7 +1,5 @@
-# pepperTux
+# PepperTux
 SuperTux fangame made using HaxeFlixel.
-
-nevermind there wont be forest stuff
 
 ## Story
 The same story as SuperTux, basically, Tux goes to a picnic with Penny, but Nolok attacks the two penguins and captures Penny, leaving just a note telling Tux that he doesn't stand a chance at getting Penny back, so Tux goes forward.
