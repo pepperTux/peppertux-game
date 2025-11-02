@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="100" height="100" tilewidth="32" tileheight="32" infinite="0" nextlayerid="23" nextobjectid="750">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="100" height="100" tilewidth="32" tileheight="32" infinite="0" nextlayerid="23" nextobjectid="751">
  <properties>
   <property name="music" value="assets/music/salcon.ogg"/>
   <property name="worldmapCreator" value="Sophie Ball"/>
@@ -54,9 +54,15 @@
     <property name="section" value="2"/>
    </properties>
   </object>
-  <object id="749" gid="464" x="864" y="480" width="32" height="32">
+  <object id="749" gid="464" x="768" y="512" width="32" height="32">
    <properties>
     <property name="levelPath" value="assets/data/levels/cant_under.tmx"/>
+    <property name="section" value="2"/>
+   </properties>
+  </object>
+  <object id="750" gid="464" x="960" y="416" width="32" height="32">
+   <properties>
+    <property name="levelPath" value="assets/data/levels/arctic_night.tmx"/>
     <property name="section" value="2"/>
    </properties>
   </object>
