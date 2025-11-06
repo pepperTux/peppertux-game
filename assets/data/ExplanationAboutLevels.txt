@@ -6,13 +6,13 @@ MILESTONE 1:
 "bombs_ice" - Bombs On Ice. It's a level that introduces you to Mr Bombs, but you can also see and walk on bridges made out of wood.
 "convivial_path" - Convivial Path. It's another snow level, this time it's pretty difficult since it's the first section 2 level!
 "cant_under" - Can't Go Under It. It's a level that introduces you to the sky!
-"snowy_evening" - Snowy Evening. It's going to be an evening level.
-"arctic_night" - Arctic Night. It's going to be a night level.
-"find_star" - Find The Star. It's going to be a level that introduces you to the star powerup.
-"above_night" - Above The Night Sky. It's going to be a sky level that takes place in the night.
-"icy_sunrise" - Icy Sunrise. It's going to be a sunrise level.
-"back_to_morning" - Back To The Morning. It's going to be a level that introduces you to stalactites!
-"entering_cave" - Entering The Cave. It's going to be a random morning level that has a 2nd half that uses the cave tileset, similar to the SuperTux / original version of this level idea.
+"snowy_evening" - Snowy Evening. It's an evening level.
+"arctic_night" - Arctic Night. It's a night level.
+"find_star" - Find The Star. It's a night level that introduces you to the star powerup.
+"above_night" - Above The Night Sky. It's a sky level that takes place in the night.
+"icy_sunrise" - Icy Sunrise. It's a sunrise level.
+"back_to_morning" - Back To The Morning. It's a level that introduces you to stalactites!
+"entering_cave" - Entering The Cave. It's a morning level that has a 2nd half that uses the cave tileset, similar to the SuperTux / original version of this level idea.
 "no_snow" - No Snow. It's going to be a level that introduces you to the cave.
 "cave_water" - Cave Of Water. It's going to be a level that features a lot of water in a cave.
 "taking_dive" - Taking A Dive. It's going to be a level that again, for some reason, features a lot of water? If anyone has a better level idea and a "proof of concept" (actual level, unfinished or not), please tell me.

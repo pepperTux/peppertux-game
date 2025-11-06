@@ -3,6 +3,7 @@ package objects;
 // Made by Vaesea, fixed by AnatolyStev
 // Well actually it came from Discover Haxeflixel but still
 
+import flixel.FlxObject;
 import creatures.Tux;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -46,13 +47,14 @@ class EmptyNormalBrickBlock extends FlxSprite
     
     public function hit(tux:Tux)
     {
-        if (HFraycast2d.overlaps(tux) == false)
+        if (!HFraycast2d.overlaps(tux))
         {
             return;
         }
 
         if (tux.currentState == Big || tux.currentState == Fire)
         {
+            FlxObject.separateY(this, tux);
             Global.score += scoreAmount;
             for (i in 0...4)
             {
@@ -128,6 +130,7 @@ class EmptySnowBrickBlock extends FlxSprite
 
         if (tux.currentState == Big || tux.currentState == Fire)
         {
+            FlxObject.separateY(this, tux);
             Global.score += scoreAmount;
             for (i in 0...4)
             {
@@ -167,7 +170,7 @@ class CoinNormalBrickBlock extends FlxSprite
     var scoreAmount = 25;
     var gravity = 1000;
 
-    var howManyHits = 3;
+    var howManyHits = 5;
     var isHit = false;
 
     var HFraycast2d:FlxSprite; // it's BASICALLY a raycast2d, right??
@@ -210,6 +213,7 @@ class CoinNormalBrickBlock extends FlxSprite
 
         if (howManyHits > 0)
         {
+            FlxObject.separateY(this, tux);
             var currentY = y;
             howManyHits -= 1;
             isHit = true;
@@ -237,7 +241,7 @@ class CoinSnowBrickBlock extends FlxSprite
     var scoreAmount = 25;
     var gravity = 1000;
 
-    var howManyHits = 3;
+    var howManyHits = 5;
     var isHit = false;
 
     var HFraycast2d:FlxSprite; // it's BASICALLY a raycast2d, right??
@@ -256,7 +260,7 @@ class CoinSnowBrickBlock extends FlxSprite
         animation.play("normal");
 
         HFraycast2d = new FlxSprite(x + 8, y + height);
-        HFraycast2d.makeGraphic(Std.int(width) - 16, Std.int(height) + 1, FlxColor.TRANSPARENT); // all this STD is gonna give me a... Nevermind. Forget about it. Std.int is there because width and height need to be ints.
+        HFraycast2d.makeGraphic(Std.int(width) - 16, Std.int(height) + 3, FlxColor.TRANSPARENT); // all this STD is gonna give me a... Nevermind. Forget about it. Std.int is there because width and height need to be ints.
         HFraycast2d.immovable = true;
         HFraycast2d.solid = false;
     }
@@ -280,6 +284,7 @@ class CoinSnowBrickBlock extends FlxSprite
 
         if (howManyHits > 0)
         {
+            FlxObject.separateY(this, tux);
             var currentY = y;
             howManyHits -= 1;
             isHit = true;

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="350" height="15" tilewidth="32" tileheight="32" infinite="0" nextlayerid="20" nextobjectid="512">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="350" height="15" tilewidth="32" tileheight="32" infinite="0" nextlayerid="20" nextobjectid="518">
  <properties>
   <property name="bg" value="assets/images/backgrounds/arctis2.png"/>
   <property name="levelCreator" value="Your Name"/>
@@ -32,13 +32,9 @@
   </data>
  </layer>
  <objectgroup id="14" name="Animated Tiles">
-  <object id="383" gid="399" x="576" y="0" width="32" height="32"/>
-  <object id="384" type="trans" gid="400" x="608" y="0" width="32" height="32"/>
-  <object id="385" type="flag" gid="401" x="768" y="0" width="32" height="32"/>
-  <object id="386" type="lavabottom" gid="414" x="640" y="0" width="32" height="32"/>
-  <object id="387" type="lavamiddle1" gid="410" x="672" y="0" width="32" height="32"/>
-  <object id="388" type="lavamiddle2" gid="406" x="704" y="0" width="32" height="32"/>
-  <object id="389" type="lavatop" gid="402" x="736" y="0" width="32" height="32"/>
+  <object id="383" gid="399" x="544" y="0" width="32" height="32"/>
+  <object id="385" type="flag" gid="401" x="608" y="0" width="32" height="32"/>
+  <object id="514" type="trans" gid="400" x="576" y="0" width="32" height="32"/>
  </objectgroup>
  <layer id="1" name="Main" width="350" height="15">
   <data encoding="base64">
@@ -52,37 +48,36 @@
  </layer>
  <objectgroup id="10" name="Enemies">
   <object id="346" gid="354" x="0" y="0" width="32" height="32"/>
-  <object id="347" type="iceblock" gid="355" x="64" y="0" width="32" height="32"/>
-  <object id="348" type="jumpy" gid="356" x="256" y="0" width="32" height="32"/>
-  <object id="350" type="smartblock" gid="358" x="96" y="0" width="32" height="32"/>
-  <object id="351" type="smartball" gid="362" x="32" y="0" width="32" height="32"/>
-  <object id="352" type="spiky" gid="360" x="160" y="0" width="32" height="32"/>
-  <object id="353" type="bouncingsnowball" gid="363" x="128" y="0" width="32" height="32"/>
-  <object id="354" type="flyingsnowball" gid="361" x="192" y="0" width="32" height="32"/>
-  <object id="355" type="icicle" gid="371" x="288" y="0" width="32" height="32"/>
-  <object id="356" type="bomb" gid="368" x="224" y="0" width="32" height="32"/>
+  <object id="347" type="iceblock" gid="355" x="32" y="0" width="32" height="32"/>
+  <object id="348" type="jumpy" gid="356" x="192" y="0" width="32" height="32"/>
+  <object id="352" type="spiky" gid="360" x="96" y="0" width="32" height="32"/>
+  <object id="353" type="bouncingsnowball" gid="363" x="64" y="0" width="32" height="32"/>
+  <object id="354" type="flyingsnowball" gid="361" x="128" y="0" width="32" height="32"/>
+  <object id="355" type="icicle" gid="371" x="224" y="0" width="32" height="32"/>
+  <object id="356" type="bomb" gid="368" x="160" y="0" width="32" height="32"/>
  </objectgroup>
  <objectgroup id="8" name="Coins">
-  <object id="391" gid="381" x="320" y="0" width="32" height="32"/>
+  <object id="391" gid="381" x="256" y="0" width="32" height="32"/>
  </objectgroup>
  <objectgroup id="6" name="Player">
-  <object id="296" x="-928" y="-32" width="896" height="896">
+  <object id="493" gid="353" x="32" y="384" width="32" height="32"/>
+  <object id="517" x="-928" y="-32" width="896" height="896">
    <text fontfamily="Segoe UI" pixelsize="37" wrap="1" color="#ff0000">(Remove this text before playing!) To place objects, copy them from the top left to your level, or manually change the class name of the object you just placed from the tilesets. Certain backgrounds (800x600 ones that don't repeat well vertically) require the level height to be set at 18 to look good. Draw squares in solid using the square tool to add collision.
 
-The reason why there's no slopes is because they're probably really difficult to add, and HaxeFlixel doesn't have good slope physics, as you can see in their platformer-like demo that contains slopes and unisolid tiles. I forgot the name of it. To see which enemies don't work, check if they're in the source code. If they're not, they don't work and will be Snowball in-game.</text>
+The reason why there's no slopes is because they're probably really difficult to add, and HaxeFlixel doesn't have good slope physics, as you can see in their platformer-like demo that contains slopes and unisolid tiles (FlxTilemapExt). To see which enemies don't work, check if they're in the source code. If they're not, they don't work and will be Snowball in-game.</text>
   </object>
-  <object id="493" gid="353" x="32" y="384" width="32" height="32"/>
  </objectgroup>
  <objectgroup id="13" name="Bricks">
-  <object id="379" gid="392" x="448" y="0" width="32" height="32"/>
-  <object id="380" type="snow" gid="393" x="480" y="0" width="32" height="32"/>
-  <object id="381" type="coin" gid="397" x="512" y="0" width="32" height="32"/>
-  <object id="382" type="snowcoin" gid="398" x="544" y="0" width="32" height="32"/>
+  <object id="379" gid="392" x="416" y="0" width="32" height="32"/>
+  <object id="380" type="snow" gid="393" x="448" y="0" width="32" height="32"/>
+  <object id="381" type="coin" gid="397" x="480" y="0" width="32" height="32"/>
+  <object id="382" type="snowcoin" gid="398" x="512" y="0" width="32" height="32"/>
  </objectgroup>
  <objectgroup id="11" name="Blocks">
-  <object id="372" type="powerup" gid="391" x="384" y="0" width="32" height="32"/>
-  <object id="377" type="tuxdoll" gid="394" x="416" y="0" width="32" height="32"/>
-  <object id="404" gid="389" x="352" y="0" width="32" height="32"/>
+  <object id="372" type="powerup" gid="391" x="320" y="0" width="32" height="32"/>
+  <object id="377" type="tuxdoll" gid="394" x="352" y="0" width="32" height="32"/>
+  <object id="404" gid="389" x="288" y="0" width="32" height="32"/>
+  <object id="513" type="star" gid="390" x="384" y="0" width="32" height="32"/>
  </objectgroup>
  <objectgroup id="12" name="Level"/>
  <objectgroup id="19" name="Animated Tiles Foreground"/>

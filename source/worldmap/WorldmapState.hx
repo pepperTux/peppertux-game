@@ -2,6 +2,8 @@ package worldmap;
 
 // Made by AnatolyStev, worldmap PlayState.
 
+// TODO: Check if afterHardLevel rocks are needed to be afterHardLevel and check if a world with no rocks is possible without crashing the game
+
 import states.PlayState;
 import flixel.FlxG;
 import worldmap.HardLevelDot;
@@ -75,7 +77,7 @@ class WorldMapState extends FlxState
                 rock.removeRock();
             }
 
-            else if (rock.rockPosition == "afterHardLevel" && sectionCompleted(rock.rockSection))
+            else if (rock.rockPosition == "afterHardLevel" && sectionCompleted(rock.rockSection)) // TODO: Is this even needed? Doesn't seem like it, will likely be removed in 0.1.1
             {
                 rock.removeRock();
             }

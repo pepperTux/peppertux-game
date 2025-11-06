@@ -37,6 +37,20 @@ class Coin extends FlxSprite
         FlxTween.tween(this, {alpha: 0, y: y - 16}, 0.33, {ease: FlxEase.circOut, onComplete: finishKill}); // thanks official haxeflixel tutorial
     }
 
+    public function collectNoSound()
+    {
+        alive = false;
+        solid = false;
+        Global.score += scoreAmount;
+        Global.coins += 1;
+        if (Global.coins >= 99)
+        {
+            Global.lives += 1;
+            Global.coins = 0;
+        }
+        FlxTween.tween(this, {alpha: 0, y: y - 16}, 0.33, {ease: FlxEase.circOut, onComplete: finishKill}); // thanks official haxeflixel tutorial
+    }
+
     function finishKill(_)
     {
         kill();
@@ -44,9 +58,10 @@ class Coin extends FlxSprite
 
     public function setFromBlock()
     {
+        FlxG.sound.play('assets/sounds/coin.wav');
         solid = false;
         acceleration.y = 420;
         velocity.y = speedFromBlock;
-        new FlxTimer().start(0.3, function(_) {collect();}, 1);
+        new FlxTimer().start(0.3, function(_) {collectNoSound();}, 1);
     }
 }

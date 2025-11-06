@@ -2,10 +2,15 @@ package creatures;
 
 // Ground detecting stuff by AnatolyStev, it's taken from the Smartball.hx file.
 
+import flixel.util.FlxColor;
+import flixel.FlxSprite;
+import flixel.FlxG;
 import flixel.graphics.frames.FlxAtlasFrames;
 
 class Spiky extends Enemy
 {
+    var point:FlxSprite;
+
     var spikyImage = FlxAtlasFrames.fromSparrow("assets/images/characters/spiky.png", "assets/images/characters/spiky.xml");
 
     public function new(x:Float, y:Float)
@@ -16,6 +21,10 @@ class Spiky extends Enemy
         animation.addByPrefix('walk', 'walk', 10, true);
         animation.play('walk');
 
+        point = new FlxSprite();
+        point.makeGraphic(1, 1, FlxColor.TRANSPARENT);
+        Global.PS.add(point);
+
         setSize(33, 33);
         offset.set(5, 9);
     }
@@ -23,18 +32,21 @@ class Spiky extends Enemy
     override private function move()
     {
         // Ground Detectors
-        var groundDetectorX = if (direction == 1) { x + this.width + 1; } else { x + 1; }
-        var groundDetectorY = y + this.height + 1;
+        var groundDetectorX = if (direction == 1) { x + this.width + 1; } else { x - 1; }
+        var groundDetectorY = y + this.height + offset.y + 1;
 
-        // Use PlayState's Map
-        var map = Global.PS.map;
+        point.setPosition(groundDetectorX, groundDetectorY);
 
         // Things
-        var tileX = Std.int(groundDetectorX / map.tileWidth);
-        var tileY = Std.int(groundDetectorY / map.tileHeight);
+        var hasGround = false;
 
-        // Check for no tiles
-        if (map.getTileIndex(tileX, tileY) == 0 && currentState == Alive) // This is why there needs to be Std.int
+        // Check for no solid objects
+        if (FlxG.overlap(point, Global.PS.blocks) || FlxG.overlap(point, Global.PS.bricks) || FlxG.overlap(point, Global.PS.collision))
+        {
+            hasGround = true;
+        }
+
+        if (!hasGround && currentState == Alive)
         {
             flipDirection();
         }

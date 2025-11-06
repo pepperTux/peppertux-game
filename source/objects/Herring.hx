@@ -18,8 +18,7 @@ class Herring extends FlxSprite
         super(x, y);
         loadGraphic("assets/images/objects/star.png", false);
 
-        setSize(30, 12);
-        offset.set(1, 10);
+        setSize(32, 32);
         
         acceleration.y = gravity;
     }

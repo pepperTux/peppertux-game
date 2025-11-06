@@ -46,11 +46,6 @@ class Enemy extends FlxSprite
     {
         if (bag == false && tornado == false)
         {
-            if (!inWorldBounds())
-            {
-                exists = false;
-            }
-
             if (isOnScreen())
             {
                 appeared = true;

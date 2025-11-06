@@ -1,6 +1,7 @@
 package creatures;
 
 // Worldmap support by AnatolyStev
+// Ducking support by AnatolyStev (Do NOT mis-read that!)
 
 // Tutorials Used:
 // https://www.youtube.com/watch?v=Qdq-vXt-NOE
@@ -27,6 +28,9 @@ class Tux extends FlxSprite
 {
     // (Added by AnatolyStev) Holding Iceblock Stuff
     public var heldIceblock:Iceblock = null;
+
+    // (Added by AnatolyStev) Ducking stuff
+    var isDucking = false;
 
     // Current State
     public var currentState = Small;
@@ -116,7 +120,7 @@ class Tux extends FlxSprite
 	{
         // these will have to be changed if options are added that would allow the player to change keybinds or whatever it's called
         // Left + A = Go Left, Right + D = Go Right, Control = Run, Down + S = Duck (NOT ADDED YET!!!), Space + Up + W = Jump
-        // i was gonna use the official haxeflixel way of doing variable jumping (using elapsed:float stuff) so that's why movement stuff is here. might still use it if the godot tutorial method turns out to not work that well for this, so don't move any of this stuff yet!
+        // I've gotten very used to this stuff being in update(elapsed:Float)
 
         if (FlxG.keys.justPressed.ONE)
         {
@@ -163,14 +167,27 @@ class Tux extends FlxSprite
         }
 
         // Tux animation stuff
-        if (velocity.x != 0)
+        if (!isDucking || currentState == Small)
         {
-            animation.play('walk');
+            if (velocity.x != 0)
+            {
+                animation.play("walk");
+            }
+            else if (velocity.x == 0)
+            {
+                animation.play("stand");
+            }
+
+            if ((velocity.y > 0 || velocity.y < 0))
+            {
+                animation.play("jump");
+            }
         }
-        else if (velocity.x == 0)
+        else if (isDucking && (currentState == Big || currentState == Fire))
         {
-            animation.play('stand');
+            animation.play("duck");
         }
+
         if (velocity.x > 0)
         {
             direction = 1;
@@ -189,10 +206,6 @@ class Tux extends FlxSprite
             smallCape.offset.x = 4;
             bigCape.offset.x = 4;
         }
-        if ((velocity.y > 0 || velocity.y < 0))
-        {
-            animation.play('jump');
-        }
 
         // Stuff to move Tux
         if (FlxG.keys.pressed.CONTROL) // Running
@@ -204,22 +217,67 @@ class Tux extends FlxSprite
             speed = walkSpeed;
         }
 
+        // Ducking stuff
+        if (currentState == Big || currentState == Fire)
+        {
+            if (FlxG.keys.anyPressed([DOWN, S]) && isTouching(FLOOR))
+            {
+                isDucking = true;
+            }
+            else if (!FlxG.keys.anyPressed([DOWN, S]) && isTouching(FLOOR))
+            {
+                isDucking = false;
+            }
+        }
+        else
+        {
+            isDucking = false;
+        }
+
         maxVelocity.x = speed; // Stop Tux from running too fast. This is very important unless you want him to be like Sonic.
 
-        if (FlxG.keys.anyPressed([LEFT, A]) && !FlxG.keys.anyPressed([RIGHT, D])) // Moving Left
+        if (!isDucking || !isTouching(FLOOR))
         {
-            acceleration.x = -tuxAcceleration;
-        }
-        else if (FlxG.keys.anyPressed([RIGHT, D]) && !FlxG.keys.anyPressed([LEFT, A])) // Moving Right
-        {
-            acceleration.x = tuxAcceleration;
+            if (FlxG.keys.anyPressed([LEFT, A]) && !FlxG.keys.anyPressed([RIGHT, D])) // Moving Left
+            {
+                acceleration.x = -tuxAcceleration;
+            }
+            else if (FlxG.keys.anyPressed([RIGHT, D]) && !FlxG.keys.anyPressed([LEFT, A])) // Moving Right
+            {
+                acceleration.x = tuxAcceleration;
+            }
+            else
+            {
+                acceleration.x = 0;
+            }
         }
         else
         {
             acceleration.x = 0;
         }
 
-        if (FlxG.keys.anyPressed([SPACE, UP, W]) && isTouching(FlxDirectionFlags.FLOOR)) // Jumping
+        // May look complicated, but checking height IS needed.
+        if (isDucking && (currentState == Big || currentState == Fire))
+        {
+            if (height != 32)
+            {
+                setSize(30, 32);
+                offset.set(10, 35);
+                velocity.y = 1000;
+            }
+        }
+        else if ((currentState == Big || currentState == Fire) && isDucking == false)
+        {
+            if (height != 63)
+            {
+                var prevBottom = y + height;
+                setSize(30, 63);
+                offset.set(10, 4);
+                y = prevBottom - height;
+            }
+        }
+
+        if (FlxG.keys.anyJustPressed([SPACE, UP, W]) && isTouching(FLOOR)) // Jumping. Using anyJustPressed so the player can't just hold down the jump button to jump every frame they can.
         {
             if (velocity.x == 320 || velocity.x == -320)
             {
@@ -332,8 +390,10 @@ class Tux extends FlxSprite
             }
             else if (currentState == Big) // If current state is big, make him go down to just being small.
             {
+                var prevBottom = y + height;
                 currentState = Small;
                 reloadGraphics();
+                y = prevBottom - height;
             }
             else if (currentState == Small) // If current state is small, kill him.
             {
@@ -367,8 +427,8 @@ class Tux extends FlxSprite
                 animation.addByPrefix('jump', 'jump', 10, false);
                 animation.play('stand');
 
-                setSize(27, 37);
-                offset.set(8, 5);
+                setSize(27, 32);
+                offset.set(8, 9);
             case Big:
                 var fixedMaybeTwo = FlxAtlasFrames.fromSparrow("assets/images/characters/tux/bigtux.png", "assets/images/characters/tux/bigtux.xml");
                 frames = fixedMaybeTwo;

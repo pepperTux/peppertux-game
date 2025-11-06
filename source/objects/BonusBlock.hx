@@ -32,7 +32,7 @@ class BonusBlock extends FlxSprite
         animation.play("full");
 
         HFraycast2d = new FlxSprite(x + 8, y + height);
-        HFraycast2d.makeGraphic(Std.int(width) - 16, Std.int(height) + 1, FlxColor.TRANSPARENT); // all this STD is gonna give me a... Nevermind. Forget about it. Std.int is there because width and height need to be ints.
+        HFraycast2d.makeGraphic(Std.int(width) - 16, Std.int(height) + 3, FlxColor.TRANSPARENT); // all this STD is gonna give me a... Nevermind. Forget about it. Std.int is there because width and height need to be ints.
         HFraycast2d.immovable = true;
         HFraycast2d.solid = false;
     }
@@ -59,7 +59,7 @@ class BonusBlock extends FlxSprite
 
     function createItem()
     {
-        FlxG.sound.play('assets/sounds/brick.wav');
+        FlxG.sound.play("assets/sounds/brick.wav");
         switch (content)
         {
             default:
@@ -70,12 +70,17 @@ class BonusBlock extends FlxSprite
             case "powerup":
                 var powerup:PowerUp = new PowerUp(Std.int(x), Std.int(y - 32));
                 Global.PS.items.add(powerup);
-                FlxG.sound.play('assets/sounds/upgrade.wav');
+                FlxG.sound.play("assets/sounds/upgrade.wav");
             
             case "star":
                 var herring:Herring = new Herring(Std.int(x), Std.int(y - 32));
                 Global.PS.items.add(herring);
-                FlxG.sound.play('assets/sounds/upgrade.wav');
+                FlxG.sound.play("assets/sounds/upgrade.wav");
+            
+            case "tuxdoll":
+                var tuxDoll:TuxDoll = new TuxDoll(Std.int(x), Std.int(y - 32));
+                Global.PS.td.add(tuxDoll);
+                FlxG.sound.play("assets/sounds/upgrade.wav");
         }
     }
 }

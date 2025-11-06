@@ -15,12 +15,12 @@ class Goal extends FlxSprite
         super(x, y);
         solid = true;
         immovable = true;
-        makeGraphic(2, FlxG.height * 24, FlxColor.TRANSPARENT);
+        makeGraphic(2, FlxG.height * 16, FlxColor.TRANSPARENT);
     }
 
     public function reach(tux:Tux)
     {
-        if (solid == true) // TODO: Add cutscene (feel free to remove this TODO if cutscenes are NOT being done in the future)
+        if (solid == true) // TODO: Add cutscene (Will be added!)
         {
             solid = false;
             Global.tuxState = tux.currentState;

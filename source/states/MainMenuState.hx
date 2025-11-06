@@ -3,6 +3,8 @@ package states;
 // Saving / loading by AnatolyStev
 // Worldmap by AnatolyStev
 
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
 import openfl.system.System;
 import worldmap.WorldmapState.WorldMapState;
 import flixel.FlxG;
@@ -13,7 +15,11 @@ import flixel.ui.FlxButton;
 class MainMenuState extends FlxState
 {
     var playButton:FlxButton;
+    var creditsButton:FlxButton;
     var eraseSaveButton:FlxButton;
+
+    var tweenDuration = 1;
+    var tweenAmount = 10;
 
     override public function create()
     {
@@ -40,18 +46,33 @@ class MainMenuState extends FlxState
             Global.lives = 3;
         }
 
+        FlxG.sound.play("assets/sounds/lifeup.wav", 1.0, false); // Test, but a nice change anyways.
+
+        FlxG.sound.playMusic("assets/music/theme.ogg", 1.0, true);
+
         // Adding Title Screen background
         var bg = new FlxSprite();
         bg.loadGraphic("assets/images/menu/title.png", false);
         add(bg);
+
+        var logo = new FlxSprite(0, 25);
+        logo.loadGraphic("assets/images/menu/logo.png");
+        logo.screenCenter(X);
+        add(logo);
+
+        FlxTween.tween(logo, {y: logo.y + tweenAmount}, tweenDuration, {ease: FlxEase.quadInOut, type: PINGPONG});
 
         // Adding button, will probably be replaced by an image?
         playButton = new FlxButton(0, 300, "Play Game", clickPlay);
         playButton.screenCenter(X);
         add(playButton);
 
+        creditsButton = new FlxButton(0, 325, "Credits Menu", clickCredits);
+        creditsButton.screenCenter(X);
+        add(creditsButton);
+
         // Adding erase save data button
-        eraseSaveButton = new FlxButton(0, 350, "Erase Save Data", clickEraseSave);
+        eraseSaveButton = new FlxButton(0, 350, "Erase Save", clickEraseSave);
         eraseSaveButton.screenCenter(X);
         add(eraseSaveButton);
     }
@@ -64,9 +85,16 @@ class MainMenuState extends FlxState
 
     function clickEraseSave()
     {
-        remove(eraseSaveButton, true);
-        remove(playButton, true);
-        Global.eraseSave();
-        System.exit(0);
+        remove(eraseSaveButton, true); // Remove erase save button so player can't click it twice
+        remove(playButton, true); // Remove play button so player can't play after deleting save
+        Global.eraseSave(); // Erase save
+        System.exit(0); // Exit game so the save is fully erased
+    }
+
+    function clickCredits()
+    {
+        remove(creditsButton, true); // Remove button, may not be needed?
+        FlxG.switchState(CreditsState.new); // Switch State
+        
     }
 }

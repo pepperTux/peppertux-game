@@ -1,5 +1,6 @@
 package;
 
+import creatures.Stalactite.IceStalactite;
 import creatures.Bomb;
 import creatures.BouncingSnowball;
 import objects.Solid;
@@ -96,7 +97,6 @@ class LevelLoader extends FlxState
         state.add(evenFurtherBackgroundMap);
         state.add(furtherBackgroundMap);
         state.add(backgroundMap);
-        state.add(state.map);
 
         // Load collision
         for (solid in getLevelObjects(tiledMap, "Solid"))
@@ -177,6 +177,8 @@ class LevelLoader extends FlxState
                     state.enemies.add(new BouncingSnowball(enemy.x, enemy.y - 32));
                 case "bomb":
                     state.enemies.add(new Bomb(enemy.x, enemy.y - 35));
+                case "icicle":
+                    state.enemies.add(new IceStalactite(enemy.x, enemy.y - 32));
             }
         
         for (object in getLevelObjects(tiledMap, "Animated Tiles Foreground"))
@@ -195,8 +197,6 @@ class LevelLoader extends FlxState
         // Don't be like me. Don't remove this.
         var tuxPosition:TiledObject = getLevelObjects(tiledMap, "Player")[0];
         state.tux.setPosition(tuxPosition.x, tuxPosition.y - 37);
-
-        
     }
 
     public static function getLevelObjects(map:TiledMap, layer:String):Array<TiledObject>

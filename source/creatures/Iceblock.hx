@@ -82,7 +82,7 @@ class Iceblock extends Enemy
 
         if (justTouched(WALL) && isOnScreen() && currentIceblockState == MovingSquished)
         {
-            trace('Hit Wall!');
+            trace("Hit Wall!");
             FlxG.sound.play("assets/sounds/ricochet.wav", 1.0, false);
         }
     }

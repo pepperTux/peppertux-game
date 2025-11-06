@@ -3,6 +3,7 @@ package states;
 // Original file made by Vaesea
 // Saving Tux's state support done by AnatoyStev
 
+import objects.TuxDoll;
 import LevelLoader;
 import creatures.Enemy;
 import creatures.Tux;
@@ -35,6 +36,7 @@ class PlayState extends FlxState
 	public var bricks(default, null):FlxTypedGroup<FlxSprite>;
 	public var enemies(default, null):FlxTypedGroup<Enemy>;
 	public var atilesFront(default, null):FlxTypedGroup<FlxSprite>;
+	public var td(default, null):FlxTypedGroup<TuxDoll>;
 
 	var hud:HUD;
 
@@ -53,6 +55,7 @@ class PlayState extends FlxState
 		bricks = new FlxTypedGroup<FlxSprite>();
 		blocks = new FlxTypedGroup<FlxSprite>();
 		enemies = new FlxTypedGroup<Enemy>();
+		td = new FlxTypedGroup<TuxDoll>();
 		tux = new Tux();
 		tux.currentState = Global.tuxState;
 		tux.reloadGraphics(); // May seem VERY useless but I just want to make it work.
@@ -69,7 +72,9 @@ class PlayState extends FlxState
 		entities.add(enemies);
 		add(collision);
 		add(atiles);
+		add(map);
 		add(entities);
+		add(td);
 		add(tux);
 		add(atilesFront);
 		add(foregroundMap);
@@ -90,6 +95,7 @@ class PlayState extends FlxState
 		// Tux collision
 		FlxG.collide(collision, tux);
 		FlxG.overlap(entities, tux, collideEntities);
+		FlxG.overlap(td, tux, collideTuxDoll);
 		FlxG.collide(tux, blocks, collideEntities);
 		FlxG.collide(tux, bricks, collideEntities);
 
@@ -153,6 +159,14 @@ class PlayState extends FlxState
 		}
 	}
 
+	function collideTuxDoll(tuxDoll:TuxDoll, tux:Tux)
+	{
+		if (tuxDoll != null) // This is here to prevent a Null Object Reference, but I'm not sure it's needed anymore? Better to be safe rather than sorry, as the saying goes...
+		{
+			tuxDoll.collect(tux);
+		}
+	}
+	
 	override public function destroy()
 	{
 		Global.saveProgress();

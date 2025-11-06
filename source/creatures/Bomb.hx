@@ -1,5 +1,9 @@
 package creatures;
 
+// Ground detecting stuff by AnatolyStev, it's taken from the Smartball.hx file.
+
+import flixel.FlxSprite;
+import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 import creatures.Explosion;
 import flixel.FlxG;
@@ -16,6 +20,8 @@ enum BombStates
 class Bomb extends Enemy
 {
     var explodeTimer = 1.0;
+    
+    var point:FlxSprite;
 
     var currentBombState = Normal;
 
@@ -30,7 +36,11 @@ class Bomb extends Enemy
         animation.addByPrefix('exploding', 'exploding', 2, true);
         animation.play('walk');
         
-        acceleration.y = gravity;
+        point = new FlxSprite();
+        point.makeGraphic(1, 1, FlxColor.TRANSPARENT);
+        Global.PS.add(point);
+        
+        acceleration.y = gravity; // Is this needed
 
         setSize(28, 35);
         offset.set(4, 10);
@@ -39,29 +49,33 @@ class Bomb extends Enemy
     override private function move()
     {
         // Ground Detectors
-        var groundDetectorX = if (direction == 1) { x + this.width + 1; } else { x + 1; }
-        var groundDetectorY = y + this.height + 1;
+        var groundDetectorX = if (direction == 1) { x + this.width + 1; } else { x - 1; }
+        var groundDetectorY = y + this.height + offset.y + 1;
 
-        // Use PlayState's Map
-        var map = Global.PS.map;
+        point.setPosition(groundDetectorX, groundDetectorY);
 
         // Things
-        var tileX = Std.int(groundDetectorX / map.tileWidth);
-        var tileY = Std.int(groundDetectorY / map.tileHeight);
+        var hasGround = false;
 
-        // Check for no tiles
-        if (map.getTileIndex(tileX, tileY) == 0 && currentState == Alive) // This is why there needs to be Std.int
+        // Check for no solid objects
+        if (FlxG.overlap(point, Global.PS.blocks) || FlxG.overlap(point, Global.PS.bricks) || FlxG.overlap(point, Global.PS.collision))
+        {
+            hasGround = true;
+        }
+
+        if (!hasGround && currentState == Alive)
         {
             flipDirection();
         }
 
+        // Walk
         if (currentBombState == Normal)
         {
             velocity.x = direction * walkSpeed;
         }
         else
         {
-            velocity.x = 0;
+            velocity.x = 0; 
         }
     }
 
