@@ -12,7 +12,7 @@ Same way you make levels for HaxeTux.
 
 ## Credits
 * Steel Paperclip Team (Vaesea, AnatolyStev, Convival) - The game
-* Everyone who worked on SuperTux - Assets from Milestone 1 and Milestone 2 (Some assets from Milestone 2 are added, like the voc music for example)
+* Everyone who worked on SuperTux - Assets from Milestone 1 and Milestone 2 (Some assets from Milestone 2 are added)
 * Lukas Nystrand (Mortimer Twang) - Mortimer's Chipdisko
 * Mystical - Salcon
 * Larry Ewing - Creator of Tux
