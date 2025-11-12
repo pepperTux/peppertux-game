@@ -1,8 +1,10 @@
 # PepperTux
-SuperTux fangame made using HaxeFlixel. This is the old version that may be made alongside or after the new version.
+SuperTux fangame made using HaxeFlixel. This is the old version that may be made alongside (if a certain poll is 50% on each side) or after the new version (if the poll is 50% on the side of 0.3.3 to 0.5.1)
 
 ## Info
 To see the newest version of PepperTux, go to https://github.com/pepperTux/peppertux-godot as that's the newest version. It's just this game but made in Godot.
+
+This is the poll mentioned in the first part of this readme: https://gamejolt.com/p/should-peppertux-be-more-like-supertux-milestone-1-or-should-it-be-rmptcazp
 
 ## Story
 The same story as SuperTux, basically, Tux goes to a picnic with Penny, but Nolok attacks the two penguins and captures Penny, leaving just a note telling Tux that he doesn't stand a chance at getting Penny back, so Tux goes forward towards Nolok's castle.
