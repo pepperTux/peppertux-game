@@ -1,5 +1,5 @@
 # PepperTux
-SuperTux fangame made using HaxeFlixel.
+SuperTux fangame made using HaxeFlixel. This is the old version that may be made alongside or after the new version.
 
 ## Info
 To see the newest version of PepperTux, go to https://github.com/pepperTux/peppertux-godot as that's the newest version. It's just this game but made in Godot.
