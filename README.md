@@ -8,6 +8,8 @@ https://gamejolt.com/p/should-peppertux-be-more-like-supertux-milestone-1-or-sho
 
 https://gamejolt.com/p/also-to-make-it-clear-what-would-happen-if-the-previous-post-s-pol-id4tuebu
 
+https://gamejolt.com/p/https-gamejolt-com-p-also-to-make-it-clear-what-would-happen-if-t-rvmds8qa
+
 ## Story
 The same story as SuperTux, basically, Tux goes to a picnic with Penny, but Nolok attacks the two penguins and captures Penny, leaving just a note telling Tux that he doesn't stand a chance at getting Penny back, so Tux goes forward towards Nolok's castle.
 
