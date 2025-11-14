@@ -27,7 +27,7 @@ Same way you make levels for HaxeTux.
 * Weluvgoatz - Snow fort tiles (used as sand tiles here with the saturation reduced and with it also being recolored) (Not added yet!)
 * DJ Gentoo - New Salcon (Not added yet!)
 
-There's credits for stuff that isn't added because they will be added in the next commit.
+There's credits for stuff that isn't added because they will be added soon.
 
 ### Everyone Else
 * Bart + opengameart.org - Airship Song
