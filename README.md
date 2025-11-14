@@ -16,10 +16,10 @@ Install Haxe 4.3.7, then install HaxeFlixel, including Flixel-Addons. Then compi
 Same way you make levels for HaxeTux.
 
 ## Credits
-### Steel Paperclip Team
-* Vaesea - Coding, Levels, Music
+### PepperTux (HaxeFlixel Version)
+* Vaesea - Coding, Levels, Music (Will be added soon)
 * Convival - Levels
-* AnatolyStev - Coding, Levels, Music
+* AnatolyStev - Coding, Levels, Music (Will be added soon)
 ### Everyone Else
 * Everyone who worked on SuperTux - Assets from SuperTux, including but not limited to: Art and Music
 * Lukas Nystrand (Mortimer Twang) - Mortimer's Chipdisko
