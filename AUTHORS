@@ -1,0 +1,27 @@
+Authors (This gets destroyed with Word Wrap enabled on Notepad)
+---------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------------------------
+| Authors File                                                                                                      [-] [[]] [X]   |
+------------------------------------------------------------------------------------------------------------------------------------
+| This file was made to list every file made for PepperTux and who made it. If a file isn't listed, it's probably from SuperTux    |
+| or it only uses images from SuperTux (Spritesheets, for example)                                                                 |
+| This file also copies the original SuperTux AUTHORS file.                                                                        |
+| The things that were made for SuperTux but aren't actually in SuperTux will be listed here, as well as music that was not made   |
+| for SuperTux but was used in SuperTux, like Chipdisko or Airship Remix.                                                          |
+| Tilesets are not listed here because they're basically just code. The credits for the levels are in the levels and show in-game. |
+------------------------------------------------------------------------------------------------------------------------------------
+Template:
+assets/path/to/file.png - Author - SuperTux/PepperTux/OpenGameArt
+
+* = something
+
+== Data ==
+assets/data/worldmaps/worldmap.tmx - AnatolyStev and Vaesea - PepperTux
+assets/data/ExplanationAboutLevels.txt - Vaesea - PepperTux
+assets/data/worldmaps.txt - AnatolyStev - PepperTux
+
+== Images ==
+assets/images/characters/smartball.png - Grumbel (Original Snowball Images), Vaesea (Pink version) - SuperTux (Original Snowball Images), PepperTux (Pink version)
+assets/images/characters/smartblock.png - Grumbel (Original Iceblock Images), Vaesea (Pink version) - SuperTux (Original Iceblock Images), PepperTuxx (Pink version)
+assets/images/editor/creatures.png - Grumbel (Original enemies), Stephen Groundwater (Original enemies), Vaesea (Smartblock + Brown Tumbleweed + The image itself) -  SuperTux (Original enemies), PepperTux (Smartblock + Brown Tumbleweed + The image itself)
