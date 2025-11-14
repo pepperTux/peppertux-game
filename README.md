@@ -2,9 +2,7 @@
 SuperTux fangame made using HaxeFlixel.
 
 ## Info
-To see the newest version of PepperTux, go to https://github.com/pepperTux/peppertux-godot as that's the newest version. It's just this game but made in Godot.
-
-This version is being continued but it isn't the main focus. The main focus is the new version named peppertux-godot.
+This version was discontinued for a while, but was continued due to the Godot version not going so well.
 
 ## Story
 The same story as SuperTux, basically, Tux goes to a picnic with Penny, but Nolok attacks the two penguins and captures Penny, leaving just a note telling Tux that he doesn't stand a chance at getting Penny back, so Tux goes forward towards Nolok's castle.
@@ -16,12 +14,24 @@ Install Haxe 4.3.7, then install HaxeFlixel, including Flixel-Addons. Then compi
 Same way you make levels for HaxeTux.
 
 ## Credits
-### PepperTux (HaxeFlixel Version)
-* Vaesea - Coding, Levels, Music (Will be added soon)
+### PepperTux
+* Vaesea - Coding, Levels, Music, some art that will be added soon
 * Convival - Levels
-* AnatolyStev - Coding, Levels, Music (Will be added soon)
+* AnatolyStev - Coding, Levels, Music
+* FilipOK - Art that will be added soon, music that will be added soon
+### SuperTux Team
+* Grumbel - Made art for SuperTux (Most, if not all of the art, including unused / scrapped art like the Desert background is used here) (Desert background not added yet!)
+* Stephen Groundwater - Also made art for SuperTux (Most of the art is used here)
+* Wansti - Made music for SuperTux (Most, if not all of the music for SuperTux is used here)
+* Jonfx1007 - Improved SuperTux's forest tileset (The slopes from that improvement are used here)
+* Weluvgoatz - Snow fort tiles (used as sand tiles here with the saturation reduced and with it also being recolored) (Not added yet!)
+* DJ Gentoo - New Salcon (Not added yet!)
+
+There's credits for stuff that isn't added because they will be added in the next commit.
+
 ### Everyone Else
-* Everyone who worked on SuperTux - Assets from SuperTux, including but not limited to: Art and Music
+* Bart + opengameart.org - Airship Song
+* Remaxim + opengameart.org - Orchestral Remix of Airship Song
 * Lukas Nystrand (Mortimer Twang) - Mortimer's Chipdisko
 * Mystical - Salcon
 * Larry Ewing - Creator of Tux
