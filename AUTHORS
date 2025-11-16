@@ -16,6 +16,9 @@ assets/path/to/file.png - Author - SuperTux/PepperTux/OpenGameArt
 
 * = something
 
+== GitHub ==
+.github/workflows/windows.yml - FNF Psych Engine Creators (Original file), Vaesea (Edited to build PepperTux) - Friday Night Funkin' Psych Engine (Original file), PepperTux (Edited to build PepperTux)
+
 == Data ==
 assets/data/worldmaps/worldmap.tmx - AnatolyStev and Vaesea - PepperTux
 assets/data/ExplanationAboutLevels.txt - Vaesea - PepperTux
