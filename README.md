@@ -15,10 +15,10 @@ Same way you make levels for HaxeTux.
 
 ## Credits
 ### PepperTux
-* Vaesea - Coding, Levels, Music, some art that will be added soon
+* Vaesea - Coding, Levels, Music, Art
 * Convival - Levels
 * AnatolyStev - Coding, Levels, Music
-* FilipOK - Art that will be added soon, music that will be added soon
+* FilipOK - Art, music that will be added soon
 ### SuperTux Team
 * Grumbel - Made art for SuperTux (Most, if not all of the art, including unused / scrapped art like the Desert background is used here) (Desert background not added yet!)
 * Stephen Groundwater - Also made art for SuperTux (Most of the art is used here)
