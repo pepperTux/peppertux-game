@@ -36,4 +36,4 @@ There's credits for stuff that isn't added because they will be added soon.
 * Mystical - Salcon
 * Larry Ewing - Creator of Tux
 * Discover HaxeFlixel (Book) + Scribd - This is the tutorial I followed to make HaxeTux, the base of PepperTux
-* Friday Night Funkin' Psych Engine - Original workflow (I edited it to make it build PepperTux)
+* Friday Night Funkin' Psych Engine - Original workflow (I edited it to make it build PepperTux but it doesn't seem to work. Any help with making it work is appreciated)
