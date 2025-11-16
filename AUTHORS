@@ -22,6 +22,12 @@ assets/data/ExplanationAboutLevels.txt - Vaesea - PepperTux
 assets/data/worldmaps.txt - AnatolyStev - PepperTux
 
 == Images ==
-assets/images/characters/smartball.png - Grumbel (Original Snowball Images), Vaesea (Pink version) - SuperTux (Original Snowball Images), PepperTux (Pink version)
-assets/images/characters/smartblock.png - Grumbel (Original Iceblock Images), Vaesea (Pink version) - SuperTux (Original Iceblock Images), PepperTuxx (Pink version)
-assets/images/editor/creatures.png - Grumbel (Original enemies), Stephen Groundwater (Original enemies), Vaesea (Smartblock + Brown Tumbleweed + The image itself) -  SuperTux (Original enemies), PepperTux (Smartblock + Brown Tumbleweed + The image itself)
+assets/images/characters/smartball.png - Grumbel (Original Smartball Images) - SuperTux
+assets/images/characters/smartblock.png - Grumbel (Original Smartblock Images) - SuperTux
+assets/images/editor/creatures.png - Grumbel (Original enemies), Stephen Groundwater (Original enemies), Vaesea (Brown Tumbleweed, new non-SuperTux enemies and The image itself) -  SuperTux (Original enemies), PepperTux (Brown Tumbleweed, new non-SuperTux enemies and The image itself)
+assets/images/characters/coconut.* - Vaesea - TimeTux (Originally made for a mod named "TimeTux", PepperTux (What it's meant for now)
+assets/images/characters/crab.* - Vaesea - PepperTux
+assets/images/characters/brab.* - Vaesea - PepperTux
+assets/images/characters/foreststalactite.* - Grumbel (Forest Tiles), Vaesea (Stalactite version) - SuperTux (Forest Tiles), PepperTux (Stalactite Version)
+assets/images/characters/grab.* - Vaesea - PepperTux
+assets/images/normalTiles - SuperTux Team (Most tiles), Vaesea (Some tiles), FilipOK (Palm Tree, Stone, Stone Background, Cactus, Sandstone) - SuperTux (Most tiles), PepperTux (Other Tiles)
