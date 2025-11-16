@@ -41,5 +41,5 @@ jobs:
       - name: Publish Artifact
         uses: actions/upload-artifact@v4.3.4
         with:
-          name: windowsBuildDebug
-          path: export/debug/windows/bin
+          name: windowsBuild
+          path: export/windows/bin
