@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="ghostflame.png">
+<SubTexture name="ghostflame normal0000" x="0" y="0" width="28" height="25" frameX="-2" frameY="-3" frameWidth="32" frameHeight="32" />
+<SubTexture name="ghostflame normal0001" x="28" y="0" width="24" height="25" frameX="-4" frameY="-4" frameWidth="32" frameHeight="32" />
+<SubTexture name="ghostflame normal0002" x="52" y="0" width="25" height="24" frameX="-5" frameY="-4" frameWidth="32" frameHeight="32" />
+<SubTexture name="ghostflame normal0003" x="0" y="25" width="28" height="25" frameX="-3" frameY="-5" frameWidth="32" frameHeight="32" />
+<SubTexture name="ghostflame normal0004" x="52" y="24" width="25" height="24" frameX="-3" frameY="-5" frameWidth="32" frameHeight="32" />
+</TextureAtlas>

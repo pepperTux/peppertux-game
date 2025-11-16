@@ -21,20 +21,20 @@ class CreditsState extends FlxState
         bg.loadGraphic("assets/images/menu/title.png", false);
         add(bg);
         
-        creditsText = new FlxText(-25, 470, 0, "
-        Vaesea - Coding, Levels\n
-        Convival - Levels\n
-        AnatolyStev - Coding, Levels\n
-        SuperTux Team - Original SuperTux assets, both from Milestone 1 and Milestone 2\n
-        Grumbel - Original SuperTux art, both from Milestone 1 and Milestone 2\n
-        Stephen Groundwater - Original SuperTux art, both from Milestone 1 and Milestone 2\n
-        Wansti - Original SuperTux music, both from Milestone 1 and Milestone 2\n
-        Lukas Nystrand (Mortimer Twang) - Mortimer's Chipdisko\n
-        Mystical - Salcon\n
-        Discover Haxeflixel - Book / pdf I used to make the base of this game, HaxeTux\n
-        Larry Ewing - Creator of Tux\n
-        Press Space to go back to the Main Menu", 12);
-        creditsText.setFormat(null, 12, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+        creditsText = new FlxText(-25, 716, FlxG.width, "
+        Vaesea - Coding, Levels
+        Convival - Levels
+        AnatolyStev - Coding, Levels
+        SuperTux Team - Original SuperTux assets, both from Milestone 1 and Milestone 2
+        Grumbel - Original SuperTux art, both from Milestone 1 and Milestone 2
+        Stephen Groundwater - Original SuperTux art, both from Milestone 1 and Milestone 2
+        Wansti - Original SuperTux music, both from Milestone 1 and Milestone 2
+        Lukas Nystrand (Mortimer Twang) - Mortimer's Chipdisko
+        Mystical - Salcon
+        Discover Haxeflixel - Book / pdf I used to make the base of this game, HaxeTux
+        Larry Ewing - Creator of Tux
+        Press Space to go back to the Main Menu", 18);
+        creditsText.setFormat(null, 18, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
         creditsText.borderSize = 1.25;
         creditsText.moves = true;
         creditsText.velocity.y = -speed;

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="kirby.png">
+<SubTexture name="walk0000" x="0" y="0" width="53" height="58" frameX="-3" frameY="0" frameWidth="54" frameHeight="54" />
+<SubTexture name="walk0001" x="53" y="0" width="52" height="58" frameX="-3" frameY="0" frameWidth="54" frameHeight="54" />
+<SubTexture name="walk0002" x="105" y="0" width="52" height="57" frameX="-3" frameY="-1" frameWidth="54" frameHeight="54" />
+<SubTexture name="walk0003" x="0" y="58" width="53" height="57" frameX="-3" frameY="-1" frameWidth="54" frameHeight="54" />
+<SubTexture name="walk0004" x="53" y="58" width="53" height="58" frameX="-3" frameY="0" frameWidth="54" frameHeight="54" />
+<SubTexture name="walk0005" x="106" y="58" width="55" height="58" frameX="-3" frameY="0" frameWidth="54" frameHeight="54" />
+<SubTexture name="walk0006" x="0" y="116" width="53" height="57" frameX="-3" frameY="-1" frameWidth="54" frameHeight="54" />
+<SubTexture name="walk0007" x="53" y="116" width="53" height="58" frameX="-3" frameY="0" frameWidth="54" frameHeight="54" />
+<SubTexture name="squished0000" x="106" y="116" width="55" height="41" frameX="-1" frameY="-27" frameWidth="54" frameHeight="64" />
+</TextureAtlas>

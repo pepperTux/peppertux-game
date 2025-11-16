@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="spidermite.png">
+<SubTexture name="climb0000" x="0" y="0" width="49" height="47" frameX="0" frameY="0" frameWidth="48" frameHeight="48" />
+<SubTexture name="climb0001" x="0" y="47" width="50" height="46" frameX="0" frameY="-1" frameWidth="48" frameHeight="48" />
+<SubTexture name="squished0000" x="0" y="93" width="52" height="34" frameX="0" frameY="-18" frameWidth="48" frameHeight="48" />
+</TextureAtlas>

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="haywire.png">
+<SubTexture name="walk0000" x="0" y="0" width="42" height="42" frameX="-4" frameY="-2" frameWidth="42" frameHeight="40" />
+<SubTexture name="walk0001" x="42" y="0" width="41" height="43" frameX="-5" frameY="-1" frameWidth="42" frameHeight="40" />
+<SubTexture name="walk0002" x="0" y="43" width="42" height="42" frameX="-4" frameY="-2" frameWidth="42" frameHeight="40" />
+<SubTexture name="walk0003" x="42" y="0" width="41" height="43" frameX="-5" frameY="-1" frameWidth="42" frameHeight="40" />
+<SubTexture name="ticking0000" x="42" y="43" width="42" height="42" frameX="-4" frameY="-2" frameWidth="42" frameHeight="40" />
+<SubTexture name="ticking0001" x="0" y="85" width="41" height="43" frameX="-5" frameY="-1" frameWidth="42" frameHeight="40" />
+<SubTexture name="ticking0002" x="41" y="85" width="42" height="42" frameX="-4" frameY="-2" frameWidth="42" frameHeight="40" />
+<SubTexture name="ticking0003" x="0" y="85" width="41" height="43" frameX="-5" frameY="-1" frameWidth="42" frameHeight="40" />
+<SubTexture name="ticking0004" x="0" y="128" width="42" height="42" frameX="-4" frameY="-2" frameWidth="42" frameHeight="40" />
+<SubTexture name="ticking0005" x="42" y="128" width="41" height="43" frameX="-5" frameY="-1" frameWidth="42" frameHeight="40" />
+<SubTexture name="ticking0006" x="0" y="43" width="42" height="42" frameX="-4" frameY="-2" frameWidth="42" frameHeight="40" />
+<SubTexture name="ticking0007" x="42" y="128" width="41" height="43" frameX="-5" frameY="-1" frameWidth="42" frameHeight="40" />
+</TextureAtlas>

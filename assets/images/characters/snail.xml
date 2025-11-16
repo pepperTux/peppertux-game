@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="snail.png">
+<SubTexture name="walk0000" x="0" y="0" width="46" height="37" frameX="0" frameY="-1" frameWidth="42" frameHeight="34" />
+<SubTexture name="walk0001" x="46" y="0" width="42" height="37" frameX="0" frameY="-1" frameWidth="42" frameHeight="34" />
+<SubTexture name="walk0002" x="0" y="37" width="46" height="37" frameX="0" frameY="-1" frameWidth="42" frameHeight="34" />
+<SubTexture name="flat0000" x="46" y="37" width="45" height="32" frameX="-1" frameY="-6" frameWidth="42" frameHeight="34" />
+<SubTexture name="flat0001" x="0" y="74" width="45" height="32" frameX="-1" frameY="-6" frameWidth="42" frameHeight="34" />
+<SubTexture name="flat0002" x="45" y="74" width="45" height="32" frameX="-1" frameY="-6" frameWidth="42" frameHeight="34" />
+<SubTexture name="flat0003" x="0" y="106" width="45" height="32" frameX="-1" frameY="-6" frameWidth="42" frameHeight="34" />
+<SubTexture name="flat0004" x="45" y="106" width="45" height="32" frameX="-1" frameY="-6" frameWidth="42" frameHeight="34" />
+<SubTexture name="flat0005" x="0" y="138" width="45" height="32" frameX="-1" frameY="-6" frameWidth="42" frameHeight="34" />
+<SubTexture name="flat0006" x="45" y="138" width="45" height="32" frameX="-1" frameY="-6" frameWidth="42" frameHeight="34" />
+<SubTexture name="flat0007" x="0" y="170" width="45" height="32" frameX="-1" frameY="-6" frameWidth="42" frameHeight="34" />
+</TextureAtlas>

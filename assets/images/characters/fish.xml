@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="fish.png">
+<SubTexture name="jump0000" x="0" y="0" width="41" height="50" frameX="0" frameY="0" frameWidth="37" frameHeight="46" />
+<SubTexture name="jump0001" x="0" y="50" width="41" height="49" frameX="0" frameY="-1" frameWidth="37" frameHeight="46" />
+<SubTexture name="fall0000" x="0" y="99" width="41" height="50" frameX="0" frameY="0" frameWidth="37" frameHeight="46" />
+</TextureAtlas>

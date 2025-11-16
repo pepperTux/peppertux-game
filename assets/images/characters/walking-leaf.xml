@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="walking-leaf.png">
+<SubTexture name="walk0000" x="0" y="0" width="54" height="43" frameX="0" frameY="0" frameWidth="50" frameHeight="39" />
+<SubTexture name="walk0001" x="0" y="43" width="54" height="43" frameX="0" frameY="0" frameWidth="50" frameHeight="39" />
+<SubTexture name="walk0002" x="0" y="86" width="54" height="43" frameX="0" frameY="0" frameWidth="50" frameHeight="39" />
+<SubTexture name="squshed0000" x="0" y="129" width="54" height="20" frameX="0" frameY="-23" frameWidth="50" frameHeight="39" />
+</TextureAtlas>

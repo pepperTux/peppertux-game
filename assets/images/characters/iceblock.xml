@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <TextureAtlas imagePath="iceblock.png">
-<SubTexture name="walk0000" x="38" y="0" width="39" height="39" frameX="0" frameY="0" frameWidth="35" frameHeight="35" />
-<SubTexture name="walk0001" x="0" y="39" width="39" height="37" frameX="0" frameY="-2" frameWidth="35" frameHeight="35" />
-<SubTexture name="walk0002" x="39" y="39" width="39" height="39" frameX="0" frameY="0" frameWidth="35" frameHeight="35" />
-<SubTexture name="walk0003" x="0" y="78" width="39" height="37" frameX="0" frameY="-2" frameWidth="35" frameHeight="35" />
-<SubTexture name="flat0000" x="0" y="0" width="38" height="31" frameX="-1" frameY="-8" frameWidth="35" frameHeight="35" />
+<SubTexture name="walk0000" x="0" y="0" width="38" height="37" frameX="0" frameY="-5" frameWidth="35" frameHeight="38" />
+<SubTexture name="walk0001" x="0" y="37" width="38" height="36" frameX="0" frameY="-6" frameWidth="35" frameHeight="38" />
+<SubTexture name="walk0002" x="0" y="73" width="38" height="37" frameX="0" frameY="-5" frameWidth="35" frameHeight="38" />
+<SubTexture name="walk0003" x="0" y="37" width="38" height="36" frameX="0" frameY="-6" frameWidth="35" frameHeight="38" />
+<SubTexture name="flat0000" x="0" y="110" width="38" height="31" frameX="-1" frameY="-11" frameWidth="35" frameHeight="38" />
 </TextureAtlas>

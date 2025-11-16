@@ -9,10 +9,11 @@ package creatures;
 
 // I added lots of comments just in case someone wanted to do make a mod of this recreation but doesn't know how to code.
 
+import creatures.forest.Snail;
+import creatures.snow.Iceblock;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.graphics.frames.FlxAtlasFrames;
-import flixel.util.FlxDirectionFlags;
 import flixel.util.FlxTimer;
 import objects.Fireball;
 import worldmap.WorldmapState;
@@ -28,6 +29,7 @@ class Tux extends FlxSprite
 {
     // (Added by AnatolyStev) Holding Iceblock Stuff
     public var heldIceblock:Iceblock = null;
+    public var heldSnail:Snail = null;
 
     // (Added by AnatolyStev) Ducking stuff
     var isDucking = false;
@@ -347,12 +349,20 @@ class Tux extends FlxSprite
             }
         }
 
+        if (heldSnail != null)
+        {
+            if (FlxG.keys.justReleased.CONTROL)
+            {
+                throwSnail();
+            }
+        }
+
 		super.update(elapsed); // Put this after the movement code, should probably also be after everything else in update.
 	}
 
     public function holdIceblock(iceblock:Iceblock)
     {
-        if (heldIceblock != null)
+        if (heldIceblock != null || heldSnail != null)
         {
             return;
         }
@@ -361,6 +371,20 @@ class Tux extends FlxSprite
         {
             heldIceblock = iceblock;
             iceblock.pickUp(this);
+        }
+    }
+
+    public function holdSnail(snail:Snail)
+    {
+        if (heldIceblock != null || heldSnail != null)
+        {
+            return;
+        }
+
+        if (FlxG.keys.pressed.CONTROL)
+        {
+            heldSnail = snail;
+            snail.pickUp(this);
         }
     }
 
@@ -373,6 +397,17 @@ class Tux extends FlxSprite
 
         heldIceblock.iceblockThrow();
         heldIceblock = null;
+    }
+
+    public function throwSnail()
+    {
+        if (heldSnail == null)
+        {
+            return;
+        }
+
+        heldSnail.snailThrow();
+        heldSnail = null;
     }
 
     public function takeDamage() //  Makes Tux take damage.

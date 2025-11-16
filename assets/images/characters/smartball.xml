@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <TextureAtlas imagePath="smartball.png">
-<SubTexture name="walk0000" x="0" y="0" width="39" height="39" frameX="-1" frameY="-1" frameWidth="38" frameHeight="36" />
-<SubTexture name="walk0001" x="0" y="39" width="39" height="40" frameX="-1" frameY="0" frameWidth="38" frameHeight="36" />
-<SubTexture name="walk0002" x="0" y="79" width="42" height="39" frameX="0" frameY="-1" frameWidth="38" frameHeight="36" />
-<SubTexture name="walk0003" x="0" y="39" width="39" height="40" frameX="-1" frameY="0" frameWidth="38" frameHeight="36" />
-<SubTexture name="squished0000" x="0" y="118" width="38" height="18" frameX="-2" frameY="-22" frameWidth="38" frameHeight="36" />
+<SubTexture name="walk0000" x="0" y="0" width="41" height="41" frameX="-1" frameY="-1" frameWidth="38" frameHeight="38" />
+<SubTexture name="walk0001" x="0" y="41" width="41" height="42" frameX="-1" frameY="0" frameWidth="38" frameHeight="38" />
+<SubTexture name="walk0002" x="0" y="83" width="42" height="41" frameX="0" frameY="-1" frameWidth="38" frameHeight="38" />
+<SubTexture name="walk0003" x="0" y="41" width="41" height="42" frameX="-1" frameY="0" frameWidth="38" frameHeight="38" />
+<SubTexture name="squished0000" x="0" y="124" width="37" height="17" frameX="-2" frameY="-25" frameWidth="38" frameHeight="38" />
 </TextureAtlas>

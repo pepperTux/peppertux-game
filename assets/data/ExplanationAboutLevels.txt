@@ -10,16 +10,15 @@ MILESTONE 1:
 "arctic_night" - Arctic Night. It's a night level.
 "find_star" - Find The Star. It's a night level that introduces you to the star powerup.
 "above_night" - Above The Night Sky. It's a sky level that takes place in the night.
-"icy_sunrise" - Icy Sunrise. It's a sunrise level.
+"seeing_sunrise" - Seeing The Sun Rise. It's a sunrise level.
 "back_to_morning" - Back To The Morning. It's a level that introduces you to stalactites!
 "entering_cave" - Entering The Cave. It's a morning level that has a 2nd half that uses the cave tileset, similar to the SuperTux / original version of this level idea.
 "no_snow" - No Snow. It's going to be a level that introduces you to the cave.
 "cave_water" - Cave Of Water. It's going to be a level that features a lot of water in a cave.
-"taking_dive" - Taking A Dive. It's going to be a level that again, for some reason, features a lot of water? If anyone has a better level idea and a "proof of concept" (actual level, unfinished or not), please tell me.
 "dark_ice" - Dark Ice. It's going to be another cave level, this time with no water. It's named after the tiles.
 "arctic_freezer" - Arctic Freezer. It's going to be another cave level, possibly with a secret where you can walk on top of the level to skip a quarter of it.
 "end_cave" - End Of The Cave. It's going to be the last cave level in World 1.
-"solid_clouds" - Solid Clouds. It's going to be another sky level, however, some of the clouds will be solid, which will let you access a secret area.
+"sky_snow" - Sky Of Snow. It's going to be another sky level, however, some of the clouds will be solid, which will let you access a secret area.
 "snow_fortress" - Snow Fortress. It's going to be a level that takes place in an almost-cave, however, it won't have the cave tileset except for the background of the level, which will be the middle tile of the cave tileset.
 "escaping_building" - Escaping The Building. It's going to be another snow level, beginning with the same start as "The Escape" from SuperTux.
 "broken_aqueduct" - Broken Aqueduct. It's going to be a bridge level, similar to "Shattered Bridge" from SuperTux.

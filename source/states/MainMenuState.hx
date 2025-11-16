@@ -6,7 +6,6 @@ package states;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
 import openfl.system.System;
-import worldmap.WorldmapState.WorldMapState;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.FlxState;
@@ -80,7 +79,7 @@ class MainMenuState extends FlxState
     function clickPlay()
     {
         remove(playButton, true); // Remove button, may not be needed?
-        FlxG.switchState(WorldMapState.new); // Switch State
+        FlxG.switchState(IntroState.new); // Switch State. TODO: Make it so if the game detects no levels completed, only play the intro then. Otherwise, go to WorldmapState.
     }
 
     function clickEraseSave()

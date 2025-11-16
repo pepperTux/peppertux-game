@@ -1,16 +1,28 @@
 package;
 
-import creatures.Stalactite.IceStalactite;
-import creatures.Bomb;
-import creatures.BouncingSnowball;
+import creatures.tropical.Cherrybomb;
+import creatures.forest.ghost.Kirby;
+import creatures.tropical.Crab;
+import creatures.tropical.Brab;
+import creatures.tropical.Grab;
+import creatures.forest.Snail;
+import creatures.misc.MrBomb;
+import creatures.forest.ViciousIvy;
+import creatures.forest.WalkingLeaf;
+import objects.Unisolid;
+import objects.SolidHurt;
+import creatures.misc.Stalactite;
+import creatures.mountain.OldBomb;
+import creatures.snow.BouncingSnowball;
 import objects.Solid;
-import creatures.Smartball;
-import creatures.FlyingSnowball;
-import creatures.Iceblock;
-import creatures.Jumpy;
+import creatures.snow.Smartball;
+import creatures.snow.FlyingSnowball;
+import creatures.snow.Iceblock;
+import creatures.mountain.MetalJumpy;
+import creatures.snow.SnowJumpy;
 import objects.Coin;
-import creatures.Snowball;
-import creatures.Spiky;
+import creatures.snow.Snowball;
+import creatures.snow.Spiky;
 import flixel.FlxState;
 import flixel.addons.display.FlxBackdrop;
 import flixel.addons.editors.tiled.TiledMap;
@@ -26,8 +38,9 @@ import tiles.AnimatedTiles;
 
 class LevelLoader extends FlxState
 {
-    // You really shouldn't touch anything here if you're modding...
     private static var background:FlxBackdrop;
+    private static var background2:FlxBackdrop; // Unused
+    private static var backgroundLooping:FlxBackdrop; // Unused
 
     public static function loadLevel(state:PlayState, level:String)
     {
@@ -36,6 +49,7 @@ class LevelLoader extends FlxState
         // MAKE SURE TO PUT THESE THINGS IN YOUR LEVEL OR THE GAME MIGHT CRASH!!!!!!!!!! Sorry for not being very professional but I just needed to make it VERY clear. Do NOT remove the custom properties of the base level for your level.
         var song = tiledMap.properties.get("music");
         var bg = tiledMap.properties.get("bg");
+        var bgSpeed = tiledMap.properties.get("bgSpeed");
         var levelName = tiledMap.properties.get("levelName");
         var levelCreator = tiledMap.properties.get("levelCreator");
 
@@ -45,10 +59,9 @@ class LevelLoader extends FlxState
         // FlxG.sound.playMusic(song, 1.0, true); only add back if there's a problem
         Global.currentSong = song;
 
-        // Background Stuff
+        // Background 1 (Usually gradients) (Set to morninggradient by default) Stuff
         background = new FlxBackdrop(bg, X);
-        background.scrollFactor.x = 0.5;
-        background.scrollFactor.y = 0.5;
+        background.scrollFactor.set(Std.parseFloat(bgSpeed), 1);
         state.add(background);
 
         // Furthest Background
@@ -103,6 +116,18 @@ class LevelLoader extends FlxState
         {
             var solidSquare = new Solid(solid.x, solid.y, solid.width, solid.height); // Need this because width and height.
             state.collision.add(solidSquare);
+        }
+
+        for (solid in getLevelObjects(tiledMap, "Hurt Collision"))
+        {
+            var hurtSquare = new SolidHurt(solid.x, solid.y, solid.width, solid.height); // Need this because width and height.
+            state.hurtCollision.add(hurtSquare);
+        }
+
+        for (solid in getLevelObjects(tiledMap, "Unisolid"))
+        {
+            var unisolidSquare = new Unisolid(solid.x, solid.y, solid.width, solid.height); // Need this because width and height.
+            state.collision.add(unisolidSquare);
         }
 
         // Load animated tiles
@@ -165,8 +190,12 @@ class LevelLoader extends FlxState
                     state.enemies.add(new Snowball(enemy.x, enemy.y - 32));
                 case "spiky":
                     state.enemies.add(new Spiky(enemy.x, enemy.y - 33));
-                case "jumpy":
-                    state.enemies.add(new Jumpy(enemy.x, enemy.y - 37));
+                case "jumpy": // Here so old levels don't break
+                    state.enemies.add(new MetalJumpy(enemy.x, enemy.y - 37));
+                case "metaljumpy":
+                    state.enemies.add(new MetalJumpy(enemy.x, enemy.y - 37));
+                case "snowjumpy":
+                    state.enemies.add(new SnowJumpy(enemy.x, enemy.y - 42));
                 case "rsod":
                     state.enemies.add(new Smartball(enemy.x, enemy.y - 32));
                 case "flyingsnowball":
@@ -175,10 +204,34 @@ class LevelLoader extends FlxState
                     state.enemies.add(new Iceblock(enemy.x, enemy.y - 30));
                 case "bouncingsnowball":
                     state.enemies.add(new BouncingSnowball(enemy.x, enemy.y - 32));
-                case "bomb":
-                    state.enemies.add(new Bomb(enemy.x, enemy.y - 35));
+                case "bomb": // Here so old levels don't break
+                    state.enemies.add(new OldBomb(enemy.x, enemy.y - 35));
+                case "oldbomb":
+                    state.enemies.add(new OldBomb(enemy.x, enemy.y - 35));
+                case "cherrybomb":
+                    state.enemies.add(new Cherrybomb(enemy.x, enemy.y - 39));
+                case "mrbomb":
+                    state.enemies.add(new MrBomb(enemy.x, enemy.y - 35));
                 case "icicle":
                     state.enemies.add(new IceStalactite(enemy.x, enemy.y - 32));
+                case "foreststalactite":
+                    state.enemies.add(new ForestStalactite(enemy.x, enemy.y - 36));
+                case "coconut":
+                    state.enemies.add(new Coconut(enemy.x, enemy.y - 32));
+                case "viciousivy":
+                    state.enemies.add(new ViciousIvy(enemy.x, enemy.y - 19));
+                case "walkingleaf":
+                    state.enemies.add(new WalkingLeaf(enemy.x, enemy.y - 19));
+                case "snail":
+                    state.enemies.add(new Snail(enemy.x, enemy.y - 29));
+                case "kirby":
+                    state.enemies.add(new Kirby(enemy.x, enemy.y - 38));
+                case "crab":
+                    state.enemies.add(new Crab(enemy.x, enemy.y - 35));
+                case "brab":
+                    state.enemies.add(new Brab(enemy.x, enemy.y - 35));
+                case "grab":
+                    state.enemies.add(new Grab(enemy.x, enemy.y - 35));
             }
         
         for (object in getLevelObjects(tiledMap, "Animated Tiles Foreground"))

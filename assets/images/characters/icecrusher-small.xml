@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="icecrusher-small.png">
+<SubTexture name="idle0000" x="0" y="0" width="68" height="68" frameX="0" frameY="0" frameWidth="64" frameHeight="64" />
+</TextureAtlas>

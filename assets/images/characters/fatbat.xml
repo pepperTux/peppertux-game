@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="fatbat.png">
+<SubTexture name="bounce0000" x="0" y="0" width="66" height="46" frameX="-2" frameY="0" frameWidth="64" frameHeight="42" />
+<SubTexture name="bounce0001" x="0" y="46" width="68" height="46" frameX="0" frameY="0" frameWidth="64" frameHeight="42" />
+<SubTexture name="bounce0002" x="0" y="92" width="68" height="46" frameX="0" frameY="0" frameWidth="64" frameHeight="42" />
+<SubTexture name="bounce0003" x="0" y="138" width="68" height="46" frameX="0" frameY="0" frameWidth="64" frameHeight="42" />
+<SubTexture name="squished0000" x="0" y="184" width="55" height="41" frameX="-6" frameY="-5" frameWidth="64" frameHeight="42" />
+</TextureAtlas>

@@ -27,13 +27,62 @@ class WorldmapLoader extends FlxState
         Global.worldmapCreator = worldmapCreator;
         Global.currentSong = song;
 
+        // Background
+        var backgroundLayer:TiledTileLayer = cast tiledMap.getLayer("Background");
+        
+        var backgroundMap = new FlxTilemap();
+        backgroundMap.loadMapFromArray(backgroundLayer.tileArray, tiledMap.width, tiledMap.height, "assets/images/normalTiles.png", 32, 32, 1);
+        backgroundMap.solid = false;
+
+        // Background 2
+        var backgroundTwoLayer:TiledTileLayer = cast tiledMap.getLayer("Background 2");
+        
+        var backgroundTwoMap = new FlxTilemap();
+        backgroundTwoMap.loadMapFromArray(backgroundTwoLayer.tileArray, tiledMap.width, tiledMap.height, "assets/images/normalTiles.png", 32, 32, 1);
+        backgroundTwoMap.solid = false;
+
+        // Main
         var mainLayer:TiledTileLayer = cast tiledMap.getLayer("Main");
 
         state.map = new FlxTilemap();
-        state.map.loadMapFromArray(mainLayer.tileArray, tiledMap.width, tiledMap.height, "assets/images/worldmap/worldmaptiles.png", 32, 32, 415); // STUPID GLOBAL IDs.
+        state.map.loadMapFromArray(mainLayer.tileArray, tiledMap.width, tiledMap.height, "assets/images/normalTiles.png", 32, 32, 1);
         state.map.solid = false;
 
+        // Foreground 1
+        var foregroundOneLayer:TiledTileLayer = cast tiledMap.getLayer("Foreground 1");
+        
+        var foregroundOneMap = new FlxTilemap();
+        foregroundOneMap.loadMapFromArray(foregroundOneLayer.tileArray, tiledMap.width, tiledMap.height, "assets/images/normalTiles.png", 32, 32, 1);
+        foregroundOneMap.solid = false;
+
+        // Foreground 2
+        var foregroundTwoLayer:TiledTileLayer = cast tiledMap.getLayer("Foreground 2");
+        
+        var foregroundTwoMap = new FlxTilemap();
+        foregroundTwoMap.loadMapFromArray(foregroundTwoLayer.tileArray, tiledMap.width, tiledMap.height, "assets/images/normalTiles.png", 32, 32, 1);
+        foregroundTwoMap.solid = false;
+
+        // Foreground 3
+        var foregroundThreeLayer:TiledTileLayer = cast tiledMap.getLayer("Foreground 3");
+        
+        var foregroundThreeMap = new FlxTilemap();
+        foregroundThreeMap.loadMapFromArray(foregroundThreeLayer.tileArray, tiledMap.width, tiledMap.height, "assets/images/normalTiles.png", 32, 32, 1);
+        foregroundThreeMap.solid = false;
+
+        // Foreground 4
+        var foregroundFourLayer:TiledTileLayer = cast tiledMap.getLayer("Foreground 4");
+        
+        var foregroundFourMap = new FlxTilemap();
+        foregroundFourMap.loadMapFromArray(foregroundFourLayer.tileArray, tiledMap.width, tiledMap.height, "assets/images/normalTiles.png", 32, 32, 1);
+        foregroundFourMap.solid = false;
+        
+        state.add(backgroundMap);
+        state.add(backgroundTwoMap);
         state.add(state.map);
+        state.add(foregroundOneMap);
+        state.add(foregroundTwoMap);
+        state.add(foregroundThreeMap);
+        state.add(foregroundFourMap);
 
         for (solid in getLevelObjects(tiledMap, "Solid"))
         {

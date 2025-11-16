@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="zeekling.png">
+<SubTexture name="fly0000" x="0" y="0" width="65" height="55" frameX="-3" frameY="0" frameWidth="64" frameHeight="51" />
+<SubTexture name="fly0001" x="65" y="0" width="65" height="44" frameX="-2" frameY="-11" frameWidth="64" frameHeight="51" />
+<SubTexture name="fly0002" x="0" y="55" width="64" height="42" frameX="-4" frameY="-13" frameWidth="64" frameHeight="51" />
+<SubTexture name="fly0003" x="64" y="55" width="68" height="48" frameX="0" frameY="-7" frameWidth="64" frameHeight="51" />
+<SubTexture name="diving0000" x="0" y="103" width="57" height="53" frameX="0" frameY="-2" frameWidth="64" frameHeight="51" />
+<SubTexture name="squished0000" x="57" y="103" width="63" height="19" frameX="-5" frameY="-35" frameWidth="64" frameHeight="51" />
+</TextureAtlas>

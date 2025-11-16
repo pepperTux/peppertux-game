@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="flame_fish.png">
+<SubTexture name="flame_fish jump0000" x="0" y="0" width="37" height="46" frameX="0" frameY="0" frameWidth="37" frameHeight="46" />
+<SubTexture name="flame_fish jump0001" x="74" y="0" width="37" height="45" frameX="0" frameY="-1" frameWidth="37" frameHeight="46" />
+<SubTexture name="flame_fish fall0000" x="37" y="0" width="37" height="46" frameX="0" frameY="0" frameWidth="37" frameHeight="46" />
+</TextureAtlas>

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="short_fuse.png">
+<SubTexture name="walk0000" x="0" y="0" width="24" height="24" frameX="-7" frameY="-1" frameWidth="32" frameHeight="21" />
+<SubTexture name="walk0001" x="0" y="24" width="29" height="25" frameX="-4" frameY="0" frameWidth="32" frameHeight="21" />
+<SubTexture name="walk0002" x="0" y="49" width="36" height="24" frameX="0" frameY="-1" frameWidth="32" frameHeight="21" />
+<SubTexture name="walk0003" x="0" y="24" width="29" height="25" frameX="-4" frameY="0" frameWidth="32" frameHeight="21" />
+</TextureAtlas>

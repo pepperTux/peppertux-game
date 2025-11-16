@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="snowjumpy.png">
+<SubTexture name="jump0000" x="0" y="0" width="47" height="52" frameX="-2" frameY="-1" frameWidth="47" frameHeight="54" />
+<SubTexture name="jump0001" x="0" y="52" width="47" height="57" frameX="-2" frameY="-1" frameWidth="47" frameHeight="54" />
+<SubTexture name="jump0002" x="0" y="109" width="47" height="57" frameX="-2" frameY="-1" frameWidth="47" frameHeight="54" />
+</TextureAtlas>

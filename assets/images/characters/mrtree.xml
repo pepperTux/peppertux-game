@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="mrtree.png">
+<SubTexture name="walk0000" x="0" y="0" width="87" height="87" frameX="0" frameY="-2" frameWidth="85" frameHeight="85" />
+<SubTexture name="walk0001" x="87" y="0" width="89" height="89" frameX="0" frameY="0" frameWidth="85" frameHeight="85" />
+<SubTexture name="walk0002" x="0" y="89" width="89" height="89" frameX="0" frameY="0" frameWidth="85" frameHeight="85" />
+<SubTexture name="walk0003" x="89" y="89" width="89" height="89" frameX="0" frameY="0" frameWidth="85" frameHeight="85" />
+<SubTexture name="walk0004" x="0" y="178" width="89" height="89" frameX="0" frameY="0" frameWidth="85" frameHeight="85" />
+<SubTexture name="walk0005" x="89" y="178" width="89" height="89" frameX="0" frameY="0" frameWidth="85" frameHeight="85" />
+</TextureAtlas>

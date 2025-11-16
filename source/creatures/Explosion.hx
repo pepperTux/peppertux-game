@@ -1,5 +1,6 @@
 package creatures;
 
+import objects.Fireball;
 import flixel.util.FlxTimer;
 import creatures.Enemy;
 import creatures.Tux;
@@ -40,5 +41,30 @@ class Explosion extends Enemy
         {
             tux.takeDamage();
         }
+    }
+
+    override public function kill()
+    {
+        return;
+    }
+
+    override private function checkIfHerring(tux:Tux)
+    {
+        return;
+    }
+
+    override public function killFall()
+    {
+        return;
+    }
+
+    override public function collideOtherEnemy(otherEnemy:Enemy)
+    {
+        return;
+    }
+
+    override public function collideFireball(fireball:Fireball)
+    {
+        fireball.kill();
     }
 }

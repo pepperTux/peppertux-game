@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="bluebomb.png">
+<SubTexture name="walk0000" x="0" y="0" width="42" height="42" frameX="-4" frameY="-2" frameWidth="42" frameHeight="40" />
+<SubTexture name="walk0001" x="42" y="0" width="41" height="43" frameX="-5" frameY="-1" frameWidth="42" frameHeight="40" />
+<SubTexture name="walk0002" x="0" y="43" width="42" height="42" frameX="-4" frameY="-2" frameWidth="42" frameHeight="40" />
+<SubTexture name="walk0003" x="42" y="0" width="41" height="43" frameX="-5" frameY="-1" frameWidth="42" frameHeight="40" />
+<SubTexture name="exploding0000" x="42" y="43" width="41" height="39" frameX="-5" frameY="-5" frameWidth="42" frameHeight="40" />
+<SubTexture name="exploding0001" x="0" y="85" width="41" height="39" frameX="-5" frameY="-5" frameWidth="42" frameHeight="40" />
+<SubTexture name="exploding0002" x="41" y="85" width="41" height="39" frameX="-5" frameY="-5" frameWidth="42" frameHeight="40" />
+<SubTexture name="exploding0003" x="0" y="124" width="41" height="39" frameX="-5" frameY="-5" frameWidth="42" frameHeight="40" />
+<SubTexture name="exploding0004" x="41" y="124" width="41" height="39" frameX="-5" frameY="-5" frameWidth="42" frameHeight="40" />
+<SubTexture name="exploding0005" x="0" y="124" width="41" height="39" frameX="-5" frameY="-5" frameWidth="42" frameHeight="40" />
+<SubTexture name="exploding0006" x="41" y="85" width="41" height="39" frameX="-5" frameY="-5" frameWidth="42" frameHeight="40" />
+<SubTexture name="exploding0007" x="0" y="85" width="41" height="39" frameX="-5" frameY="-5" frameWidth="42" frameHeight="40" />
+<SubTexture name="exploding0008" x="42" y="43" width="41" height="39" frameX="-5" frameY="-5" frameWidth="42" frameHeight="40" />
+<SubTexture name="exploding0009" x="0" y="85" width="41" height="39" frameX="-5" frameY="-5" frameWidth="42" frameHeight="40" />
+<SubTexture name="exploding0010" x="41" y="85" width="41" height="39" frameX="-5" frameY="-5" frameWidth="42" frameHeight="40" />
+<SubTexture name="exploding0011" x="0" y="124" width="41" height="39" frameX="-5" frameY="-5" frameWidth="42" frameHeight="40" />
+<SubTexture name="exploding0012" x="41" y="124" width="41" height="39" frameX="-5" frameY="-5" frameWidth="42" frameHeight="40" />
+<SubTexture name="exploding0013" x="0" y="124" width="41" height="39" frameX="-5" frameY="-5" frameWidth="42" frameHeight="40" />
+<SubTexture name="exploding0014" x="41" y="85" width="41" height="39" frameX="-5" frameY="-5" frameWidth="42" frameHeight="40" />
+<SubTexture name="exploding0015" x="0" y="85" width="41" height="39" frameX="-5" frameY="-5" frameWidth="42" frameHeight="40" />
+<SubTexture name="exploding0016" x="42" y="43" width="41" height="39" frameX="-5" frameY="-5" frameWidth="42" frameHeight="40" />
+<SubTexture name="exploding0017" x="41" y="85" width="41" height="39" frameX="-5" frameY="-5" frameWidth="42" frameHeight="40" />
+<SubTexture name="exploding0018" x="41" y="124" width="41" height="39" frameX="-5" frameY="-5" frameWidth="42" frameHeight="40" />
+<SubTexture name="exploding0019" x="41" y="85" width="41" height="39" frameX="-5" frameY="-5" frameWidth="42" frameHeight="40" />
+<SubTexture name="exploding0020" x="42" y="43" width="41" height="39" frameX="-5" frameY="-5" frameWidth="42" frameHeight="40" />
+<SubTexture name="exploding0021" x="41" y="85" width="41" height="39" frameX="-5" frameY="-5" frameWidth="42" frameHeight="40" />
+<SubTexture name="exploding0022" x="41" y="124" width="41" height="39" frameX="-5" frameY="-5" frameWidth="42" frameHeight="40" />
+<SubTexture name="exploding0023" x="41" y="85" width="41" height="39" frameX="-5" frameY="-5" frameWidth="42" frameHeight="40" />
+<SubTexture name="exploding0024" x="42" y="43" width="41" height="39" frameX="-5" frameY="-5" frameWidth="42" frameHeight="40" />
+<SubTexture name="exploding0025" x="41" y="124" width="41" height="39" frameX="-5" frameY="-5" frameWidth="42" frameHeight="40" />
+<SubTexture name="exploding0026" x="42" y="43" width="41" height="39" frameX="-5" frameY="-5" frameWidth="42" frameHeight="40" />
+<SubTexture name="exploding0027" x="41" y="124" width="41" height="39" frameX="-5" frameY="-5" frameWidth="42" frameHeight="40" />
+</TextureAtlas>

@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="coconut.png">
+<SubTexture name="coconut normal0000" x="0" y="0" width="33" height="32" frameX="-15" frameY="0" frameWidth="64" frameHeight="32" />
+<SubTexture name="coconut broken0000" x="33" y="0" width="62" height="25" frameX="-1" frameY="-7" frameWidth="64" frameHeight="32" />
+</TextureAtlas>

@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="owl.png">
+<SubTexture name="fly0000" x="0" y="0" width="55" height="61" frameX="-6" frameY="0" frameWidth="62" frameHeight="57" />
+<SubTexture name="fly0001" x="55" y="0" width="57" height="61" frameX="-5" frameY="0" frameWidth="62" frameHeight="57" />
+<SubTexture name="fly0002" x="0" y="61" width="61" height="60" frameX="-3" frameY="-1" frameWidth="62" frameHeight="57" />
+<SubTexture name="fly0003" x="61" y="61" width="61" height="59" frameX="-3" frameY="-2" frameWidth="62" frameHeight="57" />
+<SubTexture name="fly0004" x="0" y="121" width="59" height="58" frameX="-4" frameY="-3" frameWidth="62" frameHeight="57" />
+<SubTexture name="fly0005" x="59" y="121" width="61" height="60" frameX="-3" frameY="-1" frameWidth="62" frameHeight="57" />
+</TextureAtlas>

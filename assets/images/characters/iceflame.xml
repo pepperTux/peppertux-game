@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="iceflame.png">
+<SubTexture name="iceflame normal0000" x="0" y="0" width="32" height="32" frameX="0" frameY="0" frameWidth="32" frameHeight="32" />
+<SubTexture name="iceflame fade0000" x="32" y="0" width="24" height="24" frameX="-4" frameY="-4" frameWidth="32" frameHeight="32" />
+<SubTexture name="iceflame fade0001" x="0" y="32" width="16" height="16" frameX="-8" frameY="-8" frameWidth="32" frameHeight="32" />
+<SubTexture name="iceflame fade0002" x="32" y="24" width="8" height="8" frameX="-12" frameY="-12" frameWidth="32" frameHeight="32" />
+</TextureAtlas>
