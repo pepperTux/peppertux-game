@@ -8,7 +8,7 @@ This version was discontinued for a while, but was continued due to the Godot ve
 The same story as SuperTux, basically, Tux goes to a picnic with Penny, but Nolok attacks the two penguins and captures Penny, leaving just a note telling Tux that he doesn't stand a chance at getting Penny back, so Tux goes forward towards Nolok's castle.
 
 ## How do I compile?
-Install Haxe 4.3.7, then install HaxeFlixel, including Flixel-Addons. Then compile using "lime test (Your OS) -debug"
+Install Haxe 4.3.7, then install HaxeFlixel, including Flixel-Addons. Then you need to install hxcpp (haxelib install hxcpp), then compile using "lime test (Your OS) -debug"
 
 ## How do I make levels?
 Same way you make levels for HaxeTux.
