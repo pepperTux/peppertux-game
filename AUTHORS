@@ -34,3 +34,10 @@ assets/images/characters/brab.* - Vaesea - PepperTux
 assets/images/characters/foreststalactite.* - Grumbel (Forest Tiles), Vaesea (Stalactite version) - SuperTux (Forest Tiles), PepperTux (Stalactite Version)
 assets/images/characters/grab.* - Vaesea - PepperTux
 assets/images/normalTiles - SuperTux Team (Most tiles), Vaesea (Some tiles), FilipOK (Palm Tree, Stone, Stone Background, Cactus, Sandstone) - SuperTux (Most tiles), PepperTux (Other Tiles)
+
+== Music ==
+assets/music/airship_remix.ogg - Bart (Original + OpenGameArt website), Remaxim (Orchestral Remix) - OpenGameArt
+assets/music/arcticdarkness.ogg - AnatolyStev - PepperTux
+assets/music/chipdisko.ogg - Mortimer Twang - Modarchive?
+assets/music/freezingnight.ogg - Vaesea - PepperTux
+assets/music/bonuscave_2.ogg - Wansti (Original Bonus Cave), FilipOK - SuperTux (Original Bonus Cave), PepperTux
