@@ -12,10 +12,10 @@ Install Haxe 4.3.7, then install HaxeFlixel, including Flixel-Addons. Then you n
 
 ## Credits
 ### PepperTux
-* Vaesea - Coding, Levels, Music that will be added soon, Art
+* Vaesea - Coding, Levels, Art
 * Convival - Levels
-* AnatolyStev - Coding, Levels, Music that will be added soo
-* FilipOK - Art, music that will be added soon
+* AnatolyStev - Coding, Levels
+* FilipOK - Art, music
 ### SuperTux Team
 * Grumbel - Made art for SuperTux (Most, if not all of the art, including unused / scrapped art like the Desert background is used here) (Desert background not added yet!)
 * Stephen Groundwater - Also made art for SuperTux (Most of the art is used here)
