@@ -42,7 +42,7 @@ class Tux extends FlxSprite
     var shootCooldown = 0.3;
 
     // Invicibility Power-Up (Herring)
-    var herringDuration = 10.0;
+    var herringDuration = 14.0;
     public var invincible = false;
     var smallCape:FlxSprite;
     var bigCape:FlxSprite;
@@ -518,6 +518,7 @@ class Tux extends FlxSprite
     {
         var previousSong = Global.currentSong;
 
+        FlxG.sound.play("invincible_start.ogg", 1, false);
         FlxG.sound.playMusic("assets/music/salcon.ogg", 1, true);
 
         invincible = true;

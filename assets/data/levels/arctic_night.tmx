@@ -2,6 +2,7 @@
 <map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="350" height="15" tilewidth="32" tileheight="32" infinite="0" nextlayerid="20" nextobjectid="772">
  <properties>
   <property name="bg" value="assets/images/backgrounds/nightgradient.png"/>
+  <property name="bgSpeed" value="0.4"/>
   <property name="levelCreator" value="Convival"/>
   <property name="levelName" value="Arctic Night"/>
   <property name="music" value="assets/music/chipdisko.ogg"/>

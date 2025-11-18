@@ -121,7 +121,7 @@ class MrBomb extends Enemy
         {
             var explosion:Explosion = new Explosion(this.x - 20, this.y - 11);
             Global.PS.enemies.add(explosion);
-            FlxG.sound.play('assets/sounds/explode.wav');
+            FlxG.sound.play('assets/sounds/explosion.wav');
             alive = false;
             exists = false;
         }, 1);

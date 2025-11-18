@@ -1,7 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <TextureAtlas imagePath="coin.png">
 <SubTexture name="idle0000" x="0" y="0" width="36" height="36" frameX="0" frameY="0" frameWidth="32" frameHeight="32" />
-<SubTexture name="idle0001" x="36" y="0" width="24" height="36" frameX="-6" frameY="0" frameWidth="32" frameHeight="32" />
-<SubTexture name="idle0002" x="0" y="36" width="12" height="36" frameX="-12" frameY="0" frameWidth="32" frameHeight="32" />
-<SubTexture name="idle0003" x="36" y="0" width="24" height="36" frameX="-6" frameY="0" frameWidth="32" frameHeight="32" />
+<SubTexture name="idle0001" x="36" y="0" width="26" height="36" frameX="-5" frameY="0" frameWidth="32" frameHeight="32" />
+<SubTexture name="idle0002" x="62" y="0" width="9" height="33" frameX="-14" frameY="-2" frameWidth="32" frameHeight="32" />
+<SubTexture name="idle0003" x="0" y="36" width="30" height="36" frameX="-3" frameY="0" frameWidth="32" frameHeight="32" />
+<SubTexture name="idle0004" x="30" y="36" width="35" height="36" frameX="-1" frameY="0" frameWidth="32" frameHeight="32" />
+<SubTexture name="idle0005" x="65" y="36" width="25" height="36" frameX="-6" frameY="0" frameWidth="32" frameHeight="32" />
+<SubTexture name="idle0006" x="0" y="72" width="11" height="36" frameX="-13" frameY="0" frameWidth="32" frameHeight="32" />
+<SubTexture name="idle0007" x="11" y="72" width="31" height="36" frameX="-3" frameY="0" frameWidth="32" frameHeight="32" />
 </TextureAtlas>

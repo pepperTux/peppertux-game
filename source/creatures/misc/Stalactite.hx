@@ -61,6 +61,7 @@ class IceStalactite extends Enemy
             isShaking = true;
             immovable = false;
             damageOthers = true;
+            FlxG.sound.play("assets/sounds/cracking.wav");
             FlxTween.shake(this, shakeIntensity, shakeDuration, X, {onComplete: fall});
         }
 
@@ -103,9 +104,10 @@ class IceStalactite extends Enemy
             }, 1);
         }
 
-        if (isTouching(FLOOR)) // Same comment as the one on line 104.
+        if (justTouched(FLOOR)) // Same comment as the one on line 104.
         {
             isBroken = true;
+            FlxG.sound.play("assets/sounds/icecrash.ogg", 1, false);
         }
     }
 
@@ -141,6 +143,8 @@ class IceStalactite extends Enemy
         {
             isShaking = true;
             immovable = false;
+            damageOthers = true;
+            FlxG.sound.play("assets/sounds/sizzle.wav");
             FlxTween.shake(this, shakeIntensity, shakeDuration, X, {onComplete: fall});
         }
     }
@@ -196,6 +200,7 @@ class ForestStalactite extends Enemy
             isShaking = true;
             immovable = false;
             damageOthers = true;
+            FlxG.sound.play("assets/sounds/cracking.wav");
             FlxTween.shake(this, shakeIntensity, shakeDuration, X, {onComplete: fall});
         }
 
@@ -238,9 +243,10 @@ class ForestStalactite extends Enemy
             }, 1);
         }
 
-        if (isTouching(FLOOR)) // Same comment as the one on line 104.
+        if (justTouched(FLOOR)) // Same comment as the one on line 104.
         {
             isBroken = true;
+            FlxG.sound.play("assets/sounds/icecrash.ogg", 1, false);
         }
     }
 
@@ -324,6 +330,7 @@ class Coconut extends Enemy
             isShaking = true;
             immovable = false;
             damageOthers = true;
+            FlxG.sound.play("assets/sounds/cracking.wav");
             FlxTween.shake(this, shakeIntensity, shakeDuration, X, {onComplete: fall});
         }
 
@@ -366,9 +373,10 @@ class Coconut extends Enemy
             }, 1);
         }
 
-        if (isTouching(FLOOR)) // Same comment as the one on line 104.
+        if (justTouched(FLOOR)) // Same comment as the one on line 104.
         {
             isBroken = true;
+            FlxG.sound.play("assets/sounds/coconut.wav");
         }
     }
 
