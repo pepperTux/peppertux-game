@@ -4,7 +4,7 @@ SuperTux fangame made using HaxeFlixel.
 ## Info
 This version was discontinued for a while, but was continued due to the Godot version not going so well.
 
-VOC songs are placeholders, and I'm not sure why VOC Night is there.
+VOC songs will be removed soon
 
 ## Story
 The same story as SuperTux, basically, Tux goes to a picnic with Penny, but Nolok attacks the two penguins and captures Penny, leaving just a note telling Tux that he doesn't stand a chance at getting Penny back, so Tux goes forward towards Nolok's castle.
