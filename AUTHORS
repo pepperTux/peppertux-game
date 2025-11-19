@@ -14,6 +14,8 @@ Authors (This gets destroyed with Word Wrap enabled on Notepad)
 Template:
 assets/path/to/file.png - Author - SuperTux/PepperTux/OpenGameArt
 
+If it's OpenGameArt, there should be a link to the original art, mostly just so people can check the license of it easily.
+
 * = something
 
 == GitHub ==
@@ -37,7 +39,7 @@ assets/images/normalTiles - SuperTux Team (Most tiles), Vaesea (Some tiles), Fil
 assets/images/cutscene/intro.png - Grumbel (Images used for this image), Vaesea (Putting it all together), FilipOK (Nolok image) - SuperTux (Original Images), PepperTux
 
 == Music ==
-assets/music/airship_remix.ogg - Bart (Original + OpenGameArt website), Remaxim (Orchestral Remix) - OpenGameArt
+assets/music/airship_remix.ogg - Bart (Original + OpenGameArt website), Remaxim (Orchestral Remix) - OpenGameArt (https://opengameart.org/content/airship-song-orchestral-remix)
 assets/music/arcticdarkness.ogg - AnatolyStev - PepperTux
 assets/music/chipdisko.ogg - Mortimer Twang - Modarchive?
 assets/music/freezingnight.ogg - Vaesea - PepperTux
