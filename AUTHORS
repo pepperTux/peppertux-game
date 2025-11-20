@@ -12,7 +12,7 @@ Authors (This gets destroyed with Word Wrap enabled on Notepad)
 | Tilesets are not listed here because they're basically just code. The credits for the levels are in the levels and show in-game. |
 ------------------------------------------------------------------------------------------------------------------------------------
 Template:
-assets/path/to/file.png - Author - SuperTux/PepperTux/OpenGameArt
+assets/path/to/file.png - Author - SuperTux/PepperTux/OpenGameArt/Modarchive/Pingus
 
 If it's OpenGameArt, there should be a link to the original art, mostly just so people can check the license of it easily.
 
@@ -44,3 +44,6 @@ assets/music/arcticdarkness.ogg - AnatolyStev - PepperTux
 assets/music/chipdisko.ogg - Mortimer Twang - Modarchive?
 assets/music/freezingnight.ogg - Vaesea - PepperTux
 assets/music/bonuscave_2.ogg - Wansti (Original Bonus Cave), FilipOK - SuperTux (Original Bonus Cave), PepperTux
+assets/music/pingus_5.ogg - ZhayTee - Pingus
+assets/music/pingus_6.ogg - ZhayTee - Pingus
+assets/music/pingus_9.ogg - ZhayTee - Pingus
