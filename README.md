@@ -4,8 +4,6 @@ SuperTux fangame made using HaxeFlixel.
 ## Info
 This version was discontinued for a while, but was continued due to the Godot version not going so well.
 
-VOC songs will be removed soon
-
 ## Story
 The same story as SuperTux, basically, Tux goes to a picnic with Penny, but Nolok attacks the two penguins and captures Penny, leaving just a note telling Tux that he doesn't stand a chance at getting Penny back, so Tux goes forward towards Nolok's castle.
 
@@ -31,8 +29,9 @@ There's credits for stuff that isn't added because they will be added soon.
 ### Everyone Else
 * Bart + opengameart.org - Airship Song
 * Remaxim + opengameart.org - Orchestral Remix of Airship Song
+* ZhayTee - Music from Pingus
 * Lukas Nystrand (Mortimer Twang) - Mortimer's Chipdisko
 * Mystical - Salcon
 * Larry Ewing - Creator of Tux
 * Discover HaxeFlixel (Book) + Scribd - This is the tutorial I followed to make HaxeTux, the base of PepperTux
-* Friday Night Funkin' Psych Engine - Original workflow (I edited it to make it build PepperTux)
+* Friday Night Funkin' Psych Engine - Original ci / workflow (I edited it to make it build PepperTux)
