@@ -21,23 +21,23 @@ class WorldmapHUD extends FlxState
 
         var worldName = Global.worldmapName;
 
-        worldText = new FlxText(0, 20, FlxG.width, "World: " + worldName, 18);
-        worldText.setFormat(null, 18, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+        worldText = new FlxText(0, 24, FlxG.width, "World: " + worldName, 18);
+        worldText.setFormat("assets/fonts/SuperTux-Medium.ttf", 18, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
         worldText.scrollFactor.set();
         worldText.borderSize = 1.25;
 
         scoreText = new FlxText(4, 4, 0, "Score: " + Global.score, 18);
-        scoreText.setFormat(null, 18, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+        scoreText.setFormat("assets/fonts/SuperTux-Medium.ttf", 18, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
         scoreText.scrollFactor.set();
         scoreText.borderSize = 1.25;
 
         distroText = new FlxText(0, 4, FlxG.width, "Coins: " + Global.coins, 18);
-        distroText.setFormat(null, 18, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+        distroText.setFormat("assets/fonts/SuperTux-Medium.ttf", 18, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
         distroText.scrollFactor.set();
         distroText.borderSize = 1.25;
 
         livesText = new FlxText(0, 4, 1276, "Lives: " + Global.lives, 18);
-        livesText.setFormat(null, 18, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+        livesText.setFormat("assets/fonts/SuperTux-Medium.ttf", 18, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
         livesText.scrollFactor.set();
         livesText.borderSize = 1.25;
 

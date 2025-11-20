@@ -1,5 +1,12 @@
 package;
 
+import creatures.tropical.Snake;
+import creatures.forest.ghost.FatBat;
+import objects.movingplatforms.TinyWood;
+import objects.movingplatforms.SmallIcefloe;
+import objects.movingplatforms.Icefloe;
+import objects.movingplatforms.Big;
+import objects.Trampoline;
 import creatures.tropical.Cherrybomb;
 import creatures.forest.ghost.Kirby;
 import creatures.tropical.Crab;
@@ -60,8 +67,33 @@ class LevelLoader extends FlxState
         Global.currentSong = song;
 
         // Background 1 (Usually gradients) (Set to morninggradient by default) Stuff
-        background = new FlxBackdrop(bg, X);
-        background.scrollFactor.set(Std.parseFloat(bgSpeed), 1);
+        background = new FlxBackdrop(bg, XY);
+        background.scrollFactor.set(Std.parseFloat(bgSpeed), Std.parseFloat(bgSpeed));
+        // Warning: The 6 if statements of hell.
+        if (background.scrollFactor.y == 0.5)
+        {
+            background.offset.set(0, 500);
+        }
+        else if (background.scrollFactor.y == 0.4)
+        {
+            background.offset.set(0, 400);
+        }
+        else if (background.scrollFactor.y == 0.3)
+        {
+            background.offset.set(0, 300);
+        }
+        else if (background.scrollFactor.y == 0.2)
+        {
+            background.offset.set(0, 200);
+        }
+        else if (background.scrollFactor.y == 0.1)
+        {
+            background.offset.set(0, 100);
+        }
+        else if (background.scrollFactor.y == 0)
+        {
+            background.offset.set(0, 0);
+        }
         state.add(background);
 
         // Furthest Background
@@ -135,12 +167,16 @@ class LevelLoader extends FlxState
         {
             switch (object.type)
             {
+                // Deprecated
                 default:
                     state.atiles.add(new Water(object.x, object.y - 32));
+                // Deprecated
                 case "trans":
                     state.atiles.add(new WaterTrans(object.x, object.y - 32));
                 case "flag":
                     state.atiles.add(new Flag(object.x, object.y - 32));
+                case "water":
+                    state.atiles.add(new WaterNew(object.x, object.y - 32));
             }
         }
 
@@ -164,6 +200,23 @@ class LevelLoader extends FlxState
             var blockToAdd = new BonusBlock(block.x, block.y - 32);
             blockToAdd.content = block.type;
             state.blocks.add(blockToAdd);
+        }
+
+        for (object in getLevelObjects(tiledMap, "Objects"))
+        {
+            switch (object.type)
+            {
+                case "trampoline":
+                    state.trampolines.add(new Trampoline(object.x, object.y - 32));
+                case "wood":
+                    state.platforms.add(new Big(object.x, object.y - 32));
+                case "icefloe":
+                    state.platforms.add(new Icefloe(object.x, object.y - 44));
+                case "smallicefloe":
+                    state.platforms.add(new SmallIcefloe(object.x, object.y - 44));
+                case "tinywood":
+                    state.platforms.add(new TinyWood(object.x, object.y - 32));
+            }
         }
 
         // Load bricks
@@ -196,7 +249,7 @@ class LevelLoader extends FlxState
                     state.enemies.add(new MetalJumpy(enemy.x, enemy.y - 37));
                 case "snowjumpy":
                     state.enemies.add(new SnowJumpy(enemy.x, enemy.y - 42));
-                case "rsod":
+                case "smartball":
                     state.enemies.add(new Smartball(enemy.x, enemy.y - 32));
                 case "flyingsnowball":
                     state.enemies.add(new FlyingSnowball(enemy.x - 6, enemy.y - 34));
@@ -226,24 +279,32 @@ class LevelLoader extends FlxState
                     state.enemies.add(new Snail(enemy.x, enemy.y - 29));
                 case "kirby":
                     state.enemies.add(new Kirby(enemy.x, enemy.y - 38));
+                case "fatbat":
+                    state.enemies.add(new FatBat(enemy.x, enemy.y - 36));
                 case "crab":
                     state.enemies.add(new Crab(enemy.x, enemy.y - 35));
                 case "brab":
                     state.enemies.add(new Brab(enemy.x, enemy.y - 35));
                 case "grab":
                     state.enemies.add(new Grab(enemy.x, enemy.y - 35));
+                case "snake":
+                    state.enemies.add(new Snake(enemy.x, enemy.y - 8));
             }
         
         for (object in getLevelObjects(tiledMap, "Animated Tiles Foreground"))
         {
             switch (object.type)
             {
+                // Deprecated
                 default:
                     state.atilesFront.add(new Water(object.x, object.y - 32));
+                // Deprecated
                 case "trans":
                     state.atilesFront.add(new WaterTrans(object.x, object.y - 32));
                 case "flag":
                     state.atilesFront.add(new Flag(object.x, object.y - 32));
+                case "water":
+                    state.atilesFront.add(new WaterNew(object.x, object.y - 32));
             }
         }
 

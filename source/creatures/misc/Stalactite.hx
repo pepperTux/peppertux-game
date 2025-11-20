@@ -81,7 +81,7 @@ class IceStalactite extends Enemy
             tux.takeDamage();
         }
 
-        if (tux.invincible || isBroken) // Works fine without isBroken here, but just trying to make sure it works...
+        if (isBroken) // Works fine without isBroken here, but just trying to make sure it works...
         {
             return;
         }

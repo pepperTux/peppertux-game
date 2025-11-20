@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="trampoline.png">
+<SubTexture name="normal0000" x="0" y="0" width="36" height="35" frameX="0" frameY="-1" frameWidth="32" frameHeight="32" />
+<SubTexture name="bounce0000" x="0" y="35" width="36" height="32" frameX="0" frameY="-4" frameWidth="32" frameHeight="32" />
+<SubTexture name="bounce0001" x="0" y="67" width="36" height="30" frameX="0" frameY="-6" frameWidth="32" frameHeight="32" />
+<SubTexture name="bounce0002" x="0" y="97" width="36" height="27" frameX="0" frameY="-9" frameWidth="32" frameHeight="32" />
+<SubTexture name="bounce0003" x="0" y="0" width="36" height="35" frameX="0" frameY="-1" frameWidth="32" frameHeight="32" />
+</TextureAtlas>

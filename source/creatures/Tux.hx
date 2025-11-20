@@ -64,7 +64,7 @@ class Tux extends FlxSprite
     public var minJumpHeight = 512; // Jump Height (Minimum)
     public var maxJumpHeight = 576; // Jump Height (Maximum)
     var gravity = 1000; // Gravity, I don't recommend changing this but you can if you want low gravity or high gravity.
-    var decelerateOnJumpRelease = 0.5; // thanks godot tutorial that i used. also dont change this
+    var decelerateOnJumpRelease = -0.5; // thanks godot tutorial that i used. also dont change this
 
     // Coin Stuff
 	public var totalDistros = 0;
@@ -175,12 +175,12 @@ class Tux extends FlxSprite
             {
                 animation.play("walk");
             }
-            else if (velocity.x == 0)
+            else if (velocity.x == 0 && isTouching(FLOOR))
             {
                 animation.play("stand");
             }
 
-            if ((velocity.y > 0 || velocity.y < 0))
+            if (!isTouching(FLOOR))
             {
                 animation.play("jump");
             }

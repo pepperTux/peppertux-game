@@ -41,7 +41,7 @@ class Spiky extends Enemy
         var hasGround = false;
 
         // Check for no solid objects
-        if (FlxG.overlap(point, Global.PS.blocks) || FlxG.overlap(point, Global.PS.bricks) || FlxG.overlap(point, Global.PS.collision))
+        if (FlxG.overlap(point, Global.PS.blocks) || FlxG.overlap(point, Global.PS.bricks) || FlxG.overlap(point, Global.PS.collision) || FlxG.overlap(point, Global.PS.platforms))
         {
             hasGround = true;
         }

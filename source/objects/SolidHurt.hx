@@ -13,4 +13,17 @@ class SolidHurt extends FlxSprite
         solid = true;
         immovable = true;
     }
+
+    public function interact(tux:Tux)
+    {
+        tux.takeDamage();
+    }
+
+    function checkIfHerring(tux:Tux)
+    {
+        if (tux.invincible == false)
+        {
+            interact(tux);
+        }
+    }
 }

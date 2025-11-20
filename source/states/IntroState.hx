@@ -36,7 +36,7 @@ class IntroState extends FlxState
         knowing the difficult journey that was ahead...
         
         Press SPACE to play.", 18);
-        introText.setFormat(null, 18, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+        introText.setFormat("assets/fonts/SuperTux-Medium.ttf", 18, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
         introText.borderSize = 1.25;
         introText.moves = true;
         introText.velocity.y = -speed;

@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="snake.png">
+<SubTexture name="walk0000" x="0" y="0" width="64" height="13" frameX="0" frameY="-16" frameWidth="60" frameHeight="25" />
+<SubTexture name="walk0001" x="0" y="13" width="62" height="15" frameX="-1" frameY="-14" frameWidth="60" frameHeight="25" />
+<SubTexture name="walk0002" x="0" y="28" width="60" height="18" frameX="-2" frameY="-11" frameWidth="60" frameHeight="25" />
+<SubTexture name="walk0003" x="0" y="46" width="59" height="26" frameX="-2" frameY="-3" frameWidth="60" frameHeight="25" />
+<SubTexture name="walk0004" x="0" y="28" width="60" height="18" frameX="-2" frameY="-11" frameWidth="60" frameHeight="25" />
+<SubTexture name="walk0005" x="0" y="13" width="62" height="15" frameX="-1" frameY="-14" frameWidth="60" frameHeight="25" />
+<SubTexture name="squished0000" x="0" y="72" width="64" height="12" frameX="0" frameY="-17" frameWidth="60" frameHeight="25" />
+</TextureAtlas>

@@ -3,6 +3,8 @@ package states;
 // Original file made by Vaesea
 // Saving Tux's state support done by AnatoyStev
 
+import objects.movingplatforms.FloatingPlatform;
+import objects.Trampoline;
 import objects.SolidHurt;
 import objects.TuxDoll;
 import LevelLoader;
@@ -36,6 +38,8 @@ class PlayState extends FlxState
 	public var items(default, null):FlxTypedGroup<FlxSprite>;
 	public var blocks(default, null):FlxTypedGroup<FlxSprite>;
 	public var bricks(default, null):FlxTypedGroup<FlxSprite>;
+	public var platforms(default, null):FlxTypedGroup<FloatingPlatform>;
+	public var trampolines(default, null):FlxTypedGroup<FlxSprite>;
 	public var enemies(default, null):FlxTypedGroup<Enemy>;
 	public var atilesFront(default, null):FlxTypedGroup<FlxSprite>;
 	public var td(default, null):FlxTypedGroup<TuxDoll>;
@@ -57,6 +61,8 @@ class PlayState extends FlxState
 		items = new FlxTypedGroup<FlxSprite>();
 		bricks = new FlxTypedGroup<FlxSprite>();
 		blocks = new FlxTypedGroup<FlxSprite>();
+		platforms = new FlxTypedGroup<FloatingPlatform>();
+		trampolines = new FlxTypedGroup<FlxSprite>();
 		enemies = new FlxTypedGroup<Enemy>();
 		td = new FlxTypedGroup<TuxDoll>();
 		tux = new Tux();
@@ -72,6 +78,8 @@ class PlayState extends FlxState
 		entities.add(items);
 		entities.add(bricks);
 		entities.add(blocks);
+		entities.add(platforms);
+		entities.add(trampolines);
 		entities.add(enemies);
 		add(collision);
 		add(hurtCollision);
@@ -103,6 +111,7 @@ class PlayState extends FlxState
 		FlxG.overlap(td, tux, collideTuxDoll);
 		FlxG.collide(tux, blocks, collideEntities);
 		FlxG.collide(tux, bricks, collideEntities);
+		FlxG.collide(trampolines, tux, collideEntities);
 
 		// Enemy collision
 		FlxG.collide(collision, entities);
@@ -124,6 +133,17 @@ class PlayState extends FlxState
 		FlxG.collide(collision, items);
 		FlxG.collide(items, blocks);
 		FlxG.collide(items, bricks);
+
+		// Trampoline collision
+		FlxG.collide(trampolines, blocks);
+		FlxG.collide(trampolines, bricks);
+		FlxG.collide(trampolines, collision);
+		FlxG.collide(trampolines, enemies);
+
+		// Platform collision
+		FlxG.collide(platforms, enemies);
+		FlxG.collide(platforms, items);
+		FlxG.collide(platforms, tux);
 	}
 
 	function collideEntities(entity:FlxSprite, tux:Tux)
@@ -146,6 +166,11 @@ class PlayState extends FlxState
 		if (Std.isOfType(entity, BonusBlock))
 		{
 			(cast entity).hit(tux);
+		}
+
+		if (Std.isOfType(entity, Trampoline))
+		{
+			(cast entity).bounceTux(tux);
 		}
 
 		if (Std.isOfType(entity, PowerUp))
