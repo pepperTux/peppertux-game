@@ -6,7 +6,7 @@ import flixel.FlxSprite;
 
 class FloatingPlatform extends FlxSprite
 {
-    public var velocityY:Float = 8;
+    public var velocityY = 8;
     public var minY:Float;
     public var maxY:Float;
 
