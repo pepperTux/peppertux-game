@@ -1,5 +1,7 @@
 package;
 
+import flixel.FlxSprite;
+import flixel.addons.editors.tiled.TiledImageLayer;
 import creatures.tropical.Snake;
 import creatures.forest.ghost.FatBat;
 import objects.movingplatforms.TinyWood;
@@ -45,9 +47,6 @@ import tiles.AnimatedTiles;
 
 class LevelLoader extends FlxState
 {
-    private static var background:FlxBackdrop;
-    private static var background2:FlxBackdrop; // Unused
-    private static var backgroundLooping:FlxBackdrop; // Unused
 
     public static function loadLevel(state:PlayState, level:String)
     {
@@ -66,35 +65,27 @@ class LevelLoader extends FlxState
         // FlxG.sound.playMusic(song, 1.0, true); only add back if there's a problem
         Global.currentSong = song;
 
-        // Background 1 (Usually gradients) (Set to morninggradient by default) Stuff
-        background = new FlxBackdrop(bg, XY);
-        background.scrollFactor.set(Std.parseFloat(bgSpeed), Std.parseFloat(bgSpeed));
-        // Warning: The 6 if statements of hell.
-        if (background.scrollFactor.y == 0.5)
+        // Load background the new way
+        for (layer in tiledMap.layers)
         {
-            background.offset.set(0, 500);
+            if (Std.isOfType(layer, TiledImageLayer))
+            {
+                var imageLayer:TiledImageLayer = cast layer;
+                var path:String = Std.string(imageLayer.imagePath);
+                path = StringTools.replace(path, "../", "");
+                path = "assets/" + path;
+
+                var image = new FlxBackdrop(path, XY);
+
+                image.offset.x = Std.parseFloat(imageLayer.properties.get("offsetX"));
+                image.offset.y = Std.parseFloat(imageLayer.properties.get("offsetY"));
+                
+                image.scrollFactor.x = imageLayer.parallaxX;
+                image.scrollFactor.y = imageLayer.parallaxY;
+
+                state.add(image);
+            }
         }
-        else if (background.scrollFactor.y == 0.4)
-        {
-            background.offset.set(0, 400);
-        }
-        else if (background.scrollFactor.y == 0.3)
-        {
-            background.offset.set(0, 300);
-        }
-        else if (background.scrollFactor.y == 0.2)
-        {
-            background.offset.set(0, 200);
-        }
-        else if (background.scrollFactor.y == 0.1)
-        {
-            background.offset.set(0, 100);
-        }
-        else if (background.scrollFactor.y == 0)
-        {
-            background.offset.set(0, 0);
-        }
-        state.add(background);
 
         // Furthest Background
         var furthestBackgroundLayer:TiledTileLayer = cast tiledMap.getLayer("Furthest Background");
