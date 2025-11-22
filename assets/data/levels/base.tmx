@@ -15,7 +15,7 @@
  <tileset firstgid="3938" source="../tilesets/icefloe_small.tsx"/>
  <tileset firstgid="3939" source="../tilesets/wood-tiny.tsx"/>
  <tileset firstgid="3940" source="../tilesets/liquid.tsx"/>
- <imagelayer id="25" name="Background Image" offsetx="400" offsety="400" parallaxx="0.4" parallaxy="0.4" repeatx="1" repeaty="1">
+ <imagelayer id="25" name="Background Image" parallaxx="0.4" parallaxy="0.4" repeatx="1" repeaty="1">
   <image source="../../images/backgrounds/arctis2new.png" width="1664" height="1472"/>
   <properties>
    <property name="offsetX" type="float" value="400"/>
