@@ -518,8 +518,8 @@ class Tux extends FlxSprite
     {
         var previousSong = Global.currentSong;
 
-        FlxG.sound.play("invincible_start.ogg", 1, false);
-        FlxG.sound.playMusic("assets/music/salcon.ogg", 1, true);
+        FlxG.sound.play("assets/sounds/invincible_start.ogg", 1, false);
+        FlxG.sound.playMusic("assets/music/invincible.ogg", 1, true);
 
         invincible = true;
 

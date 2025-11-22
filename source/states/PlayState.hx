@@ -88,8 +88,8 @@ class PlayState extends FlxState
 		add(entities);
 		add(td);
 		add(tux);
-		add(atilesFront);
 		add(foregroundMap);
+		add(atilesFront);
 		add(hud);
 
 		// Camera

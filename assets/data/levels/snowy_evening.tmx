@@ -167,7 +167,7 @@
   <object id="800" gid="3897" x="10432" y="1088" width="32" height="32"/>
  </objectgroup>
  <objectgroup id="6" name="Player">
-  <object id="493" gid="3841" x="32" y="1088" width="32" height="32"/>
+  <object id="493" gid="3841" x="32" y="1120" width="32" height="32"/>
  </objectgroup>
  <objectgroup id="13" name="Bricks">
   <object id="759" type="snow" gid="3909" x="608" y="960" width="32" height="32"/>

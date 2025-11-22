@@ -42,7 +42,6 @@ class Herring extends FlxSprite
 
     public function collect(tux:Tux)
     {
-        FlxG.sound.play('assets/sounds/invincible.wav');
         kill();
         tux.herringTux();
         Global.score += scoreAmount;
