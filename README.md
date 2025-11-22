@@ -19,6 +19,7 @@ Install Haxe 4.3.7, then install HaxeFlixel, including Flixel-Addons. Then you n
 ### SuperTux Team
 * Grumbel - Made art for SuperTux (Most, if not all of the art, including unused / scrapped art like the Desert background is used here) (Desert background not added yet!)
 * Stephen Groundwater - Also made art for SuperTux (Most of the art is used here)
+* BlasterMaster - Made art for SuperTux (A few backgrounds he made are used here)
 * Wansti - Made music for SuperTux (Most, if not all of the music for SuperTux is used here)
 * Jonfx1007 - Improved SuperTux's forest tileset
 * Weluvgoatz - Snow fort tiles (used as sand tiles here with the saturation reduced and with it also being recolored)
