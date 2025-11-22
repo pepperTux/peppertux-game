@@ -22,7 +22,7 @@ Install Haxe 4.3.7, then install HaxeFlixel, including Flixel-Addons. Then you n
 * BlasterMaster - Made art for SuperTux (A few backgrounds he made are used here)
 * Wansti - Made music for SuperTux (Most, if not all of the music for SuperTux is used here)
 * Jonfx1007 - Improved SuperTux's forest tileset
-* Weluvgoatz - Snow fort tiles (used as sand tiles here with the saturation reduced and with it also being recolored)
+* Weluvgoatz - Snow fort tiles (used as sand tiles here with the saturation reduced and with it also being recolored), Dawn Hill Para Blur background
 * DJ Gentoo - New Salcon
 
 There's credits for stuff that isn't added because they will be added soon.
